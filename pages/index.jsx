@@ -219,22 +219,18 @@ const LandingStyle = {
 class Home extends React.Component {
   constructor(){
     super();
-    this.state = {
-      x: 0,
-      y: 0,
-    }
   }
   render(){
-    const startMouseEvent = (e) => {
-      let x = e.clientX, 
-      y = e.clientY
-      this.setState({x:x, y: y})
-    }    
-    const stopCapture = () => {
-      let x = 0, 
-      y = 0
-      this.setState({x:x, y: y})
-    }    
+    // const startMouseEvent = (e) => {
+    //   let x = e.clientX, 
+    //   y = e.clientY
+    //   this.setState({x:x, y: y})
+    // }    
+    // const stopCapture = () => {
+    //   let x = 0, 
+    //   y = 0
+    //   this.setState({x:x, y: y})
+    // }    
     const copyText = (e) => {
       console.log(e)
       var textField = document.createElement('textarea')
@@ -244,13 +240,12 @@ class Home extends React.Component {
       document.execCommand('copy')
       textField.remove()
     }
-    const {x, y} = this.state
     
     return (
       <Layout>
         <LandingStyle.Header>
           <PageWrapper>
-            <h1 data-text="I'm Adenekan Wonderful" className="intro__text" onMouseMove={startMouseEvent} onMouseLeave={stopCapture}><mark className="mark">I'm Adenekan Wonderful</mark></h1>
+            <h1 data-text="I'm Adenekan Wonderful" className="intro__text"><mark className="mark">I'm Adenekan Wonderful</mark></h1>
             <p> Frontend developer and javascript engineer, <Link href="/"><a><button>Photochromic Glasses</button></a></Link> enthusiast, practicing minimalist, and <a href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" target="_blank"><button>Pop Music { '&&' } Jazz lover</button></a> in search of flow.</p>
 
             <p>Working with my village people to design better ways to signin fast on websites. View my <a href="https://twitter.com"><button>Projects</button></a>, <a href="https://twitter.com"><button>Resumé</button></a>, <a href="https://twitter.com"><button>Contact Me</button></a>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText}>hellocodewonders@gmail.com</button>.</p>
