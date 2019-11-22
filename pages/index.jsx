@@ -15,7 +15,7 @@ const LandingStyle = {
       font-weight: 900; 
       margin: 2rem 0rem 1.5rem ;
       position: relative;
-      // &:hover{
+      // &:hover{ 
         &::before,
       &::after {
         content: attr(data-text);
