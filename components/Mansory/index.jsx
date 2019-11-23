@@ -2,14 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const MansoryLayoutStyle = styled.div`
-    margin: 1.5em 0;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    opacity: 0;
-    animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
-    -webkit-animation-fill-mode: both;
+    margin: 1.5em 0;   
     max-width: auto;
     column-gap: 1.5em;
   @media only screen and (min-width: 1024px) {
