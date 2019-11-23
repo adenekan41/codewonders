@@ -131,6 +131,10 @@ export const Header = styled.header`
     nav {
       background: transparent !important;
     }
+    .navbar-toggler {
+        color: rgba(255, 255, 255, 0.5);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
     .nav-item.hover__bottom {
       display: inline-block;
       vertical-align: middle;
@@ -169,16 +173,26 @@ export const Header = styled.header`
       font-weight:900;
       color: var(--cw) !important;
     }
+    @media( max-width : 585px ) {
+      padding:20px 0 0;
+    }
+    @media( max-width : 989px ) {
+      padding:20px 0 0;
+    }
+    @media( max-width : 220px ){
+      padding:20px 0 0;
+    }
 `
 export const SocialMedia = styled.div` 
   position: fixed;
-  background: white;
+  background: transparent;
   width: 40px;
   display: flex;
   right: 23px;
   flex-direction: column;
-  height: 80vh;
-  top: 70px;
+  height: 100vh;
+  padding: 5rem 0;
+  bottom: 0px;
   align-items: center;
   justify-content: space-evenly;
   a{
@@ -195,6 +209,45 @@ export const SocialMedia = styled.div`
       stroke-width: 1px;
       stroke-opacity: 0.8;
     }
+  }
+  @media( max-width : 585px ) {
+    position: fixed;
+    background: rgba(255,255,255,0.86) !important;
+    width: 100% !important;
+    display: flex;
+    padding:0 !important;
+    right: 0;
+    flex-direction:row !important;
+    height: 60px !important;
+    bottom: 0px !important;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  @media( max-width : 989px ) {
+    position: fixed;
+    background: rgba(255,255,255,0.86) !important;
+    width: 100% !important;
+    display: flex;
+    padding:0 !important;
+    right: 0;
+    flex-direction:row !important;
+    height: 60px !important;
+    bottom: 0px !important;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  @media( max-width : 220px ){
+    position: fixed;
+    background: rgba(255,255,255,0.86) !important;
+    width: 100% !important;
+    display: flex;
+    padding:0 !important;
+    right: 0;
+    flex-direction:row !important;
+    height: 60px !important;
+    bottom: 0px !important;
+    align-items: center;
+    justify-content: space-evenly;
   }
 `
 export const BackLay = styled.div`

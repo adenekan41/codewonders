@@ -21,7 +21,7 @@ export default ({ children, title = 'Home' }) => (
     <Header>
       <nav className="navbar navbar-expand-md bg-light navbar-light">
         <div className="container">
-        <a className="navbar-brand" href="#!" aria-label="Adenekan Wonderful Home"><img src="/img/cw..svg"/></a>
+        <Link href='/'><a className="navbar-brand" aria-label="Adenekan Wonderful Home"><img src="/img/cw..svg"/></a></Link>
 
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>

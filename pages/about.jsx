@@ -68,6 +68,27 @@ const AboutStyle = {
             } 
         }
     }
+    @media( max-width : 585px ) {
+      ul.timeline li a{
+        display:block;
+        float:none !important;
+        margin-top:5px;
+      }
+    }
+    @media( max-width : 989px ) {
+      ul.timeline li a{
+        display:block;
+        float:none !important;
+        margin-top:5px;
+      }
+    }
+    @media( max-width : 220px ){
+      ul.timeline li a{
+        display:block;
+        float:none !important;
+        margin-top:5px;
+      }
+    }
   ` ,
   SkillSection: styled.div`
     
@@ -104,6 +125,32 @@ class About extends React.Component {
                     <a href="#">Learning Something Great 😉</a>
                     <a href="#" className="float-right"><Date /> <b>Currently</b></a>
                     <p>We continue learning everyday.  </p>
+                </li>
+            </ul>
+          </PageWrapper>
+          <br/><br/>
+          <PageWrapper>
+          <h4>My Volunteer Experience.</h4>
+            <ul className="timeline">
+                <li>
+                    <a target="_blank" href="https://freecodecamp.com">Mentor. <small>Freecodecamp</small></a>
+                    <a className="float-right"><Date /> <b>2018 - Present</b></a>
+                    <p>Helped set goals and work toward achieving them by educating four mentees about various resources available on campus, as the need arises Served as a positive social and academic role-model by supporting mentees with their involvement on campus Provided an environment that supports constructive feedback on performance</p>
+                </li>
+                <li>
+                    <a href="https://jobs.google.com" target="_blank">Local Guide. <small>google</small></a>
+                    <a className="float-right"><Date /> <b>2019</b></a>
+                    <p>I spoke and introduced the user to the newly on-boarded product at jobs at google here. also Increased revenue by designing eye-catching displays and utilizing selling techniques to connect with potential customers, thereby closing sales.</p>
+                </li> 
+                <li>
+                    <a href="https://developers.google.com">Programmes Developer. <small>Google Developers</small></a>
+                    <a className="float-right"><Date /> <b>2019 - Present</b></a>
+                    <p>Developer Student Clubs train thousands of student developers globally and work with their communities to solve real-life problems. University students who lead a DSC gain access to Google technology, events, and mentorship while training their local community through fun meetups, project building activities, and global competitions.</p>
+                </li>
+                <li>
+                    <a href="https://forloop.africa" target="_blank">Media Specialist. <small>Forloop Africa</small></a>
+                    <a href="#" className="float-right"><Date /> <b>2018 - Present</b></a>
+                    <p>A community of passionate software developers and enthusiasts across Africa.</p>
                 </li>
             </ul>
           </PageWrapper>
