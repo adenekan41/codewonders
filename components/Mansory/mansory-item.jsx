@@ -82,7 +82,7 @@ const MansoryItemStyle = styled.div`
 const MansoryItem = ({item, index}) => {
     return (
         <a href={item.link} target="_blank" style={{color: 'inherit',
-            textDecoration: 'none'}}>
+            textDecoration: 'none', display:'block'}}>
             <MansoryItemStyle {...{item}} style={{height: get_random(['440px', '560px', '350px'])}}>
                 <div>
                     <h3>{item.title}</h3> 

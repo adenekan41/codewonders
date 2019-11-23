@@ -223,11 +223,11 @@ class Home extends React.Component {
             <p> Frontend developer and javascript engineer, <Link href="/"><a><button>Photochromic Glasses</button></a></Link> enthusiast, practicing minimalist, and <a href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" target="_blank"><button>Pop Music { '&&' } Jazz lover</button></a> in search of flow.</p>
 
             <p>Working with my village people to design better ways to signin fast on websites. View my <a href="https://twitter.com"><button>Projects</button></a>, <a href="https://docs.google.com/document/d/1Ll91-P5r9gIaYh76tBLd1XH0nxIIzskJYt2gfJ29svc/edit?usp=sharing"><button>Resumé</button></a>, <a href="https://twitter.com"><button>Contact Me</button></a>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText}>hellocodewonders@gmail.com</button>.</p>
+            <br/>
+            <FooterLink goto="/about">See More</FooterLink>
+            br
           </PageWrapper>
         </LandingStyle.Header>
-        <PageWrapper>
-          <FooterLink goto="/about">See More</FooterLink>
-        </PageWrapper>
       </Layout> 
     )
   }

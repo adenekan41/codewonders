@@ -9,6 +9,22 @@ const TabStyle = styled.div`
     align-items: center;
     justify-content: center;
     min-height: 43px;
+    
+    @media( max-width : 585px ) {
+      white-space: nowrap;
+      overflow-x: auto;
+      margin: 0px auto;
+    }
+    @media( max-width : 989px ) {
+      white-space: nowrap;
+      overflow-x: auto;
+      margin: 0px auto;
+    }
+    @media( max-width : 220px ){
+      white-space: nowrap;
+      overflow-x: auto;
+      margin: 0px auto;
+    }
     .tab-list-item {
         margin: 0 1rem 0 0;
         font-size: 15px;
@@ -54,7 +70,7 @@ class Tabs extends Component {
 
     return (
       <div className="tabs">
-        <TabStyle>
+        <TabStyle className="d-md-flex d-block">
             {children.map((child) => {
             const { label } = child.props;
 
