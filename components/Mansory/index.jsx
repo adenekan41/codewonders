@@ -9,7 +9,6 @@ const MansoryLayoutStyle = styled.div`
     opacity: 0;
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
-    -webkit-backface-visibility: hidden;
     -webkit-animation-fill-mode: both;
     max-width: auto;
     column-gap: 1.5em;
@@ -25,12 +24,18 @@ const MansoryLayoutStyle = styled.div`
   }
   @keyframes fadeInUp {
       from {
-            animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform:translate3d(0,40px,0);
           transform: translate3d(0,40px,0)
       }
 
       to {
           animation-timing-function: ease-in;
+          -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform:translate3d(0,0,0);
           transform: translate3d(0,0,0);
           opacity: 1
       }
@@ -39,11 +44,17 @@ const MansoryLayoutStyle = styled.div`
   @-webkit-keyframes fadeInUp {
       from {
         animation-timing-function: ease-in-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform:translate3d(0,40px,0);
           transform: translate3d(0,40px,0)
       }
 
       to {
         animation-timing-function: ease-in;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform:translate3d(0,0,0);
           transform: translate3d(0,0,0);
           opacity: 1
       }
