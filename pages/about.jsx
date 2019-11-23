@@ -84,7 +84,7 @@ class About extends React.Component {
           <PageWrapper>
            <h1 className="intro__text">About Me.</h1> <br/>
            <h4>My Education.</h4>
-            <ul class="timeline">
+            <ul className="timeline">
                 <li>
                     <a target="_blank" href="https://www.totoprayogo.com/#">Human Centered Design 101. <small>Acumen</small></a>
                     <a href="#" className="float-right"><Date /> <b>2017 - 2018</b></a>
