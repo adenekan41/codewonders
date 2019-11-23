@@ -8,6 +8,8 @@ const MansoryLayoutStyle = styled.div`
     -webkit-animation-duration: 1s;
     opacity: 0;
     animation-name: fadeInUp;
+    -webkit-transform:translate3d(0,0,0);
+          transform: translate3d(0,0,0);
     -webkit-animation-name: fadeInUp;
     -webkit-animation-fill-mode: both;
     max-width: auto;
