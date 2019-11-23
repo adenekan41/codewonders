@@ -2,11 +2,12 @@ import React from 'react'
 import Layout, { PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
-import { IconRight } from '../components/Layout/icons';
+import FooterLink from '../components/Utils/footer-link';
 
 const LandingStyle = {
   Header: styled.header`
-    min-height:45vh; 
+    margin-top: 4rem;
+    margin-bottom: 2.6rem;
     display:flex;
     align-items:center;
     justify-contents:center;
@@ -107,7 +108,7 @@ const LandingStyle = {
           clip-path: inset(76% 0 21% 0);
         }
         5% {
-          clip-path: inset(54% 0 7% 0);
+          clip-path: inset(54% 0 7% 0); 
         }
         10% {
           clip-path: inset(55% 0 29% 0);
@@ -187,34 +188,7 @@ const LandingStyle = {
       padding: 0px 9px;  
     }
   ` ,
-  FirstSection: styled.div`
-    p{
-      font-size: 14px; 
-      transition: all 1s ease;
-      svg{
-        margin-left: 1rem;
-        animation-name: forward;
-        animation-duration: .5s;
-        animation-iteration-count: infinite;
-        animation-direction:alternate;
-      }
-      &:hover {
-        svg{
-         
-        }
-
-        @keyframes forward {
-          from {
-            margin-left: 1rem;
-          }
-          to {
-            margin-left: 2rem;
-          }
-        }
-      }
-    }
-  
-  `
+ 
 }
 class Home extends React.Component {
   constructor(){
@@ -248,13 +222,11 @@ class Home extends React.Component {
             <h1 data-text="I'm Adenekan Wonderful" className="intro__text"><mark className="mark">I'm Adenekan Wonderful</mark></h1>
             <p> Frontend developer and javascript engineer, <Link href="/"><a><button>Photochromic Glasses</button></a></Link> enthusiast, practicing minimalist, and <a href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" target="_blank"><button>Pop Music { '&&' } Jazz lover</button></a> in search of flow.</p>
 
-            <p>Working with my village people to design better ways to signin fast on websites. View my <a href="https://twitter.com"><button>Projects</button></a>, <a href="https://twitter.com"><button>Resumé</button></a>, <a href="https://twitter.com"><button>Contact Me</button></a>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText}>hellocodewonders@gmail.com</button>.</p>
+            <p>Working with my village people to design better ways to signin fast on websites. View my <a href="https://twitter.com"><button>Projects</button></a>, <a href="https://docs.google.com/document/d/1Ll91-P5r9gIaYh76tBLd1XH0nxIIzskJYt2gfJ29svc/edit?usp=sharing"><button>Resumé</button></a>, <a href="https://twitter.com"><button>Contact Me</button></a>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText}>hellocodewonders@gmail.com</button>.</p>
           </PageWrapper>
         </LandingStyle.Header>
         <PageWrapper>
-          <LandingStyle.FirstSection>
-            <Link href="/"><a><p>See More <IconRight/></p></a></Link>
-          </LandingStyle.FirstSection> 
+          <FooterLink goto="/about">See More</FooterLink>
         </PageWrapper>
       </Layout> 
     )

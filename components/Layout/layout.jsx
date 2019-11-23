@@ -30,13 +30,13 @@ export default ({ children, title = 'Home' }) => (
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item hover__bottom">
-                <Link href='/' activeClassName='is-active' exact={true}><a className="nav-link" aria-label="Go Home">Home</a></Link>
+                <Link href='/' activeClassName='is-active'><a className="nav-link" aria-label="Go Home">Home</a></Link>
               </li>
               <li className="nav-item hover__bottom">
                 <Link href='/about' activeClassName='is-active'><a className="nav-link" aria-label="Go To About Page">About</a></Link>
               </li>
               <li className="nav-item hover__bottom">
-                <Link href='/blog' activeClassName='is-active'><a className="nav-link" aria-label="Go To Blog Page">Projects</a></Link>
+                <Link href='/projects' activeClassName='is-active'><a className="nav-link" aria-label="Go To Projects Page">Projects</a></Link>
               </li>
               <li className="nav-item hover__bottom">
                 <Link href='/reading' activeClassName='is-active'><a className="nav-link" aria-label="Go To Reading Page">Articles</a></Link>

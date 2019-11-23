@@ -106,6 +106,12 @@ a, h1, h2, h3, h4, h5, h6, p, button, input[type=text], input[type=date], input[
   text-rendering: geometricPrecision;
   color: var(--cw)
 }
+a{
+  cursor: pointer;
+  p{
+    cursor: pointer;
+  }
+}
 
 mark.mark {
   color: inherit;
@@ -123,7 +129,7 @@ mark.mark {
 export const Header = styled.header`
     padding: 50px 0; 
     nav {
-      background: var(--bg) !important;
+      background: transparent !important;
     }
     .nav-item.hover__bottom {
       display: inline-block;
