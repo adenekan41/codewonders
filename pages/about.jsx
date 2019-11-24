@@ -107,23 +107,23 @@ class About extends React.Component {
            <h4>My Education.</h4>
             <ul className="timeline">
                 <li>
-                    <a target="_blank" href="https://www.totoprayogo.com/#">Human Centered Design 101. <small>Acumen</small></a>
-                    <a href="#" className="float-right"><Date /> <b>2017 - 2018</b></a>
+                    <a target="_blank" href="https://www.plusacumen.org/courses/introduction-human-centered-design">Human Centered Design 101. <small>Acumen</small></a>
+                    <a className="float-right"><Date /> <b>2017 - 2018</b></a>
                     <p>This is an intensive, hands-on learning experience that will challenge you to get out of your chair and out into the real world to talk to people and test your ideas. You’ll leave this experience equipped and energized to apply the human-centered design process to challenges across industries, sectors, and geographies to generate breakthrough ideas.</p>
                 </li>
                 <li>
-                    <a href="#">Data Structure And Algorithm. <small>Udemy</small></a>
+                    <a target="_blank" href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/">Data Structure And Algorithm. <small>Udemy</small></a>
                     <a href="#" className="float-right"><Date /> <b>2019</b></a>
                     <p>Many developers who are "self taught", feel that one of the main disadvantages they face compared to college educated graduates in computer science is the fact that they don't have knowledge about algorithms, data structures and the notorious Big-O Notation</p>
                 </li> 
                 <li>
-                    <a href="#">Adaptive Leadership. <small>Udacity</small></a>
+                    <a target="_blank" href="https://www.edx.org/course/adaptive-leadership-in-development">Adaptive Leadership. <small>edX</small></a>
                     <a href="#" className="float-right"><Date /> <b>2019</b></a>
                     <p>This introductory course helps you identify and make progress on a leadership challenge in your own life, team, or community. You’ll apply the tools and techniques of Adaptive Leadership, a practical framework developed at Harvard Kennedy School of Government for leading change, particularly during times of uncertainty or when there are no easy answers.  </p>
                 </li>
                 <li>
                     <a href="#">Learning Something Great 😉</a>
-                    <a href="#" className="float-right"><Date /> <b>Currently</b></a>
+                    <a className="float-right"><Date /> <b>Currently</b></a>
                     <p>We continue learning everyday.  </p>
                 </li>
             </ul>

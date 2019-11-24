@@ -77,6 +77,36 @@ const MansoryItemStyle = styled.div`
             opacity: 1;
         } */
     }
+    @media( max-width : 585px ) {
+        &:after {
+            opacity: 1 !important;
+        }
+        div{
+            z-index: 999 !important;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+    }
+    @media( max-width : 989px ) {
+        &:after {
+            opacity: 1 !important;
+        }
+        div{
+            z-index: 999 !important;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+    }
+    @media( max-width : 220px ){
+        &:after {
+            opacity: 1 !important;
+        }
+        div{
+            z-index: 999 !important;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+    }
 
 `
 const MansoryItem = ({item, index}) => {
