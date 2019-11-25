@@ -7,6 +7,7 @@ import FooterLink from '../components/Utils/footer-link';
 import Tabs from '../components/Tabs';
 import MansoryLayout from '../components/Mansory';
 import MansoryItem from '../components/Mansory/mansory-item';
+import LENS_DATA from '../components/CardData/lens';
 
 const LensStyle = {
   Header: styled.header`
@@ -72,89 +73,19 @@ const LensStyle = {
         }
     }
   ` ,
-  SkillSection: styled.div`
+   SkillSection: styled.div`
     
-  `
+   `
 }
-class Lens extends React.Component {
+class LensPage extends React.Component {
   constructor(){
     super();
     this.state = {
-        data: [
-            {
-                title:'Ray Ban',
-                description: 'Model: RB3539',
-                link: 'https://www.selectspecs.com/sunglasses/ray-ban/rb3539/ss105.57.html',
-                imageUrl: 'https://i.ibb.co/mvCf7vN/105-57-2.jpg',
-                type:['ray-ban']
-            },
-            {
-                title:'Ray Ban',
-                description: 'Model: RB3647N',
-                link: 'https://www.selectspecs.com/sunglasses/ray-ban/rb3647n/ss106.08.html',
-                imageUrl: 'https://i.ibb.co/jySj3HY/106-08-1.jpg',
-                type:['ray-ban']
-            },
-            {
-                title:'Ray-Ban',
-                description: 'Model: RB3136 Aviator',
-                link: 'https://www.selectspecs.com/sunglasses/ray-ban/rb3136-aviator-caravan-flash-lenses/ss105.24.html',
-                imageUrl: 'https://i.ibb.co/vX3B6j4/105-24-5.jpg',
-                type:['ray-ban']
-            },
-            {
-                title:'Persol',
-                description:'Model: PO3199S',
-                link: 'https://www.selectspecs.com/sunglasses/persol/po3199s',
-                imageUrl: 'https://i.ibb.co/wKtdt70/653-57-3.jpg',
-                type:['persol']
-            },
-            {
-                title:'Persol',
-                description: 'Model: PO3171S',
-                link: 'https://www.selectspecs.com/sunglasses/persol/po3171s',
-                imageUrl: 'https://i.ibb.co/GVp7FdB/653-38-4.jpg',
-                type:['persol']
-            },
-            {
-                title:'EdBlue',
-                description: 'Model: Prism - PL5428',
-                link: 'https://www.eyebuydirect.com/packages/ebd-blue',
-                imageUrl: 'https://i.ibb.co/Y3Rdny1/pl5428-1-1.png',
-                type:['Edblue']
-            },
-            {
-                title:'EdBlue',
-                description: 'Model: Melody - MT6300',
-                link: 'https://www.eyebuydirect.com/packages/ebd-blue',
-                imageUrl: 'https://i.ibb.co/nfFY5R8/mt6300-1.png',
-                type:['Edblue']
-            },
-            {
-                title:'EdBlue',
-                description: 'Model: Memento - MT6641',
-                link: 'https://www.eyebuydirect.com/packages/ebd-blue',
-                imageUrl: 'https://i.ibb.co/cc3jHjx/mt6641-1.png',
-                type:['Edblue']
-            },
-            {
-                title:'SightRelax',
-                description: 'Model: Nadia - MT6772',
-                link: 'https://www.eyebuydirect.com/packages/sightrelax',
-                imageUrl: 'https://i.ibb.co/SxCtgBK/mt6772-1.png',
-                type:['sight-relax']
-            },
-            {
-                title:'SightRelax',
-                description: 'Model: Contact - MT6772',
-                link: 'https://www.eyebuydirect.com/packages/sightrelax',
-                imageUrl: 'https://i.ibb.co/9cCfYCS/mt6707-1.png',
-                type:['sight-relax']
-            },
-        ]
+        lens: LENS_DATA
     }
   }
-  render(){    
+  render(){
+    const { lens } = this.state   
     return (
       <Layout title="Lens">
         <LensStyle.Header>
@@ -164,7 +95,7 @@ class Lens extends React.Component {
                 <div label="All">
                     <MansoryLayout>
                         {
-                            this.state.data.map((item,index) => (
+                            lens.map((item,index) => (
                                 <MansoryItem key={index} index={index} item={item}/>
                             ))
                         }
@@ -173,7 +104,7 @@ class Lens extends React.Component {
                 <div label="Ray Ban">
                   <MansoryLayout>
                     {
-                      this.state.data.map((item, index) => item.type.includes('ray-ban') && (
+                      lens.map((item, index) => item.type.includes('ray-ban') && (
                           <MansoryItem key={index} index={index} item={item}/>
                       ))
                     }
@@ -182,7 +113,7 @@ class Lens extends React.Component {
                 <div label="Persol">
                   <MansoryLayout>
                     {
-                      this.state.data.map((item, index) => item.type.includes('persol') && (
+                      lens.map((item, index) => item.type.includes('persol') && (
                           <MansoryItem key={index} index={index} item={item}/>
                       ))
                     }
@@ -191,7 +122,7 @@ class Lens extends React.Component {
                 <div label="EdBlue">
                   <MansoryLayout>
                       {
-                        this.state.data.map((item, index) => item.type.includes('Edblue') && (
+                        lens.map((item, index) => item.type.includes('Edblue') && (
                             <MansoryItem key={index} index={index} item={item}/>
                       ))
                     }
@@ -200,7 +131,7 @@ class Lens extends React.Component {
                 <div label="Sight Relax">
                   <MansoryLayout>
                       {
-                        this.state.data.map((item, index) => item.type.includes('sight-relax') && (
+                        lens.map((item, index) => item.type.includes('sight-relax') && (
                             <MansoryItem key={index} index={index} item={item}/>
                       ))
                     }
@@ -220,5 +151,5 @@ class Lens extends React.Component {
   }
 }
 
-export default Lens
+export default LensPage
   

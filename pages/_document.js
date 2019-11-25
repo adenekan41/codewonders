@@ -1,4 +1,3 @@
-// See https://dev.to/aprietof/nextjs--styled-components-the-really-simple-guide----101c
 import Document, { Head, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";

@@ -3,6 +3,7 @@ import  { Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
 import FooterLink from '../components/Utils/footer-link';
+import { get_random } from '../components/Utils';
 
 const LandingStyle = {
   Header: styled.header`
@@ -179,10 +180,16 @@ const LandingStyle = {
     }
     button{
       font-size: 16px;
-      background: var(--mark);
+      background: var(--button-index);
       border: none;
       border-radius: 5px;
+      transition:all .4s ease;
       padding: 0px 9px;  
+      &:hover{
+        background: ${props => props.color};
+        color: #fff;
+        font-weight:600;
+      }
     }
   ` ,
  
@@ -190,8 +197,12 @@ const LandingStyle = {
 class Home extends React.Component {
   constructor(){
     super();
+    this.state = {
+      color: get_random(['#37609c', '#34c759', '#5856d6'])
+    }
   }
   render(){   
+    const {color} = this.state
     const copyText = (e) => {
       console.log(e)
       var textField = document.createElement('textarea')
@@ -204,7 +215,7 @@ class Home extends React.Component {
     
     return (
       <Layout>
-        <LandingStyle.Header>
+        <LandingStyle.Header {...{color}}>
           <PageWrapper>
             <h1 data-text="I'm Adenekan Wonderful" className="intro__text"><mark className="mark">I'm Adenekan Wonderful</mark></h1>
             <p> Frontend developer and javascript engineer, <Link href="/lens"><a aria-label="Go to Lens Page"><button>Photochromic Lens</button></a></Link> enthusiast, practicing minimalist, and <a href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" target="_blank" rel="noopener noreferrer" aria-label="View Music Playlist"><button>Pop Music { '&&' } Jazz lover</button></a> in search of flow.</p>
