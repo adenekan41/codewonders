@@ -177,9 +177,6 @@ const LandingStyle = {
       font-weight: 400;
       color: var(--article-color) !important;
     }
-    img{ 
-      height: 160px;
-    }
     button{
       font-size: 16px;
       background: var(--mark);
@@ -222,7 +219,7 @@ class Home extends React.Component {
             <h1 data-text="I'm Adenekan Wonderful" className="intro__text"><mark className="mark">I'm Adenekan Wonderful</mark></h1>
             <p> Frontend developer and javascript engineer, <Link href="/lens"><a><button>Photochromic Lens</button></a></Link> enthusiast, practicing minimalist, and <a href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" target="_blank" rel="noopener noreferrer"><button>Pop Music { '&&' } Jazz lover</button></a> in search of flow.</p>
 
-            <p>Working with my village people to design better ways to signin fast on websites. View my <Link href="/projects"><a><button>Projects</button></a></Link>, <a href="https://drive.google.com/file/d/1zwya25lVBKg4sw9tqFS84yz3gCn88eU0/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>Resumé</button></a>, <Link href="/contact"><a><button>Contact Me</button></a></Link>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText}>hellocodewonders@gmail.com</button>.</p>
+            <p>Working with my village people to design better ways to signin fast on websites. View my <Link href="/projects"><a><button>Projects</button></a></Link>, <a href="https://drive.google.com/file/d/1zwya25lVBKg4sw9tqFS84yz3gCn88eU0/view?usp=sharingC" target="_blank" rel="noopener noreferrer"><button>Resumé</button></a>, <Link href="/contact"><a><button>Contact Me</button></a></Link>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText}>hellocodewonders@gmail.com</button>.</p>
             <br/>
             <FooterLink goto="/about">See More</FooterLink>
             <br />

@@ -37,6 +37,7 @@ class Tab extends Component {
         <button
             className={className}
             onClick={onClick}
+            aria-label={`Open ${label}`}
         >
             {label}
         </button>
