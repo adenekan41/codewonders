@@ -38,7 +38,7 @@ export const Layout = ({ children, title = 'Home' }) => {
       <title>{`${title} | Adenekan Wonderful`}</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      <meta http-equiv="Content-Language" content="en"/>
+      <meta httpEquiv="Content-Language" content="en"/>
       <meta name="author" content="Adenekan Wonderful" />
       <meta name="keywords" content="codewonders , codewonders.us , start up design, software, code, tech, computer stuff, store, couture, html, css, javascript, websites, website development, web development, design, ui, ux , adenekan wonderful , code_wonders" />
       <meta property="og:locale" content="en-US" />
@@ -48,7 +48,8 @@ export const Layout = ({ children, title = 'Home' }) => {
       <meta name="twitter:card" content="summary_large_image"/>
       <meta name="twitter:site" content="@code_wonders"/>
       <meta name="twitter:image" content="https://i.ibb.co/jz5Qwx1/Group-7.png"/>
-      <meta name="og:title" content="Adenekan Wonderful"/><meta name="og:url" content="https://codewonders.us"/>
+      <meta name="og:title" content="Adenekan Wonderful"/>
+      <meta name="og:url" content="https://codewonders.us"/>
       <meta name="og:image" content="https://i.ibb.co/jz5Qwx1/Group-7.png"/>
       <meta name="apple-mobile-web-app-title" content="Codewonders"/>
       <meta name="msapplication-TileColor" content="#000000"/>
@@ -87,7 +88,7 @@ export const Layout = ({ children, title = 'Home' }) => {
       `}}/>
       <link rel="stylesheet" href="/css/style.css" />
     </Head>
-    <Header>
+    <Header {...{theme}}>
       <nav className="navbar navbar-expand-md bg-light navbar-light">
         <div className="container">
         <Link href='/'><a className="navbar-brand" aria-label="Adenekan Wonderful Home"><Logo /></a></Link>

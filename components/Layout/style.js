@@ -2,8 +2,10 @@ import styled, {createGlobalStyle, css} from 'styled-components'
 const theme = css`
   ${props => props.theme ? 
   `
+  // @desc Dark Theme
   :root {
     --bg: #090909;
+    --theme-amount: 1;
     --cw: #e1e1e1;
     --gray: #a8a8a8;
     --light-gray: #444;
@@ -12,16 +14,21 @@ const theme = css`
     --header-bg: rgba(19,20,21,0.8);
     --gray-alpha: rgba(0, 0, 0, 0.86);
     --token: #999;
-    --border-color: #2e2e2e;
+    --border-color: #3d3d3d;
+    --button-index:#1a1a1a;;
     --mark:#131313;
     --nav-link: rgba(255, 255, 255, 0.8);
 }
   ` : 
   `
+  // @desc Light Theme
   :root {
    --bg: #fff;
+   --button-index:#eeeeee;
    --cw: #000;
    --mark: #f6f6f6;
+   --theme-amount:0;
+   --border-color: #2e2e2e;
    --gray: #888;
    --light-gray: #dedede;
    --lighter-gray: #f5f5f5;
@@ -148,8 +155,8 @@ export const Header = styled.header`
         color: rgba(255, 255, 255, 0.5);
         border-color: transparent;
         &-icon{
-          ${props => props.theme ? 'filter: invert(1);' : ''};
-          
+          /* filter: ${props => props.theme ? 'invert(1)' : 'invert(0)'}; */
+          filter: invert(var(--theme-amount));
         }
     }
     .nav-item.hover__bottom {

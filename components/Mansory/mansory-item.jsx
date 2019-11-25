@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-const get_random = function (list) {
-    return list[Math.floor((Math.random()*list.length))];
-} 
+import { get_random } from '../Utils';
+
 const MansoryItemStyle = styled.div`
     margin: 0 0 1.5em;
     position: relative;
