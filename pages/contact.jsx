@@ -34,6 +34,7 @@ const AboutStyle = {
       font-size: 16px;
       background: var(--border-color);
       border: none;
+      color:var(--cw);
       border-radius: 5px;
       padding: 17px 40px;
       margin-bottom:3rem;

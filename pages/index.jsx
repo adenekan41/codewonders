@@ -29,14 +29,14 @@ const LandingStyle = {
       &::before {
         left: 2px;
         text-shadow: -1px 0 blue;
-        background: #fff;
+        background: var(--bg);
         animation: noise-anim-2 15s infinite linear alternate-reverse;
       }
       &::after {
         left: -2px;
         text-shadow: 3px 0 red;
         animation: noise-anim 2s infinite linear alternate-reverse;
-        background: #fff;
+        background: var(--bg);
       }
       @keyframes noise-anim {
         0% {
@@ -191,17 +191,7 @@ class Home extends React.Component {
   constructor(){
     super();
   }
-  render(){
-    // const startMouseEvent = (e) => {
-    //   let x = e.clientX, 
-    //   y = e.clientY
-    //   this.setState({x:x, y: y})
-    // }    
-    // const stopCapture = () => {
-    //   let x = 0, 
-    //   y = 0
-    //   this.setState({x:x, y: y})
-    // }    
+  render(){   
     const copyText = (e) => {
       console.log(e)
       var textField = document.createElement('textarea')
