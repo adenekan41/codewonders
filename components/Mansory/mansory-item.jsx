@@ -10,7 +10,7 @@ const MansoryItemStyle = styled.div`
     cursor: pointer;
     border-radius: 9px;
     object-fit: cover;
-    background-image: url(${props => props.item.imageUrl});
+    ${props => props.item.imageUrl ? `background-image: url(${props.item.imageUrl});` : '' }
     background-size: cover;
     background-color: #f5f5f5;
     background-position:center;
@@ -112,8 +112,8 @@ const MansoryItemStyle = styled.div`
 const MansoryItem = ({item, index}) => {
     return (
         <a href={item.link} target="_blank" style={{color: 'inherit',
-            textDecoration: 'none', display:'block'}}>
-            <MansoryItemStyle {...{item}} style={{height: get_random(['440px', '560px', '350px'])}}>
+            textDecoration: 'none', display:'block'}} rel="noopener noreferrer" title={item.title} aria-label={item.title + ' ' + item.description}>
+            <MansoryItemStyle {...{item}} style={{height: get_random(['400px', '454px', '310px'])}}>
                 <div>
                     <h3>{item.title}</h3> 
                     <p>{item.description}</p>

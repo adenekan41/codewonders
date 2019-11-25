@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout, { PageWrapper } from '../components/Layout/layout'
+import  {Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
 import {Date } from '../components/Layout/icons';
@@ -114,7 +114,7 @@ class Projects extends React.Component {
                 description: 'Manage All Your Logistics in One Place',
                 link: 'https://nesterpod.com',
                 imageUrl: 'https://i.ibb.co/nfnG7F6/Screen-Shot-2019-11-23-at-2-17-06-PM.png',
-                type:['others']
+                type:['others', 'project']
             },
             {
                 title:'Bloverse',
@@ -128,7 +128,7 @@ class Projects extends React.Component {
                 description: 'Learn a New Skill, Boost Your Career',
                 link: 'https://ngcareers.com',
                 imageUrl: 'https://i.ibb.co/ykQmbVw/Screen-Shot-2019-11-23-at-2-20-17-PM.png',
-                type:['others']
+                type:['others', 'project']
             },
             {
                 title:'Joblink',
@@ -145,6 +145,13 @@ class Projects extends React.Component {
                 type:['project']
             },
             {
+              title:'Liveizy',
+              description: 'Manage all your properties in one place',
+              link: 'https://liveizy.com',
+              imageUrl: 'https://i.ibb.co/PxwbV5m/Screen-Shot-2019-11-24-at-11-36-52-PM-1.png',
+              type:['others', 'project']
+          },
+            {
                 title:'Farmhub360',
                 description: 'Our goal is to help Customers to get fresh foods within the shortest possible time.',
                 link: 'https://farmhub360.com',
@@ -156,8 +163,9 @@ class Projects extends React.Component {
                 description: 'Helps business owners create an eCommerce platform for their businesses',
                 link: 'https://joblink4u.com',
                 imageUrl: 'https://i.ibb.co/q939Wxd/Screen-Shot-2019-11-23-at-2-27-08-PM.png',
-                type:['others']
+                type:['others', 'project']
             },
+           
             {
                 title:'Bellza',
                 description: 'Discover & access to on-demand Information leisure and utility over the world from your chrome.',
@@ -177,7 +185,7 @@ class Projects extends React.Component {
               description: 'Buy and Sell Anywhere with Zero Risk',
               link: 'https://atarapay.com',
               imageUrl: 'https://i.ibb.co/dk7bZ9L/Screen-Shot-2019-11-23-at-3-16-38-PM.png',
-              type:['portfolio']
+              type:['portfolio', 'project']
           },
           {
               title:'Iyanu',
@@ -193,6 +201,13 @@ class Projects extends React.Component {
             imageUrl: 'https://i.ibb.co/6ZHSPH0/Screen-Shot-2019-11-23-at-3-19-39-PM.png',
             type:['others']
         },
+        {
+          title:'Artisan Inc',
+          description: 'Artisan Is a platform for engaging workers all over the country with easy task and small platform to work with',
+          link: 'https://adenekan41.github.io/Artisan/',
+          imageUrl: 'https://i.ibb.co/6s4mcqc/Screen-Shot-2019-11-24-at-11-30-22-PM.png',
+          type:['others']
+      },
         {
           title:'Drum Root',
           description: 'A React Web App for Creating and Sharing Drum Loops.',
@@ -213,6 +228,13 @@ class Projects extends React.Component {
             link: 'https://npm.im/nodestorage.js',
             imageUrl: 'https://i.ibb.co/QPBqVL2/Group-12-2-1.png',
             type:['open-source', 'tools']
+        },
+        {
+          title:'Helix',
+          description: 'A minimal monochrome UI theme for Vscode',
+          link: 'https://github.com/adenekan41/Helix',
+          imageUrl: 'https://i.ibb.co/kxKY97y/Screen-Shot-2019-11-24-at-9-00-13-PM.png',
+          type:['tools']
         },
         {
             title:'Wondafu',

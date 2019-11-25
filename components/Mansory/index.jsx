@@ -18,7 +18,7 @@ const MansoryLayoutStyle = styled.div`
     column-count: 2;
   }
   @media only screen and (max-width: 1023px) and (min-width: 768px) {
-    column-count: 2;
+    column-count: 1;
   }
   
   @media only screen and (max-width: 767px) and (min-width: 540px) {

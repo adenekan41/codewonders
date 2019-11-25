@@ -1,7 +1,8 @@
+import React, { useState } from 'react';
 import Link from '../Utils/link'
 import Head from 'next/head'
 import { BodyStyling , Header, SocialMedia, BackLay} from './style'
-import { Moon, Twitter, Facebook, Linkedin, Github, Instagram } from './icons'
+import { Moon, Twitter, Facebook, Linkedin, Github, Instagram, Icon } from './icons'
 const links = [
   { href: 'https://zeit.co/now', label: 'ZEIT' },
   { href: 'https://github.com/zeit/next.js', label: 'GitHub' }
@@ -9,7 +10,12 @@ const links = [
   link.key = `nav-link-${link.href}-${link.label}`
   return link
 })
-export default ({ children, title = 'Home' }) => (
+export const Layout = ({ children, title = 'Home' }) => {
+  const [show, updateShow] = useState(false);
+  const Handleopen = () => {
+    updateShow(!show)
+  }
+  return (
   <div>
     <BodyStyling />
     <Head>
@@ -23,26 +29,27 @@ export default ({ children, title = 'Home' }) => (
         <div className="container">
         <Link href='/'><a className="navbar-brand" aria-label="Adenekan Wonderful Home"><img src="/img/cw..svg"/></a></Link>
 
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <button className="navbar-toggler" type="button" onClick={Handleopen}>
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="collapsibleNavbar">
+          <div className={`collapse navbar-collapse ${show && 'show'}`} id="collapsibleNavbar">
+            <span className="d-block d-md-none" onClick={Handleopen}><Icon /></span>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item hover__bottom">
-                <Link href='/' activeClassName='is-active'><a className="nav-link" aria-label="Go Home">Home</a></Link>
+                <Link href='/' activeClassName='is-active'><a className="nav-link" aria-label="Go Home" title="Home">Home</a></Link>
               </li>
               <li className="nav-item hover__bottom">
-                <Link href='/about' activeClassName='is-active'><a className="nav-link" aria-label="Go To About Page">About</a></Link>
+                <Link href='/about' activeClassName='is-active'><a className="nav-link" aria-label="Go To About Page" title="About">About</a></Link>
               </li>
               <li className="nav-item hover__bottom">
-                <Link href='/projects' activeClassName='is-active'><a className="nav-link" aria-label="Go To Projects Page">Projects</a></Link>
+                <Link href='/projects' activeClassName='is-active'><a className="nav-link" aria-label="Go To Projects Page" title="Projects">Projects</a></Link>
               </li>
               <li className="nav-item hover__bottom">
-                <Link href='/reading' activeClassName='is-active'><a className="nav-link" aria-label="Go To Reading Page">Articles</a></Link>
+                <Link href='/articles' activeClassName='is-active'><a className="nav-link" aria-label="Go To Articles Page" title="Articles">Articles</a></Link>
               </li>
               <li className="nav-item hover__bottom">
-                <Link href='/desgins' activeClassName='is-active'><a className="nav-link" aria-label="Go To Designs Page">Contact</a></Link>
+                <Link href='/contact' activeClassName='is-active'><a className="nav-link" aria-label="Go To Contacts Page" title="Contact">Contact</a></Link>
               </li>
               {/* <li className="nav-item pl-md-4">
                 <Link href='/' activeClassName='is-active'><a className="nav-link" aria-label="Turn On Dark Mood"><Moon/> </a></Link>
@@ -59,14 +66,15 @@ export default ({ children, title = 'Home' }) => (
      
     {children}
     <SocialMedia>
-      <a target="_blank" href="https://twitter.com/code_wonders" aria-label="Go To Adenekan Wonderful Twitter Page"><Twitter /></a>
-      <a target="_blank" href="https://www.facebook.com/AdenekanWonderful" aria-label="Go To Adenekan Wonderful Facebook Page"><Facebook /></a>
-      <a target="_blank" href="https://linkedin.com/in/codewonders" aria-label="Go To Adenekan Wonderful Linkedin Page"><Linkedin /></a>
-      <a target="_blank" href="https://github.com/adenekan41" aria-label="Go To Adenekan Wonderful Github Page"><Github /></a>
-      <a target="_blank" href="https://instagram.com/codewonders" aria-label="Go To Adenekan Wonderful Instagram Page"><Instagram /></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/code_wonders" aria-label="Go To Adenekan Wonderful Twitter Page" title="Twitter Page"><Twitter /></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/AdenekanWonderful" aria-label="Go To Adenekan Wonderful Facebook Page" title="Facebook Page"><Facebook /></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/codewonders" aria-label="Go To Adenekan Wonderful Linkedin Page" title="Linkedin Page"><Linkedin /></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/adenekan41" aria-label="Go To Adenekan Wonderful Github Page" title="Github Page"><Github /></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/codewonders" aria-label="Go To Adenekan Wonderful Instagram Page" title="Instagram Page"><Instagram /></a>
     </SocialMedia>
   </div>
 )
+}
 
 export const PageWrapper = ({children}) => {
   return (
