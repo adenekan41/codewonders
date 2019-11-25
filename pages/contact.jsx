@@ -84,7 +84,7 @@ class About extends React.Component {
                             <textarea name="message" id="message" rows="5" className="form-control">Message</textarea>
                         </div>
                     </div>
-                    <button className="btn btn-default" type="submit">Send Message</button>
+                    <button className="btn btn-default" type="submit" aria-label="Send Message">Send Message</button>
                 </form>
           </PageWrapper>
         </AboutStyle.Header>

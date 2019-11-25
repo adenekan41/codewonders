@@ -1,35 +1,6 @@
 import styled, {createGlobalStyle} from 'styled-components'
 export const BodyStyling = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
-@font-face{
-  font-family:'Blorado';
-  src:url("/fonts/BRFirmaCW-Bold.woff2") format("woff2");
-  font-weight:bold;
-  font-display:fallback;
-  font-style:normal
-}
-
-@font-face{
-  font-family:'Blorado';
-  src:url("/fonts/BRFirmaCW-Regular.woff2") format("woff2");
-  font-weight:normal;
-  font-display:fallback;
-  font-style:normal
-}
-@font-face{
-  font-family:'Blorado';
-  src:url("/fonts/BRFirmaCW-Medium.woff2") format("woff2");
-  font-weight:500;
-  font-display:fallback;
-  font-style:normal
-}
-@font-face{
-  font-family:'Blorado';
-  src:url("/fonts/BRFirmaCW-SemiBold.woff2") format("woff2");
-  font-weight:600;
-  font-display:fallback;
-  font-style:normal
-}
 :root {
    --bg: #fff;
    --cw: #000;
@@ -166,7 +137,7 @@ export const Header = styled.header`
       }
     }
     .nav-item > a {
-        padding: 0 10px !important;
+        padding: 0 15px !important;
         font-size: 15px;
         cursor:pointer;
     }

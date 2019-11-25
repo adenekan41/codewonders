@@ -107,17 +107,17 @@ class About extends React.Component {
            <h4>My Education.</h4>
             <ul className="timeline">
                 <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.plusacumen.org/courses/introduction-human-centered-design">Human Centered Design 101. <small>Acumen</small></a>
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Open Link" href="https://www.plusacumen.org/courses/introduction-human-centered-design">Human Centered Design 101. <small>Acumen</small></a>
                     <a className="float-right"><Date /> <b>2017 - 2018</b></a>
                     <p>This is an intensive, hands-on learning experience that will challenge you to get out of your chair and out into the real world to talk to people and test your ideas. You’ll leave this experience equipped and energized to apply the human-centered design process to challenges across industries, sectors, and geographies to generate breakthrough ideas.</p>
                 </li>
                 <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/">Data Structure And Algorithm. <small>Udemy</small></a>
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Open Link" href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/">Data Structure And Algorithm. <small>Udemy</small></a>
                     <a href="#" className="float-right"><Date /> <b>2019</b></a>
                     <p>Many developers who are "self taught", feel that one of the main disadvantages they face compared to college educated graduates in computer science is the fact that they don't have knowledge about algorithms, data structures and the notorious Big-O Notation</p>
                 </li> 
                 <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.edx.org/course/adaptive-leadership-in-development">Adaptive Leadership. <small>edX</small></a>
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Open Link" href="https://www.edx.org/course/adaptive-leadership-in-development">Adaptive Leadership. <small>edX</small></a>
                     <a href="#" className="float-right"><Date /> <b>2019</b></a>
                     <p>This introductory course helps you identify and make progress on a leadership challenge in your own life, team, or community. You’ll apply the tools and techniques of Adaptive Leadership, a practical framework developed at Harvard Kennedy School of Government for leading change, particularly during times of uncertainty or when there are no easy answers.  </p>
                 </li>
@@ -133,13 +133,13 @@ class About extends React.Component {
            <h4>My Playlist.</h4>
             <ul className="timeline">
                 <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V">Codewonders. <small>Spotify</small></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" className="float-right" style={{fontSize: '15px',textDecoration: 'underline',}}>View Playlist</a>
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Open Link" href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V">Codewonders. <small>Spotify</small></a>
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Open Link" href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" className="float-right" style={{fontSize: '15px',textDecoration: 'underline',}}>View Playlist</a>
                     <p>This is an intensive, energizing songs list that helps me through the day and inspires generate breakthrough ideas.</p>
                 </li>
                 <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS">Chill Lofi Study Beats <small>Spotify</small></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS" className="float-right" style={{fontSize: '15px',textDecoration: 'underline',}}>View Playlist</a>
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Open Link" href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS">Chill Lofi Study Beats <small>Spotify</small></a>
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Open Link" href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS" className="float-right" style={{fontSize: '15px',textDecoration: 'underline',}}>View Playlist</a>
                     <p>The perfect study beats, twenty four seven. with over 178 SONGS</p>
                 </li> 
             </ul>
