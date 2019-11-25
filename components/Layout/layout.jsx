@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from '../Utils/link'
 import Head from 'next/head'
 import { BodyStyling , Header, SocialMedia, BackLay} from './style'
-import { Moon, Twitter, Facebook, Linkedin, Github, Instagram, Icon } from './icons'
+import { Moon, Twitter, Facebook, Linkedin, Github, Instagram, Icon, Logo } from './icons'
+import { loadState, saveState, clearState } from '../Utils/localstorage';
 const links = [
   { href: 'https://zeit.co/now', label: 'ZEIT' },
   { href: 'https://github.com/zeit/next.js', label: 'GitHub' }
@@ -12,12 +13,27 @@ const links = [
 })
 export const Layout = ({ children, title = 'Home' }) => {
   const [show, updateShow] = useState(false);
+  const [theme, setTheme] = useState(loadState() ? true : false)
   const Handleopen = () => {
     updateShow(!show)
   }
+  const darkMode = () => {
+    setTheme(!theme)
+  }
+  const loadTheme = () => {
+    if(theme == false){
+      clearState()
+    }else{
+      saveState(1)
+    }
+  }
+  useEffect(() => {
+    loadTheme()
+  },[loadTheme])
+
   return (
   <div>
-    <BodyStyling />
+    <BodyStyling {...{theme}}/>
     <Head>
       <title>{`${title} | Adenekan Wonderful`}</title>
       <meta charSet='utf-8' />
@@ -74,7 +90,7 @@ export const Layout = ({ children, title = 'Home' }) => {
     <Header>
       <nav className="navbar navbar-expand-md bg-light navbar-light">
         <div className="container">
-        <Link href='/'><a className="navbar-brand" aria-label="Adenekan Wonderful Home"><img alt="Adenekan Wonderful" src="/img/cw..svg"/></a></Link>
+        <Link href='/'><a className="navbar-brand" aria-label="Adenekan Wonderful Home"><Logo /></a></Link>
 
           <button className="navbar-toggler" type="button" onClick={Handleopen} aria-label="Open Button Toggle">
             <span className="navbar-toggler-icon"></span>
@@ -99,7 +115,7 @@ export const Layout = ({ children, title = 'Home' }) => {
                 <Link prefetch href='/contact' activeClassName='is-active'><a className="nav-link" aria-label="Go To Contacts Page" title="Contact">Contact</a></Link>
               </li>
               <li className="nav-item pl-md-3">
-                <Link href='/' activeClassName='is-active'><a className="nav-link" aria-label="Turn On Dark Mood"><Moon/> </a></Link>
+                <Link href=''><a className="nav-link" aria-label="Turn On Dark Mood" onClick={darkMode}><Moon/></a></Link>
               </li>
             </ul>
             

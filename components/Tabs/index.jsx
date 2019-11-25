@@ -33,7 +33,7 @@ const TabStyle = styled.div`
         color: var(--gray);
         &.tab-list-active {
             font-weight: 900 !important;
-            color: var(--bw);
+            color: var(--cw);
             background: var(--mark);
             padding: 5px 22px;
         }

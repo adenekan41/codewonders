@@ -1,7 +1,24 @@
-import styled, {createGlobalStyle} from 'styled-components'
-export const BodyStyling = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
-:root {
+import styled, {createGlobalStyle, css} from 'styled-components'
+const theme = css`
+  ${props => props.theme ? 
+  `
+  :root {
+    --bg: #090909;
+    --cw: #e1e1e1;
+    --gray: #a8a8a8;
+    --light-gray: #444;
+    --lighter-gray: #222;
+    --article-color: #c6c6c6;
+    --header-bg: rgba(19,20,21,0.8);
+    --gray-alpha: rgba(255,255,255,0.3);
+    --token: #999;
+    --border-color: #2e2e2e;
+    --mark:#131313;
+    --nav-link: rgba(255, 255, 255, 0.8);
+}
+  ` : 
+  `
+  :root {
    --bg: #fff;
    --cw: #000;
    --mark: #f6f6f6;
@@ -13,6 +30,19 @@ export const BodyStyling = createGlobalStyle`
    --gray-alpha: rgba(19,20,21,0.3);
    --token: #666;
    --border-color: #e4e4e4;
+   --nav-link: rgba(0,0,0,.5);
+}
+  `}
+`
+export const BodyStyling = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+${theme}
+@media (prefers-color-scheme: dark) {
+  ${theme}
+}
+
+@media (prefers-color-scheme: light) {
+  ${theme}
 }
 
 ::selection {
@@ -47,7 +77,7 @@ export const BodyStyling = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box; 
-  cursor: url("/cursor.png"), auto;
+  cursor: url(${props => props.theme ? "/wcursor.png" : "/cursor.png"}), auto;
 }
 :global(body) {
     margin: 0;
@@ -72,7 +102,14 @@ body{
     -moz-osx-font-smoothing:grayscale;
     -webkit-font-smoothing: antialiased;
 }
-
+svg{
+  fill: var(--article-color);
+  &.logo__section{
+    path{
+      fill: var(--cw);
+    }
+  }
+}
 a, h1, h2, h3, h4, h5, h6, p, button, input[type=text], input[type=date], input[type=password], input[type=value], b, label, td, select, textarea, th {
   font-family: "Blorado", sans-serif;
   text-rendering: geometricPrecision;
@@ -97,11 +134,15 @@ mark.mark {
   position: relative;
   background-size: 100% .3em;
 }
+
 `
 export const Header = styled.header`
     padding: 50px 0; 
     nav {
       background: transparent !important;
+      .nav-link {
+          color: var(--nav-link) !important;
+      }
     }
     .navbar-toggler {
         color: rgba(255, 255, 255, 0.5);
@@ -141,7 +182,7 @@ export const Header = styled.header`
         font-size: 15px;
         cursor:pointer;
     }
-    .is-active{
+    #collapsibleNavbar .is-active{
       font-weight:900;
       color: var(--cw) !important;
     }
@@ -372,7 +413,7 @@ export const BackLay = styled.div`
     z-index: -1;
     color: var(--mark);
     bottom: 0px;
-    opacity: 0.85;
+    opacity: 1;
     transition: all .8s ease;
     left: -4rem;
   }
