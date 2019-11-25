@@ -41,6 +41,7 @@ export const BodyStyling = createGlobalStyle`
    --header-bg: rgba(255,255,255,0.8);
    --gray-alpha: rgba(19,20,21,0.3);
    --token: #666;
+   --border-color: #e4e4e4;
 }
 
 ::selection {
@@ -173,14 +174,154 @@ export const Header = styled.header`
       font-weight:900;
       color: var(--cw) !important;
     }
+    .navbar-border-collapse.show{
+        background: red;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 99;
+        height: 84vh;
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+   
     @media( max-width : 585px ) {
       padding:20px 0 0;
+      .navbar-collapse{
+        background: white;
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        animation-name:opacitys;
+        transition:all 1s ease;
+        animation-duration:1s;
+        left: 0;
+        bottom: 0;
+
+        height: 100%;
+        svg{
+          position: absolute;
+          right: 60px;
+          top: 60px;
+          cursor: pointer;
+        }
+        ul {
+          display: flex;
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          li{
+            margin-bottom: 2rem;
+            .nav-link{
+              font-size: 20px;
+              font-weight: 800;
+              text-transform: uppercase;
+            }
+          }
+        }
+        
+      }
+      @keyframes opacity {
+        from{
+          opacity:0.5;
+        }
+        from{
+          opacity:1;
+        }
+      }
     }
-    @media( max-width : 989px ) {
+    @media( max-width : 762px ) {
       padding:20px 0 0;
+      .navbar-collapse{
+        background: white;
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        transition:all 1s ease;
+        left: 0;
+        bottom: 0;
+        animation-name:opacitys;
+        animation-duration:1s;
+        height: 100%;
+        svg{
+          position: absolute;
+          right: 60px;
+          top: 60px;
+          cursor: pointer;
+        }
+        ul {
+          display: flex;
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          li{
+            margin-bottom: 2rem;
+            .nav-link{
+              font-size: 20px;
+              font-weight: 800;
+              text-transform: uppercase;
+            }
+          }
+        }
+        
+      }
+      @keyframes opacity {
+        from{
+          opacity:0.5;
+        }
+        from{
+          opacity:1;
+        }
+      }
     }
     @media( max-width : 220px ){
       padding:20px 0 0;
+      .navbar-collapse{
+        background: white;
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        transition:all 1s ease;
+        animation-name:opacitys;
+        animation-duration:1s;
+        height: 100%;
+        svg{
+          position: absolute;
+          right: 60px;
+          top: 60px;
+          cursor: pointer;
+        }
+        ul {
+          display: flex;
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          li{
+            margin-bottom: 2rem;
+            .nav-link{
+              font-size: 20px;
+              font-weight: 800;
+              text-transform: uppercase;
+            }
+          }
+        }
+        
+      }
+      @keyframes opacitys {
+        from{
+          opacity:0.5;
+        }
+        from{
+          opacity:1;
+        }
+      }
     }
 `
 export const SocialMedia = styled.div` 

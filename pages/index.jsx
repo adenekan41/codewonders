@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout, { PageWrapper } from '../components/Layout/layout'
+import  { Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
 import FooterLink from '../components/Utils/footer-link';
@@ -220,9 +220,9 @@ class Home extends React.Component {
         <LandingStyle.Header>
           <PageWrapper>
             <h1 data-text="I'm Adenekan Wonderful" className="intro__text"><mark className="mark">I'm Adenekan Wonderful</mark></h1>
-            <p> Frontend developer and javascript engineer, <Link href="/"><a><button>Photochromic Glasses</button></a></Link> enthusiast, practicing minimalist, and <a href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" target="_blank"><button>Pop Music { '&&' } Jazz lover</button></a> in search of flow.</p>
+            <p> Frontend developer and javascript engineer, <Link href="/lens"><a><button>Photochromic Lens</button></a></Link> enthusiast, practicing minimalist, and <a href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" target="_blank" rel="noopener noreferrer"><button>Pop Music { '&&' } Jazz lover</button></a> in search of flow.</p>
 
-            <p>Working with my village people to design better ways to signin fast on websites. View my <a href="https://twitter.com"><button>Projects</button></a>, <a href="https://docs.google.com/document/d/1Ll91-P5r9gIaYh76tBLd1XH0nxIIzskJYt2gfJ29svc/edit?usp=sharing"><button>Resumé</button></a>, <a href="https://twitter.com"><button>Contact Me</button></a>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText}>hellocodewonders@gmail.com</button>.</p>
+            <p>Working with my village people to design better ways to signin fast on websites. View my <Link href="/projects"><a><button>Projects</button></a></Link>, <a href="https://drive.google.com/file/d/1zwya25lVBKg4sw9tqFS84yz3gCn88eU0/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button>Resumé</button></a>, <Link href="/contact"><a><button>Contact Me</button></a></Link>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText}>hellocodewonders@gmail.com</button>.</p>
             <br/>
             <FooterLink goto="/about">See More</FooterLink>
             <br />

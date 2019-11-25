@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout, { PageWrapper } from '../components/Layout/layout'
+import {Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
 import {Date } from '../components/Layout/icons';
@@ -107,17 +107,17 @@ class About extends React.Component {
            <h4>My Education.</h4>
             <ul className="timeline">
                 <li>
-                    <a target="_blank" href="https://www.plusacumen.org/courses/introduction-human-centered-design">Human Centered Design 101. <small>Acumen</small></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.plusacumen.org/courses/introduction-human-centered-design">Human Centered Design 101. <small>Acumen</small></a>
                     <a className="float-right"><Date /> <b>2017 - 2018</b></a>
                     <p>This is an intensive, hands-on learning experience that will challenge you to get out of your chair and out into the real world to talk to people and test your ideas. You’ll leave this experience equipped and energized to apply the human-centered design process to challenges across industries, sectors, and geographies to generate breakthrough ideas.</p>
                 </li>
                 <li>
-                    <a target="_blank" href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/">Data Structure And Algorithm. <small>Udemy</small></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/">Data Structure And Algorithm. <small>Udemy</small></a>
                     <a href="#" className="float-right"><Date /> <b>2019</b></a>
                     <p>Many developers who are "self taught", feel that one of the main disadvantages they face compared to college educated graduates in computer science is the fact that they don't have knowledge about algorithms, data structures and the notorious Big-O Notation</p>
                 </li> 
                 <li>
-                    <a target="_blank" href="https://www.edx.org/course/adaptive-leadership-in-development">Adaptive Leadership. <small>edX</small></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.edx.org/course/adaptive-leadership-in-development">Adaptive Leadership. <small>edX</small></a>
                     <a href="#" className="float-right"><Date /> <b>2019</b></a>
                     <p>This introductory course helps you identify and make progress on a leadership challenge in your own life, team, or community. You’ll apply the tools and techniques of Adaptive Leadership, a practical framework developed at Harvard Kennedy School of Government for leading change, particularly during times of uncertainty or when there are no easy answers.  </p>
                 </li>
@@ -130,27 +130,28 @@ class About extends React.Component {
           </PageWrapper>
           <br/><br/>
           <PageWrapper>
-          <h4>My Volunteer Experience.</h4>
+           <h4>My Playlist.</h4>
             <ul className="timeline">
                 <li>
-                    <a target="_blank" href="https://freecodecamp.com">Mentor. <small>Freecodecamp</small></a>
-                    <a className="float-right"><Date /> <b>2018 - Present</b></a>
-                    <p>Helped set goals and work toward achieving them by educating four mentees about various resources available on campus, as the need arises Served as a positive social and academic role-model by supporting mentees with their involvement on campus Provided an environment that supports constructive feedback on performance</p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V">Codewonders. <small>Spotify</small></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V" className="float-right" style={{fontSize: '15px',textDecoration: 'underline',}}>View Playlist</a>
+                    <p>This is an intensive, energizing songs list that helps me through the day and inspires generate breakthrough ideas.</p>
                 </li>
                 <li>
-                    <a href="https://jobs.google.com" target="_blank">Local Guide. <small>google</small></a>
-                    <a className="float-right"><Date /> <b>2019</b></a>
-                    <p>I spoke and introduced the user to the newly on-boarded product at jobs at google here. also Increased revenue by designing eye-catching displays and utilizing selling techniques to connect with potential customers, thereby closing sales.</p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS">Chill Lofi Study Beats <small>Spotify</small></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS" className="float-right" style={{fontSize: '15px',textDecoration: 'underline',}}>View Playlist</a>
+                    <p>The perfect study beats, twenty four seven. with over 178 SONGS</p>
                 </li> 
+            </ul>
+          </PageWrapper>
+          <br/><br/>
+          <PageWrapper>
+           <h4>My Photochromic Lens.</h4>
+            <ul className="timeline">
                 <li>
-                    <a href="https://developers.google.com">Programmes Developer. <small>Google Developers</small></a>
-                    <a className="float-right"><Date /> <b>2019 - Present</b></a>
-                    <p>Developer Student Clubs train thousands of student developers globally and work with their communities to solve real-life problems. University students who lead a DSC gain access to Google technology, events, and mentorship while training their local community through fun meetups, project building activities, and global competitions.</p>
-                </li>
-                <li>
-                    <a href="https://forloop.africa" target="_blank">Media Specialist. <small>Forloop Africa</small></a>
-                    <a href="#" className="float-right"><Date /> <b>2018 - Present</b></a>
-                    <p>A community of passionate software developers and enthusiasts across Africa.</p>
+                    <Link href="/lens"><a>Adenekan's Collection. <small>©Adenekan</small></a></Link>
+                    <Link href="/lens"><a className="float-right" style={{fontSize: '15px',textDecoration: 'underline',}}>Visit Page</a></Link>
+                    <p>This is an intensive, curation of the photochromic lenses that standout and the ones that i personally love, NOTE this is just by preference actually.</p>
                 </li>
             </ul>
           </PageWrapper>
