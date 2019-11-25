@@ -10,7 +10,7 @@ const theme = css`
     --lighter-gray: #222;
     --article-color: #c6c6c6;
     --header-bg: rgba(19,20,21,0.8);
-    --gray-alpha: rgba(255,255,255,0.3);
+    --gray-alpha: rgba(0, 0, 0, 0.86);
     --token: #999;
     --border-color: #2e2e2e;
     --mark:#131313;
@@ -27,7 +27,7 @@ const theme = css`
    --lighter-gray: #f5f5f5;
    --article-color: #464646;
    --header-bg: rgba(255,255,255,0.8);
-   --gray-alpha: rgba(19,20,21,0.3);
+   --gray-alpha: rgba(255,255,255,0.86);
    --token: #666;
    --border-color: #e4e4e4;
    --nav-link: rgba(0,0,0,.5);
@@ -146,7 +146,10 @@ export const Header = styled.header`
     }
     .navbar-toggler {
         color: rgba(255, 255, 255, 0.5);
-        border-color: rgba(255, 255, 255, 0.1);
+        border-color: transparent;
+        .icon{
+          ${props => props.theme ? 'filter: invert(1);' : ''}
+        }
     }
     .nav-item.hover__bottom {
       display: inline-block;
@@ -202,7 +205,7 @@ export const Header = styled.header`
     @media( max-width : 585px ) {
       padding:20px 0 0;
       .navbar-collapse{
-        background: white;
+        background: var(--bg);
         position: fixed;
         z-index: 9999;
         width: 100%;
@@ -232,6 +235,9 @@ export const Header = styled.header`
               font-weight: 800;
               text-transform: uppercase;
             }
+            &:nth-of-type(6) svg{
+              left:60px !important;
+            }
           }
         }
         
@@ -248,7 +254,7 @@ export const Header = styled.header`
     @media( max-width : 762px ) {
       padding:20px 0 0;
       .navbar-collapse{
-        background: white;
+        background: var(--bg);
         position: fixed;
         z-index: 9999;
         width: 100%;
@@ -277,6 +283,9 @@ export const Header = styled.header`
               font-weight: 800;
               text-transform: uppercase;
             }
+            &:nth-of-type(6) svg{
+              left:60px !important;
+            }
           }
         }
         
@@ -293,7 +302,7 @@ export const Header = styled.header`
     @media( max-width : 220px ){
       padding:20px 0 0;
       .navbar-collapse{
-        background: white;
+        background: var(--bg);
         position: fixed;
         z-index: 9999;
         width: 100%;
@@ -321,6 +330,9 @@ export const Header = styled.header`
               font-size: 20px;
               font-weight: 800;
               text-transform: uppercase;
+            }
+            &:nth-of-type(6) svg{
+              left:60px !important;
             }
           }
         }
@@ -365,7 +377,7 @@ export const SocialMedia = styled.div`
   }
   @media( max-width : 585px ) {
     position: fixed;
-    background: rgba(255,255,255,0.86) !important;
+    background: var(--gray-alpha) !important;
     width: 100% !important;
     display: flex;
     padding:0 !important;
@@ -378,7 +390,7 @@ export const SocialMedia = styled.div`
   }
   @media( max-width : 989px ) {
     position: fixed;
-    background: rgba(255,255,255,0.86) !important;
+    background: var(--gray-alpha) !important;
     width: 100% !important;
     display: flex;
     padding:0 !important;
@@ -391,7 +403,7 @@ export const SocialMedia = styled.div`
   }
   @media( max-width : 220px ){
     position: fixed;
-    background: rgba(255,255,255,0.86) !important;
+    background: var(--gray-alpha) !important;
     width: 100% !important;
     display: flex;
     padding:0 !important;
