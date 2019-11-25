@@ -147,8 +147,9 @@ export const Header = styled.header`
     .navbar-toggler {
         color: rgba(255, 255, 255, 0.5);
         border-color: transparent;
-        .icon{
-          ${props => props.theme ? 'filter: invert(1);' : ''}
+        &-icon{
+          ${props => props.theme ? 'filter: invert(1);' : ''};
+          
         }
     }
     .nav-item.hover__bottom {
