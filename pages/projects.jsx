@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import  {Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
-import FooterLink from '../components/Utils/footer-link';
+import FooterLink from '../components/Layout/footer-link';
 import Tabs from '../components/Tabs';
 import MansoryLayout from '../components/Mansory';
 import MansoryItem from '../components/Mansory/mansory-item';
-import PROJECTS_DATA from '../components/CardData/projects';
+import PROJECTS_DATA from '../components/AppData/projects';
+import { ProjectsContext } from '../components/Utils/context';
 
 const ProjectsStyle = {
   Header: styled.header`
@@ -68,15 +69,8 @@ const ProjectsStyle = {
     
    `
 }
-class Projects extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-        projects: PROJECTS_DATA
-    }
-  }
-  render(){    
-    const { projects } = this.state
+const Projects = () => {   
+    const projects = useContext(ProjectsContext)
     return (
       <Layout title="Project">
         <ProjectsStyle.Header>
@@ -139,7 +133,7 @@ class Projects extends React.Component {
         </ProjectsStyle.SkillSection>
       </Layout> 
     )
-  }
+
 }
 
 export default Projects

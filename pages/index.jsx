@@ -2,7 +2,7 @@ import React from 'react'
 import  { Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
-import FooterLink from '../components/Utils/footer-link';
+import FooterLink from '../components/Layout/footer-link';
 import { get_random } from '../components/Utils';
 
 const LandingStyle = {

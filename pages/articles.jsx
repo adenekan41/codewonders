@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import  {Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
-import FooterLink from '../components/Utils/footer-link';
+import FooterLink from '../components/Layout/footer-link';
 import Tabs from '../components/Tabs';
 import MansoryLayout from '../components/Mansory';
 import MansoryItem from '../components/Mansory/mansory-item';
-import ARTICLE_DATA from '../components/CardData/articles';
+import { ArticleContext } from '../components/Utils/context';
 
 const ArticlesStyle = {
   Header: styled.header`
@@ -68,15 +68,8 @@ const ArticlesStyle = {
     
   `
 }
-class Articles extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      articles: ARTICLE_DATA
-    }
-  }
-  render(){ 
-    const {articles} = this.state  
+const Articles = () => {
+    const articles = useContext(ArticleContext)
     return (
       <Layout title="Articles">
         <ArticlesStyle.Header>
@@ -130,7 +123,6 @@ class Articles extends React.Component {
         </ArticlesStyle.SkillSection>
       </Layout> 
     )
-  }
 }
 
 export default Articles

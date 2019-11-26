@@ -3,7 +3,7 @@ import {Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
 import {Date } from '../components/Layout/icons';
-import FooterLink from '../components/Utils/footer-link';
+import FooterLink from '../components/Layout/footer-link';
 
 const AboutStyle = {
   Header: styled.header`
@@ -29,6 +29,9 @@ const AboutStyle = {
         resize: none;
         padding: 24px 21px !important;
         border-color: var(--border-color) !important;
+        &:focus{
+          background-color: var(--bg);
+        }
     }
     button{
       font-size: 16px;
@@ -82,7 +85,7 @@ class About extends React.Component {
                             <input type="text" name="email" id="email" className="form-control" placeholder="Email" />
                         </div>
                         <div className="field">
-                            <textarea name="message" id="message" rows="5" className="form-control">Message</textarea>
+                            <textarea name="message" id="message" rows="5" className="form-control" placeholder="Message"></textarea>
                         </div>
                     </div>
                     <button className="btn btn-default" type="submit" aria-label="Send Message">Send Message</button>
