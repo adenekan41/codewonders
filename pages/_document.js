@@ -33,8 +33,6 @@ export default class MyDocument extends Document {
             <meta name="og:url" content="https://codewonders.us"/>
             <meta name="og:image" content="https://i.ibb.co/jz5Qwx1/Group-7.png"/>
             <meta name="apple-mobile-web-app-title" content={`Adenekan Wonderful`}/>
-            <meta name="msapplication-TileColor" content="#000000"/>
-            <meta name="theme-color" content="#000000"/>
             <meta name="next-head-count" content="21"/>
             <style dangerouslySetInnerHTML={{__html: `
                 @font-face{

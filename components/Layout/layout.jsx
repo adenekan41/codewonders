@@ -14,6 +14,8 @@ export const Layout = ({ children , title="Home"}) => {
     <BodyStyling {...{theme}}/>
     <Helmet>
       <title>{`${title} | Adenekan Wonderful`}</title>
+      <meta name="msapplication-TileColor" content={`${theme ? '#000000' : '#FFFFFF'}`}/>
+      <meta name="theme-color" content={`${theme ? '#000000' : '#FFFFFF'}`}/>
     </Helmet>
     <Navbar />
     <BackLay>
