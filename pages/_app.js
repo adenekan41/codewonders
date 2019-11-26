@@ -25,7 +25,6 @@ export default class MyApp extends App {
     }
     setTheme = () => {
         const {theme} = this.state
-        this.closeShow()
         this.setState({theme: !theme})
     }
     closeShow = () => {

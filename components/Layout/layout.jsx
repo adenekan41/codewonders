@@ -4,18 +4,28 @@ import { Twitter, Facebook, Linkedin, Github, Instagram} from './icons'
 import Navbar from './navbar';
 import Helmet from 'react-helmet'
 import AppContext from '../Utils/context';
+import { initGA, logPageView } from '../Utils/analytics'
 export const Layout = ({ children , title="Home"}) => {
   const {theme, loadTheme} = useContext(AppContext)
+  const logPage = () => {
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
+  }
   useEffect(() => {
+    logPage()
     loadTheme()
-  },[loadTheme])
+  },[loadTheme, logPage])
   return (
   <div>
     <BodyStyling {...{theme}}/>
     <Helmet>
       <title>{`${title} | Adenekan Wonderful`}</title>
       <meta name="msapplication-TileColor" content={`${theme ? '#000000' : '#FFFFFF'}`}/>
-      <meta name="theme-color" content={`${theme ? '#000000' : '#FFFFFF'}`}/>
+      <meta name="theme-color" content={`${theme ? '#000000' : '#FFFFFF'}`}
+      />
     </Helmet>
     <Navbar />
     <BackLay>
