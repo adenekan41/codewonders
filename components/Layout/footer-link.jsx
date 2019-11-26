@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { IconRight } from '../Layout/icons'
+import { IconRight } from './icons'
 import styled from 'styled-components'
 const FooterStyle = styled.div`
 p{

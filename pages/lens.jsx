@@ -1,13 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import  {Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
 import {Date } from '../components/Layout/icons';
-import FooterLink from '../components/Utils/footer-link';
+import FooterLink from '../components/Layout/footer-link';
 import Tabs from '../components/Tabs';
 import MansoryLayout from '../components/Mansory';
 import MansoryItem from '../components/Mansory/mansory-item';
-import LENS_DATA from '../components/CardData/lens';
+import LENS_DATA from '../components/AppData/lens';
+import { LensContext } from '../components/Utils/context';
 
 const LensStyle = {
   Header: styled.header`
@@ -77,15 +78,8 @@ const LensStyle = {
     
    `
 }
-class LensPage extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-        lens: LENS_DATA
-    }
-  }
-  render(){
-    const { lens } = this.state   
+const LensPage = () => {
+    const lens = useContext(LensContext)
     return (
       <Layout title="Lens">
         <LensStyle.Header>
@@ -148,7 +142,6 @@ class LensPage extends React.Component {
         </LensStyle.SkillSection>
       </Layout> 
     )
-  }
 }
 
 export default LensPage

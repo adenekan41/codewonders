@@ -3,7 +3,7 @@ import {Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
 import Link from 'next/link' 
 import {Date } from '../components/Layout/icons';
-import FooterLink from '../components/Utils/footer-link';
+import FooterLink from '../components/Layout/footer-link';
 
 const AboutStyle = {
   Header: styled.header`
