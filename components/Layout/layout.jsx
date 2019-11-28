@@ -5,8 +5,10 @@ import Navbar from './navbar';
 import Helmet from 'react-helmet'
 import AppContext from '../Utils/context';
 import { initGA, logPageView } from '../Utils/analytics'
+
 export const Layout = ({ children , title="Home"}) => {
   const {theme, loadTheme} = useContext(AppContext)
+
   const logPage = () => {
     if (!window.GA_INITIALIZED) {
       initGA()
@@ -14,10 +16,13 @@ export const Layout = ({ children , title="Home"}) => {
     }
     logPageView()
   }
+
   useEffect(() => {
     logPage()
     loadTheme()
   },[loadTheme, logPage])
+
+
   return (
   <div>
     <BodyStyling {...{theme}}/>
@@ -42,6 +47,7 @@ export const Layout = ({ children , title="Home"}) => {
   </div>
 )
 }
+
 
 export const PageWrapper = ({children}) => {
   return (

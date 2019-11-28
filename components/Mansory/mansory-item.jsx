@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { get_random } from '../Utils';
+import Image from '../Utils/Image';
 
 const MansoryItemStyle = styled.div`
     margin: 0 0 1.5em;
@@ -9,9 +10,8 @@ const MansoryItemStyle = styled.div`
     cursor: pointer;
     border-radius: 9px;
     object-fit: cover;
-    ${props => props.item.imageUrl ? `background-image: url(${props.item.imageUrl});` : '' }
-    background-size: cover;
-    background-color: #f5f5f5;
+    /* ${props => props.item.imageUrl ? `background-image: url(${props.item.imageUrl});` : '' } */
+    background-color: var(--button-index);
     background-position:center;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -20,7 +20,14 @@ const MansoryItemStyle = styled.div`
     align-items:flex-end;
     border-radius: 9px;
     break-inside: avoid;
- 
+    img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
     &:before{
         content: "";
         pointer-events: none;
@@ -113,6 +120,7 @@ const MansoryItem = ({item, index}) => {
         <a href={item.link} target="_blank" style={{color: 'inherit',
             textDecoration: 'none', display:'block'}} rel="noopener noreferrer" title={item.title} aria-label={item.title + ' ' + item.description}>
             <MansoryItemStyle {...{item}} style={{height: get_random(['400px', '454px', '310px'])}}>
+                <Image src={item.imageUrl} alt={item.imageUrl}/>
                 <div>
                     <h3>{item.title}</h3> 
                     <p>{item.description}</p>
