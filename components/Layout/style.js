@@ -149,6 +149,9 @@ export const Header = styled.header`
       background: transparent !important;
       .nav-link {
           color: var(--nav-link) !important;
+          svg{
+            cursor:pointer;
+          }
       }
     }
     .navbar-toggler {
@@ -189,7 +192,7 @@ export const Header = styled.header`
       }
     }
     .nav-item > a {
-        padding: 0 15px !important;
+        padding: 8px 15px !important;
         font-size: 15px;
         cursor:pointer;
     }

@@ -29,6 +29,10 @@ export default class MyDocument extends Document {
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:site" content="@code_wonders"/>
             <meta name="twitter:image" content="https://i.ibb.co/jz5Qwx1/Group-7.png"/>
+            <link rel='shortcut icon' href='/favicon.ico' />
+            <link rel='apple-touch-icon' sizes='180x180' href='/icon.png' />
+            <link rel='icon' href='/favicon.ico' />
+            <link rel='manifest' href='/manifest.json' />
             <meta name="og:title" content="Adenekan Wonderful"/>
             <meta name="og:url" content="https://codewonders.us"/>
             <meta name="og:image" content="https://i.ibb.co/jz5Qwx1/Group-7.png"/>

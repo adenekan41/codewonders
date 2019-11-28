@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import { Header, BodyStyling } from './style'
+import { Header } from './style'
 import { Logo, Moon, Icon } from './icons';
 import Link from '../Utils/link'
 import AppContext from '../Utils/context';
@@ -35,8 +35,8 @@ const Navbar = ({}) => {
                         <li className="nav-item hover__bottom">
                             <Link href='/contact' activeClassName='is-active'><a className="nav-link" onClick={closeShow} aria-label="Go To Contacts Page" title="Contact">Contact</a></Link>
                         </li>
-                        <li className="nav-item pl-md-3">
-                            <Link href=''><a className="nav-link" aria-label="Turn On Dark Mood" onClick={setTheme}><Moon/></a></Link>
+                        <li className="nav-item pl-md-3" >
+                            <Link href=''><a className="nav-link" aria-label="Turn On Dark Mood"  onClick={setTheme}><Moon/></a></Link>
                         </li>
                         </ul>
                         
