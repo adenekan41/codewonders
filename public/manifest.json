@@ -3,19 +3,24 @@
     "short_name": "Codewonders",
     "icons": [
       {
-        "src": "/favicon.ico",
+        "src": "/icons/android-icon-192x192.png",
         "sizes": "192x192",
-        "type": "image/ico"
+        "type": "image/png"
       },
       {
-        "src": "/favicon.ico",
-        "sizes": "384x384",
-        "type": "image/ico"
+        "src": "/icons/256.png",
+        "sizes": "256x256",
+        "type": "image/png"
       },
       {
-        "src": "/favicon.ico",
+        "src": "/icons/512.png",
         "sizes": "512x512",
-        "type": "image/ico"
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/16.png",
+        "sizes": "16x16",
+        "type": "image/png"
       }
     ],
     "theme_color": "#FFFFFF",
