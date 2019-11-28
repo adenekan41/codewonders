@@ -7,8 +7,7 @@ import { get_random } from '../components/Utils';
 
 const LandingStyle = {
   Header: styled.header`
-    margin-top: 4rem;
-    margin-bottom: 2.6rem;
+    min-height: calc(100vh - 39vh);
     display:flex;
     align-items:center;
     justify-contents:center;
