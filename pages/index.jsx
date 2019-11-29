@@ -221,7 +221,7 @@ class Home extends React.Component {
 
             <p>Working with my hands to make magic happen on the internet. View my <Link href="/projects" ><a aria-label="Go to Projects Page"><button>Projects</button></a></Link>, <a href="https://drive.google.com/file/d/1zwya25lVBKg4sw9tqFS84yz3gCn88eU0/view?usp=sharingC" target="_blank" rel="noopener noreferrer" aria-label="Go to Resumé Page"><button>Resumé</button></a>, <Link href="/contact" ><a aria-label="Go to Contact Page"><button>Contact Me</button></a></Link>, or send me an email at <button style={{cursor: 'crosshair'}} title="Copy to clipboard" onClick={copyText} aria-label="Send an email">hellocodewonders@gmail.com</button>.</p>
             <br/>
-            <FooterLink goto="/about">See More</FooterLink>
+            <FooterLink goto="/about">See More About Me</FooterLink>
             <br />
           </PageWrapper>
         </LandingStyle.Header>

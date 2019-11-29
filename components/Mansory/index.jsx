@@ -8,8 +8,6 @@ const MansoryLayoutStyle = styled.div`
     -webkit-animation-duration: 1s;
     opacity: 0;
     animation-name: fadeInUp;
-    -webkit-transform:translate3d(0,0,0);
-    transform: translate3d(0,0,0);
     -webkit-animation-name: fadeInUp;
     -webkit-animation-fill-mode: both;
     max-width: auto;
@@ -26,39 +24,25 @@ const MansoryLayoutStyle = styled.div`
   }
   @keyframes fadeInUp {
       from {
-          animation-timing-function: ease-in-out;
-          -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-transform:translate3d(0,40px,0);
-          transform: translate3d(0,40px,0)
+        margin-top:4rem;
       }
 
       to {
-          animation-timing-function: ease-in;
-          -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-transform:translate3d(0,0,0);
-          transform: translate3d(0,0,0);
-          opacity: 1
+
+        margin-top: 1.5em;
+          opacity: 1;
       }
   }
 
   @-webkit-keyframes fadeInUp {
-      from {
-        animation-timing-function: ease-in-out;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-transform:translate3d(0,40px,0);
-          transform: translate3d(0,40px,0)
+    from {
+        margin-top:4rem;
       }
 
       to {
-        animation-timing-function: ease-in;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-transform:translate3d(0,0,0);
-          transform: translate3d(0,0,0);
-          opacity: 1
+
+        margin-top: 1.5em;
+          opacity: 1;
       }
   }
     @media( max-width : 585px ) {
