@@ -6,7 +6,6 @@ const MansoryLayoutStyle = styled.div`
     animation-duration: 1s;
     animation-fill-mode: both;
     -webkit-animation-duration: 1s;
-    opacity: 0;
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
     -webkit-animation-fill-mode: both;
@@ -25,11 +24,12 @@ const MansoryLayoutStyle = styled.div`
   @keyframes fadeInUp {
       from {
         margin-top:4rem;
+        opacity: 0;
       }
 
       to {
 
-        margin-top: 1.5em;
+        margin-top: 1.5em ;
           opacity: 1;
       }
   }
@@ -37,11 +37,12 @@ const MansoryLayoutStyle = styled.div`
   @-webkit-keyframes fadeInUp {
     from {
         margin-top:4rem;
+        opacity: 0;
       }
 
       to {
 
-        margin-top: 1.5em;
+        margin-top: 1.5em ;
           opacity: 1;
       }
   }
