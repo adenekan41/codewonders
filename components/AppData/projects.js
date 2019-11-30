@@ -64,12 +64,12 @@ const PROJECTS_DATA =
         type:['project']
     },
     {
-      title:'Liveizy',
-      description: 'Manage all your properties in one place',
-      link: 'https://liveizy.com',
-      imageUrl: 'https://i.ibb.co/PxwbV5m/Screen-Shot-2019-11-24-at-11-36-52-PM-1.png',
-      type:['others', 'project']
-  },
+        title:'Liveizy',
+        description: 'Manage all your properties in one place',
+        link: 'https://liveizy.com',
+        imageUrl: 'https://i.ibb.co/PxwbV5m/Screen-Shot-2019-11-24-at-11-36-52-PM-1.png',
+        type:['others', 'project']
+    },
     {
         title:'Farmhub360',
         description: 'Our goal is to help Customers to get fresh foods within the shortest possible time.',
@@ -100,68 +100,68 @@ const PROJECTS_DATA =
         type:['project']
     },
     {
-      title:'Atara Pay',
-      description: 'Buy and Sell Anywhere with Zero Risk',
-      link: 'https://atarapay.com',
-      imageUrl: 'https://i.ibb.co/dk7bZ9L/Screen-Shot-2019-11-23-at-3-16-38-PM.png',
-      type:['portfolio', 'project']
-  },
-  {
-      title:'Iyanu',
-      description: 'Social Conscience As A Service',
-      link: 'https://iyanu.io',
-      imageUrl: 'https://i.ibb.co/VBk5JzH/Screen-Shot-2019-11-23-at-3-17-50-PM.png',
-      type:['portfolio']
-  },
-  {
-    title:'Payer',
-    description: 'The Easietst way To But Airtime Make Payments,',
-    link: 'https://adenekan41.github.io/payer',
-    imageUrl: 'https://i.ibb.co/6ZHSPH0/Screen-Shot-2019-11-23-at-3-19-39-PM.png',
-    type:['others']
-},
-{
-  title:'Artisan Inc',
-  description: 'Artisan Is a platform for engaging workers all over the country with easy task and small platform to work with',
-  link: 'https://adenekan41.github.io/Artisan/',
-  imageUrl: 'https://i.ibb.co/6s4mcqc/Screen-Shot-2019-11-24-at-11-30-22-PM.png',
-  type:['others']
-},
-{
-  title:'Drum Root',
-  description: 'A React Web App for Creating and Sharing Drum Loops.',
-  link: 'https://github.com/zero-to-mastery/drum-root',
-  imageUrl: 'https://i.ibb.co/8MG46Ts/Smart-Select-20191111-111937-Fiverr.jpg',
-  type:['open-source']
-},
-{
-  title:'VSCode Nice Index',
-  description: 'VSCode package to rename "index.js" files to their parent dir.',
-  link: 'https://github.com/iamuchejude/vs-nice-index',
-  imageUrl: 'https://i.ibb.co/Fz8wGvg/msvschero.jpg',
-  type:['open-source', 'tools']
-},
-{
-    title:'NodeStorage.js',
-    description: 'File system storage utility with localStorage like API',
-    link: 'https://npm.im/nodestorage.js',
-    imageUrl: 'https://i.ibb.co/QPBqVL2/Group-12-2-1.png',
-    type:['open-source', 'tools']
-},
-{
-  title:'Helix',
-  description: 'A minimal monochrome UI theme for Vscode',
-  link: 'https://github.com/adenekan41/Helix',
-  imageUrl: 'https://i.ibb.co/kxKY97y/Screen-Shot-2019-11-24-at-9-00-13-PM.png',
-  type:['tools']
-},
-{
-    title:'Wondafu',
-    description: 'You can pay bills on WhatsApp now! My number is +1 (954) 621-1426.',
-    link: 'https://wondafu.ng',
-    imageUrl: 'https://i.ibb.co/0tYR5Mb/Screen-Shot-2019-11-23-at-6-47-50-PM.png',
-    type:['project', 'others']
-},
+        title:'Atara Pay',
+        description: 'Buy and Sell Anywhere with Zero Risk',
+        link: 'https://atarapay.com',
+        imageUrl: 'https://i.ibb.co/dk7bZ9L/Screen-Shot-2019-11-23-at-3-16-38-PM.png',
+        type:['portfolio', 'project']
+    },
+    {
+        title:'Iyanu',
+        description: 'Social Conscience As A Service',
+        link: 'https://iyanu.io',
+        imageUrl: 'https://i.ibb.co/VBk5JzH/Screen-Shot-2019-11-23-at-3-17-50-PM.png',
+        type:['portfolio']
+    },
+    {
+        title:'Payer',
+        description: 'The Easietst way To But Airtime Make Payments,',
+        link: 'https://adenekan41.github.io/payer',
+        imageUrl: 'https://i.ibb.co/6ZHSPH0/Screen-Shot-2019-11-23-at-3-19-39-PM.png',
+        type:['others']
+    },
+    {
+        title:'Artisan Inc',
+        description: 'Artisan Is a platform for engaging workers all over the country with easy task and small platform to work with',
+        link: 'https://adenekan41.github.io/Artisan/',
+        imageUrl: 'https://i.ibb.co/6s4mcqc/Screen-Shot-2019-11-24-at-11-30-22-PM.png',
+        type:['others']
+    },
+    {
+        title:'Drum Root',
+        description: 'A React Web App for Creating and Sharing Drum Loops.',
+        link: 'https://github.com/zero-to-mastery/drum-root',
+        imageUrl: 'https://i.ibb.co/8MG46Ts/Smart-Select-20191111-111937-Fiverr.jpg',
+        type:['open-source']
+    },
+    {
+        title:'VSCode Nice Index',
+        description: 'VSCode package to rename "index.js" files to their parent dir.',
+        link: 'https://github.com/iamuchejude/vs-nice-index',
+        imageUrl: 'https://i.ibb.co/Fz8wGvg/msvschero.jpg',
+        type:['open-source', 'tools']
+    },
+    {
+        title:'NodeStorage.js',
+        description: 'File system storage utility with localStorage like API',
+        link: 'https://npm.im/nodestorage.js',
+        imageUrl: 'https://i.ibb.co/QPBqVL2/Group-12-2-1.png',
+        type:['open-source', 'tools']
+    },
+    {
+        title:'Helix',
+        description: 'A minimal monochrome UI theme for Vscode',
+        link: 'https://github.com/adenekan41/Helix',
+        imageUrl: 'https://i.ibb.co/kxKY97y/Screen-Shot-2019-11-24-at-9-00-13-PM.png',
+        type:['tools']
+        },
+    {
+        title:'Wondafu',
+        description: 'You can pay bills on WhatsApp now! My number is +1 (954) 621-1426.',
+        link: 'https://wondafu.ng',
+        imageUrl: 'https://i.ibb.co/0tYR5Mb/Screen-Shot-2019-11-23-at-6-47-50-PM.png',
+        type:['project', 'others']
+    },
 ]
 
 export default PROJECTS_DATA
