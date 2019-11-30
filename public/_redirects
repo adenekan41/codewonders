@@ -2,4 +2,3 @@
 
 # Redirect default Netlify subdomain to primary domain
 https://codewonders.netlify.com/* https://www.codewonders.dev/:splat 301!
-https://codewonders.dev/*  https://www.codewonders.dev/:splat 301!
