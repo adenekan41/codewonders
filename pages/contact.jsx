@@ -1,8 +1,6 @@
 import React from 'react'
 import {Layout, PageWrapper } from '../components/Layout/layout'
 import styled from 'styled-components';
-import Link from 'next/link' 
-import {Date } from '../components/Layout/icons';
 import FooterLink from '../components/Layout/footer-link';
 
 const AboutStyle = {
@@ -79,13 +77,13 @@ class About extends React.Component {
                 <form method="POST" action="https://formspree.io/adenekanwonderful41@gmail.com">
                     <div className="fields">
                         <div className="field half">
-                            <input type="text" name="name" id="name" className="form-control" placeholder="Name" />
+                            <input type="text" name="name" id="name" className="form-control" placeholder="Name" required/>
                         </div>
                         <div className="field half">
-                            <input type="text" name="email" id="email" className="form-control" placeholder="Email" />
+                            <input type="email" name="email" id="email" className="form-control" placeholder="Email" required/>
                         </div>
                         <div className="field">
-                            <textarea name="message" id="message" rows="5" className="form-control" placeholder="Message"></textarea>
+                            <textarea name="message" id="message" rows="5" className="form-control" placeholder="Message" required></textarea>
                         </div>
                     </div>
                     <button className="btn btn-default" type="submit" aria-label="Send Message">Send Message</button>
