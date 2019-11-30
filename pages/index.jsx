@@ -190,6 +190,30 @@ const LandingStyle = {
         font-weight:600;
       }
     }
+    @media( max-width : 585px ) {
+      margin:3rem 0;
+      min-height: 80vh;
+    }
+    @media( max-width : 989px ) {
+      margin:3rem 0;
+    }
+    @media( max-width : 220px ){
+      margin:3rem 0;
+      min-height: 80vh;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        /* Stop the animation */
+        
+        .intro__text{
+          animation: none;
+
+          &::before,
+          &::after {
+            content: none;
+          }
+
+        }
+    }
   ` ,
  
 }

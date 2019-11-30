@@ -38,7 +38,7 @@ const PROJECTS_DATA =
     {
         title:'Bloverse',
         description: 'A content creation platform fostering a global community of engaged and insightful individuals',
-        link: 'https://bloverse.com',
+        link: 'https://www.bloverse.com/',
         imageUrl: 'https://i.ibb.co/s5ppyjx/Screen-Shot-2019-11-23-at-2-17-57-PM.png',
         type:['others']
     },

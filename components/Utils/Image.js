@@ -4,7 +4,7 @@ import ProgressiveImage from 'react-progressive-image';
 const Image = ({ src, alt, className }) => (
   <ProgressiveImage
     src={src}
-    placeholder="https://ehp.niehs.nih.gov/ux3/widgets/publication-content/images/spinner.gif"
+    placeholder="https://i.ibb.co/1RWFqf2/spinner.gif"
   >
     {(currentSrc, loading) => (
       <Fragment>

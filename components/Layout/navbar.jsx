@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext, useState, useEffect} from 'react'
 import { Header } from './style'
 import { Logo, Moon, Icon } from './icons';
 import Link from '../Utils/link'
@@ -9,11 +9,11 @@ const Navbar = ({}) => {
     return (
         <>
             <Header>
-                <nav className="navbar navbar-expand-md bg-light navbar-light">
+                <nav className={`navbar navbar-expand-md bg-light navbar-light`}>
                     <div className="container">
                     <Link href='/'><a className="navbar-brand" aria-label="Adenekan Wonderful Home"><Logo /></a></Link>
 
-                    <button className="navbar-toggler" type="button" onClick={handleopen} aria-label="Open Button Toggle">
+                    <button className="navbar-toggler" type="button" style={{paddingRight: '0'}} onClick={handleopen} aria-label="Open Button Toggle">
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
