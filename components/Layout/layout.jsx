@@ -3,6 +3,7 @@ import { SocialMedia, BackLay, BodyStyling} from './style'
 import { Twitter, Facebook, Linkedin, Github, Instagram} from './icons'
 import Navbar from './navbar';
 import Helmet from 'react-helmet'
+import {withRouter} from 'next/router'
 import AppContext from '../Utils/context';
 import { initGA, logPageView } from '../Utils/analytics'
 

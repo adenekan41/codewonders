@@ -12,7 +12,7 @@ const theme = css`
     --lighter-gray: #222;
     --article-color: #c6c6c6;
     --header-bg: rgba(19,20,21,0.8);
-    --gray-alpha: rgba(0, 0, 0, 0.86);
+    --gray-alpha: rgba(0, 0, 0, 0.95);
     --token: #999;
     --border-color: #3d3d3d;
     --button-index:#1a1a1a;;
@@ -34,7 +34,7 @@ const theme = css`
    --lighter-gray: #f5f5f5;
    --article-color: #464646;
    --header-bg: rgba(255,255,255,0.8);
-   --gray-alpha: rgba(255,255,255,0.86);
+   --gray-alpha: rgba(255,255,255,0.95);
    --token: #666;
    --border-color: #e4e4e4;
    --nav-link: rgba(0,0,0,.5);
@@ -145,6 +145,7 @@ mark.mark {
 `
 export const Header = styled.header`
     padding: 50px 0; 
+    transition: all .5s ease;
     nav {
       background: transparent !important;
       .nav-link {
@@ -153,6 +154,18 @@ export const Header = styled.header`
             cursor:pointer;
           }
       }
+    }
+    #nav{
+      transition: all .5s ease;
+      &.fixed-top{
+      position: fixed;
+      top: 0;
+      background: var(--gray-alpha) !important;
+      right: 0;
+      left: 0;
+      padding: 15px 19px;
+      z-index: 1030;
+    }
     }
     .navbar-toggler {
         color: rgba(255, 255, 255, 0.5);
