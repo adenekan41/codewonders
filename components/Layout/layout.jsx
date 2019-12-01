@@ -28,7 +28,7 @@ export const Layout = ({ children , title="Home"}) => {
   <div>
     <BodyStyling {...{theme}}/>
     <Helmet>
-      <title>{`${title} | Adenekan Wonderful`}</title>
+      <title>{`${title} | Adenekan Wonderful | Codewonders`}</title>
       <meta name="msapplication-TileColor" content={`${theme ? '#000000' : '#FFFFFF'}`}/>
       <meta name="theme-color" content={`${theme ? '#000000' : '#FFFFFF'}`}
       />
