@@ -406,6 +406,7 @@ export const SocialMedia = styled.div`
     display: flex;
     padding:0 !important;
     right: 0;
+    z-index: 999;
     flex-direction:row !important;
     height: 60px !important;
     bottom: 0px !important;
@@ -419,6 +420,7 @@ export const SocialMedia = styled.div`
     display: flex;
     padding:0 !important;
     right: 0;
+    z-index: 999;
     flex-direction:row !important;
     height: 60px !important;
     bottom: 0px !important;
@@ -432,6 +434,7 @@ export const SocialMedia = styled.div`
     display: flex;
     padding:0 !important;
     right: 0;
+    z-index: 999;
     flex-direction:row !important;
     height: 60px !important;
     bottom: 0px !important;
