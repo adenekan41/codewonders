@@ -373,20 +373,17 @@ export const Header = styled.header`
     }
 `
 export const SocialMedia = styled.div` 
-  position: fixed;
   background: transparent;
-  width: 40px;
-  display: flex;
-  right: 23px;
-  flex-direction: column;
-  height: 100vh;
-  padding: 5rem 0;
-  bottom: 0px;
-  align-items: center;
-  justify-content: space-evenly;
+  padding: 1rem 0;
   a{
     transition: all 1s ease;
     cursor: pointer;
+    padding: 0 12px;
+    &:first-child {
+      padding-left: 0; 
+    }
+    
+
   }
   svg{
     cursor: pointer;
