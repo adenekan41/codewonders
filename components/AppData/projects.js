@@ -116,14 +116,14 @@ const PROJECTS_DATA =
     {
         title:'Payer',
         description: 'The Easietst way To But Airtime Make Payments,',
-        link: 'https://adenekan41.github.io/payer',
+        link: 'https://www.codewonders.us/payer',
         imageUrl: 'https://i.ibb.co/6ZHSPH0/Screen-Shot-2019-11-23-at-3-19-39-PM.png',
         type:['others']
     },
     {
         title:'Artisan Inc',
         description: 'Artisan Is a platform for engaging workers all over the country with easy task and small platform to work with',
-        link: 'https://adenekan41.github.io/Artisan/',
+        link: 'https://www.codewonders.us/Artisan/',
         imageUrl: 'https://i.ibb.co/6s4mcqc/Screen-Shot-2019-11-24-at-11-30-22-PM.png',
         type:['others']
     },

@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import { SocialMedia, BackLay, BodyStyling} from './style'
-import { Twitter, Facebook, Linkedin, Github, Instagram} from './icons'
+
 import Navbar from './navbar';
 import Helmet from 'react-helmet'
 import {withRouter} from 'next/router'
@@ -38,13 +38,6 @@ export const Layout = ({ children , title="Home"}) => {
       <h1 style={{left:'-4rem',}}>{title === 'Home' ? 'Hello.' : title.concat('.')}</h1>
     </BackLay>
     {children}
-    <SocialMedia>
-      <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/code_wonders" aria-label="Go To Adenekan Wonderful Twitter Page" title="Twitter Page"><Twitter /></a>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/AdenekanWonderful" aria-label="Go To Adenekan Wonderful Facebook Page" title="Facebook Page"><Facebook /></a>
-      <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/codewonders" aria-label="Go To Adenekan Wonderful Linkedin Page" title="Linkedin Page"><Linkedin /></a>
-      <a target="_blank" rel="noopener noreferrer" href="https://github.com/adenekan41" aria-label="Go To Adenekan Wonderful Github Page" title="Github Page"><Github /></a>
-      <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/codewonders" aria-label="Go To Adenekan Wonderful Instagram Page" title="Instagram Page"><Instagram /></a>
-    </SocialMedia>
   </div>
 )
 }
