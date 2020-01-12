@@ -34,7 +34,7 @@ const Resume = () => {
     const resumeData = "https://drive.google.com/file/d/1kKHGL-RchL3YnyRVvvHTmZoyb8KbGqa3/preview"
     const previewData = resumeData.substr(0, resumeData.lastIndexOf('/') + 1) + "view?usp=sharingC";
     return (
-        <Layout>
+        <Layout title="Resume">
             <PageWrapper>
                 <ResumeStyle.Container>
                     <h1 className="intro__text">Resumé.</h1>
@@ -42,7 +42,7 @@ const Resume = () => {
                     <iframe  src={resumeData} width="640" height="480" scrolling="no" title="Adenekan Wonderful Resumé"></iframe>
                 </ResumeStyle.Container>
                 <br/><br />
-                <FooterLink goto="/contact">Are you convinced to contact me now ?</FooterLink>
+                <FooterLink goto="/contact" className="mt-3 mb-5">Are you convinced to contact me now ?</FooterLink>
                 <br />
             </PageWrapper>
         </Layout>
