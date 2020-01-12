@@ -5,6 +5,7 @@ const theme = css`
   // @desc Dark Theme
   :root {
     --bg: #090909;
+    --invert: 1;
     --theme-amount: 1;
     --cw: #e1e1e1;
     --gray: #a8a8a8;
@@ -26,6 +27,7 @@ const theme = css`
    --bg: #fff;
    --button-index:#eeeeee;
    --cw: #000;
+   --invert:0;
    --mark: #f6f6f6;
    --theme-amount:0;
    --border-color: #2e2e2e;
