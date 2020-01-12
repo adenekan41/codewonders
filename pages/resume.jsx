@@ -27,7 +27,7 @@ const ResumeStyle ={
     `
 } 
 const Resume = () => {
-    const resumeData = "https://drive.google.com/file/d/1zwya25lVBKg4sw9tqFS84yz3gCn88eU0/preview"
+    const resumeData = "https://drive.google.com/file/d/1kKHGL-RchL3YnyRVvvHTmZoyb8KbGqa3/preview"
     const previewData = resumeData.substr(0, resumeData.lastIndexOf('/') + 1) + "view?usp=sharingC";
     return (
         <Layout>
