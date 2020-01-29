@@ -10,7 +10,7 @@ const PROJECTS_DATA =
     {
         title:'54gene',
         description: 'Discover Yourself Through Your Genes.',
-        link: 'https://consumers.54gene.com',
+        link: 'https://54gene.com',
         imageUrl: 'https://i.ibb.co/Z85CmV8/Screen-Shot-2019-11-23-at-1-48-13-PM.png',
         type:['others']
     },
@@ -43,9 +43,9 @@ const PROJECTS_DATA =
         type:['others']
     },
     {
-        title:'NG Elearning',
+        title:'Lentora',
         description: 'Learn a New Skill, Boost Your Career',
-        link: 'https://ngcareers.com',
+        link: 'http://lentora.com/',
         imageUrl: 'https://i.ibb.co/ykQmbVw/Screen-Shot-2019-11-23-at-2-20-17-PM.png',
         type:['others', 'project']
     },
@@ -154,7 +154,7 @@ const PROJECTS_DATA =
         link: 'https://github.com/adenekan41/Helix',
         imageUrl: 'https://i.ibb.co/kxKY97y/Screen-Shot-2019-11-24-at-9-00-13-PM.png',
         type:['tools']
-        },
+    },
     {
         title:'Wondafu',
         description: 'You can pay bills on WhatsApp now! My number is +1 (954) 621-1426.',
@@ -162,6 +162,20 @@ const PROJECTS_DATA =
         imageUrl: 'https://i.ibb.co/0tYR5Mb/Screen-Shot-2019-11-23-at-6-47-50-PM.png',
         type:['project', 'others']
     },
+    {
+        title:'#payme',
+        description: 'Create your personal hashtag to make & receive payments across all messaging apps.',
+        link: 'https://hashtagpay.me/',
+        imageUrl: 'https://i.ibb.co/7p3Cz7K/Screen-Shot-2020-01-20-at-11-44-45-PM.png',
+        type:['project', 'others']
+    },
+    {
+        title:"Todolst",
+        description:"Create Your first Todo with todolist.io we manage your todo.",
+        link:"https://exquis.surge.sh/",
+        imageUrl:"https://i.ibb.co/7Y5BHXK/Screen-Shot-2020-01-20-at-11-35-35-PM.png",
+        type:['project', 'others']
+    }
 ]
 
 export default PROJECTS_DATA
