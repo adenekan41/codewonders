@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import {withRouter} from 'next/router'
 import AppContext from '../Utils/context';
 import { initGA, logPageView } from '../Utils/analytics'
+import Cursor from '../Cursor';
 
 export const Layout = ({ children , title="Home"}) => {
   const {theme, loadTheme} = useContext(AppContext)
@@ -37,6 +38,7 @@ export const Layout = ({ children , title="Home"}) => {
     <BackLay>
       <h1 style={{left:'-4rem',}}>{title === 'Home' ? 'Hello.' : title.concat('.')}</h1>
     </BackLay>
+    <Cursor />
     {children}
   </div>
 )

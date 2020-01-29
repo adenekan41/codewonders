@@ -27,7 +27,7 @@ const theme = css`
    --bg: #fff;
    --button-index:#eeeeee;
    --cw: #000;
-   --invert:0;
+   --invert:0; 
    --mark: #f6f6f6;
    --theme-amount:0;
    --border-color: #2e2e2e;
