@@ -92,7 +92,7 @@ const Cursor = () => {
     },[clicked])
     return  (
         <Wrapper>
-            <div className={ `${ clicked ? 'expand' : '' } cursor`} ref={cursor}></div>
+            <div className={ `${ clicked ? 'expand' : '' } cursor d-none d-md-inline`} ref={cursor}></div>
         </Wrapper>
     )
 }
