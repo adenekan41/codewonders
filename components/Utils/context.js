@@ -8,4 +8,4 @@ export const ArticleContext = createContext(ARTICLE_DATA);
 export const LensContext = createContext(LENS_DATA);
 export const ProjectsContext = createContext(PROJECTS_DATA);
 
-export default AppContext
+export default AppContext;

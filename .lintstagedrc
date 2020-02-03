@@ -1,0 +1,4 @@
+{
+  "*.+(js|jsx)": ["npm run format", "git add"],
+  "*.+(json|css|md)": ["prettier --write", "git add"]
+}
