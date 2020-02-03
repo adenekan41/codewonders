@@ -1,9 +1,9 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 
 const theme = css`
-	${(props) =>
-		props.theme
-			? `
+  ${(props) =>
+    props.theme
+      ? `
   // @desc Dark Theme
   :root {
     --bg: #090909;
@@ -23,7 +23,7 @@ const theme = css`
     --nav-link: rgba(255, 255, 255, 0.8);
 }
   `
-			: `
+      : `
   // @desc Light Theme
   :root {
    --bg: #fff;
@@ -89,7 +89,7 @@ ${theme}
   padding: 0;
   box-sizing: border-box; 
   cursor: url(${(props) =>
-		props.theme ? '/wcursor.png' : '/cursor.png'}), auto;
+    props.theme ? '/wcursor.png' : '/cursor.png'}), auto;
 }
 :global(body) {
     margin: 0;
@@ -378,81 +378,81 @@ export const Header = styled.header`
     }
 `;
 export const SocialMedia = styled.div`
-	background: transparent;
-	padding: 1rem 0;
-	a {
-		transition: all 1s ease;
-		cursor: pointer;
-		padding: 0 12px;
-		&:first-child {
-			padding-left: 0;
-		}
-	}
-	svg {
-		cursor: pointer;
-		height: 15px;
-		fill: var(--article-color);
-		transition: all 1s ease;
-		&:hover {
-			stroke: var(--article-color);
-			stroke-width: 1px;
-			stroke-opacity: 0.8;
-		}
-	}
-	@media (max-width: 585px) {
-		position: fixed;
-		background: var(--gray-alpha) !important;
-		width: 100% !important;
-		display: flex;
-		padding: 0 !important;
-		right: 0;
-		z-index: 999;
-		flex-direction: row !important;
-		height: 60px !important;
-		bottom: 0px !important;
-		align-items: center;
-		justify-content: space-evenly;
-	}
-	@media (max-width: 989px) {
-		position: fixed;
-		background: var(--gray-alpha) !important;
-		width: 100% !important;
-		display: flex;
-		padding: 0 !important;
-		right: 0;
-		z-index: 999;
-		flex-direction: row !important;
-		height: 60px !important;
-		bottom: 0px !important;
-		align-items: center;
-		justify-content: space-evenly;
-	}
-	@media (max-width: 220px) {
-		position: fixed;
-		background: var(--gray-alpha) !important;
-		width: 100% !important;
-		display: flex;
-		padding: 0 !important;
-		right: 0;
-		z-index: 999;
-		flex-direction: row !important;
-		height: 60px !important;
-		bottom: 0px !important;
-		align-items: center;
-		justify-content: space-evenly;
-	}
+  background: transparent;
+  padding: 1rem 0;
+  a {
+    transition: all 1s ease;
+    cursor: pointer;
+    padding: 0 12px;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  svg {
+    cursor: pointer;
+    height: 15px;
+    fill: var(--article-color);
+    transition: all 1s ease;
+    &:hover {
+      stroke: var(--article-color);
+      stroke-width: 1px;
+      stroke-opacity: 0.8;
+    }
+  }
+  @media (max-width: 585px) {
+    position: fixed;
+    background: var(--gray-alpha) !important;
+    width: 100% !important;
+    display: flex;
+    padding: 0 !important;
+    right: 0;
+    z-index: 999;
+    flex-direction: row !important;
+    height: 60px !important;
+    bottom: 0px !important;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  @media (max-width: 989px) {
+    position: fixed;
+    background: var(--gray-alpha) !important;
+    width: 100% !important;
+    display: flex;
+    padding: 0 !important;
+    right: 0;
+    z-index: 999;
+    flex-direction: row !important;
+    height: 60px !important;
+    bottom: 0px !important;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  @media (max-width: 220px) {
+    position: fixed;
+    background: var(--gray-alpha) !important;
+    width: 100% !important;
+    display: flex;
+    padding: 0 !important;
+    right: 0;
+    z-index: 999;
+    flex-direction: row !important;
+    height: 60px !important;
+    bottom: 0px !important;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 `;
 export const BackLay = styled.div`
-	h1 {
-		font-family: Abril FatFace;
-		font-size: 29.42vh;
-		writing-mode: tb-rl;
-		position: fixed;
-		z-index: -1;
-		color: var(--mark);
-		bottom: 0px;
-		opacity: 1;
-		transition: all 0.8s ease;
-		left: -4rem;
-	}
+  h1 {
+    font-family: Abril FatFace;
+    font-size: 29.42vh;
+    writing-mode: tb-rl;
+    position: fixed;
+    z-index: -1;
+    color: var(--mark);
+    bottom: 0px;
+    opacity: 1;
+    transition: all 0.8s ease;
+    left: -4rem;
+  }
 `;
