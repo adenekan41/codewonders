@@ -6,7 +6,7 @@ import FooterLink from '../components/Footer';
 
 const Resume = () => {
   const resumeData =
-    'https://drive.google.com/file/d/1kKHGL-RchL3YnyRVvvHTmZoyb8KbGqa3/preview';
+    'https://docs.google.com/file/d/1Ll91-P5r9gIaYh76tBLd1XH0nxIIzskJYt2gfJ29svc/preview';
   const previewData = `${resumeData.substr(
     0,
     resumeData.lastIndexOf('/') + 1
@@ -20,7 +20,7 @@ const Resume = () => {
             Reach out to me via my{' '}
             <b>
               <Link href="/contact">
-                <a>contact page</a>
+                <a href="#!">contact page</a>
               </Link>
             </b>{' '}
             or download the resume{' '}
