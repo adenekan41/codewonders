@@ -68,8 +68,8 @@ const Projects = () => {
       </Header>
       <Section>
         <PageWrapper>
-          <FooterLink goto="/articles" className="mt-3 mb-5">
-            Lets Go To My Articles.
+          <FooterLink goto="/resume" className="mt-3 mb-5">
+            Lets Go To My Resume.
           </FooterLink>
           <br />
         </PageWrapper>

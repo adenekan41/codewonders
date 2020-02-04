@@ -194,9 +194,9 @@ export const Header = styled.header`
           z-index: -1;
           left: 51%;
           right: 51%;
-          bottom: -1px;
+          bottom: 1.5px;
           background:var(--article-color);
-          height: 2px;
+          height: 1px;
           -webkit-transition-property: left, right; 
           transition-property: left, right;
           -webkit-transition-duration: 0.3s;
@@ -216,6 +216,7 @@ export const Header = styled.header`
     }
     #collapsibleNavbar .is-active{
       font-weight:900;
+      border-bottom: 1px solid var(--cw);
       color: var(--cw) !important;
     }
     .navbar-border-collapse.show{

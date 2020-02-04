@@ -43,7 +43,7 @@ const Navbar = ({}) => {
                 <Icon />
               </span>
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item hover__bottom">
+                <li className="nav-item hover__bottom d-block d-md-none">
                   <Link href="/" activeClassName="is-active">
                     <a
                       className="nav-link"
@@ -83,15 +83,15 @@ const Navbar = ({}) => {
                   </Link>
                 </li>
                 <li className="nav-item hover__bottom">
-                  <Link href="/articles" activeClassName="is-active">
+                  <Link href="/resume" activeClassName="is-active">
                     <a
                       className="nav-link"
                       onClick={closeShow}
                       href="#!"
-                      aria-label="Go To Articles Page"
-                      title="Articles"
+                      aria-label="Go To Resume Page"
+                      title="Resume"
                     >
-                      Articles
+                      Resume
                     </a>
                   </Link>
                 </li>

@@ -52,6 +52,10 @@ const Home = () => {
               </a>
             </Link>
             ,{' '}
+            <Link href="/articles">
+              <button type="button">Articles</button>
+            </Link>
+            ,{' '}
             <Link href="/resume">
               <button type="button">Resumé</button>
             </Link>
