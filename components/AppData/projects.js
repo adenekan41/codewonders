@@ -216,6 +216,22 @@ const PROJECTS_DATA = [
     imageUrl: 'https://i.ibb.co/QpZjSmP/Group-14-1.png',
     type: ['open-source', 'tools'],
   },
+  {
+    title: 'Helix',
+    description:
+      'A Visual Studio Code theme for the notion lovers out there.',
+    link: 'https://marketplace.visualstudio.com/items?itemName=codewonders.helix&ssr=false',
+    imageUrl: 'https://i.ibb.co/KbQ3zVy/Group-4-1.png',
+    type: ['open-source', 'tools'],
+  },
+  {
+    title: 'Compiled HTML',
+    description:
+      'A small project to make writing HTML faster and better and now components based with js',
+    link: 'https://www.npmjs.com/package/generator-compiled-html',
+    imageUrl: 'https://i.ibb.co/kQvnBG2/Group-5-2-1.png',
+    type: ['open-source', 'tools'],
+  },
 ];
 
 export default PROJECTS_DATA;
