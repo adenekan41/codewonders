@@ -175,14 +175,6 @@ const PROJECTS_DATA = [
     type: ['open-source', 'tools'],
   },
   {
-    title: 'Helix',
-    description: 'A minimal monochrome UI theme for Vscode',
-    link: 'https://github.com/adenekan41/Helix',
-    imageUrl:
-      'https://i.ibb.co/kxKY97y/Screen-Shot-2019-11-24-at-9-00-13-PM.png',
-    type: ['tools'],
-  },
-  {
     title: 'Wondafu',
     description:
       'You can pay bills on WhatsApp now! My number is +1 (954) 621-1426.',
@@ -221,7 +213,7 @@ const PROJECTS_DATA = [
     description:
       'A Visual Studio Code theme for the notion lovers out there.',
     link: 'https://marketplace.visualstudio.com/items?itemName=codewonders.helix&ssr=false',
-    imageUrl: 'https://i.ibb.co/KbQ3zVy/Group-4-1.png',
+    imageUrl: 'https://i.ibb.co/kxKY97y/Screen-Shot-2019-11-24-at-9-00-13-PM.png',
     type: ['open-source', 'tools'],
   },
   {
