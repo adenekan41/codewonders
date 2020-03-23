@@ -224,6 +224,14 @@ const PROJECTS_DATA = [
     imageUrl: 'https://i.ibb.co/kQvnBG2/Group-5-2-1.png',
     type: ['open-source', 'tools'],
   },
+  {
+    title: 'Overstateful',
+    description:
+      'A small state management with less setup and super scalability in your react app.',
+    link: 'https://www.npmjs.com/package/over-stateful',
+    imageUrl: 'https://i.ibb.co/vwXydQy/Group-1-1.png',
+    type: ['open-source', 'tools'],
+  },
 ];
 
 export default PROJECTS_DATA;
