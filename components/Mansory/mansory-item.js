@@ -149,7 +149,7 @@ const MansoryItemStyle = styled.div`
 `;
 
 MansoryItem.propTypes = {
-  item: PropTypes.any,
+  item: PropTypes.object,
 };
 
 export default MansoryItem;

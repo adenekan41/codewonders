@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { BackLay, BodyStyling } from './style';
+import { BackLay, BodyStyling, Main } from './style';
 
 import Navbar from '../Navbar';
 import AppContext from '../Utils/context';
@@ -26,8 +26,8 @@ const Layout = ({ children, title = 'Home' }) => {
   }, [loadTheme, logPage]);
 
   return (
-    <div>
-      <BodyStyling {...{ theme }} />
+    <Main>
+      <BodyStyling theme={theme} />
       <Helmet>
         <title>{`${title} | Adenekan Wonderful | Codewonders`}</title>
         <meta
@@ -38,34 +38,36 @@ const Layout = ({ children, title = 'Home' }) => {
       </Helmet>
       <Navbar />
       <BackLay>
-        <h1 style={{ left: '-4rem' }}>
+        <h1 aria-hidden="true">
           {title === 'Home' ? 'Hello.' : title.concat('.')}
         </h1>
       </BackLay>
       <Cursor />
       {children}
-    </div>
+    </Main>
   );
 };
 
 Layout.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
   title: PropTypes.string,
 };
 
-export const PageWrapper = ({ children }) => {
+export const PageWrapper = ({ children, className = '', ...rest }) => {
   return (
-    <div className="container">
-      <div className="row align-items-center justify-content-center">
-        <div className="col-md-10">{children}</div>
+    <section {...rest}>
+      <div className={`container  ${className}`}>
+        <div className="row align-items-center justify-content-center">
+          <div className="col-md-10">{children}</div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 PageWrapper.propTypes = {
-  children: PropTypes.any,
-  title: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
+  className: PropTypes.string,
 };
 
 export default Layout;

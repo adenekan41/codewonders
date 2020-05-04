@@ -4,7 +4,7 @@ import { Logo, Moon, Icon } from '../Icons';
 import Link from '../ActiveLink';
 import AppContext from '../Utils/context';
 
-const Navbar = ({}) => {
+const Navbar = () => {
   const { show, handleopen, setTheme, closeShow } = useContext(AppContext);
   return (
     <>
@@ -22,9 +22,8 @@ const Navbar = ({}) => {
             </Link>
 
             <button
-              className="navbar-toggler"
+              className="navbar-toggler pr-0"
               type="button"
-              style={{ paddingRight: '0' }}
               onClick={handleopen}
               aria-label="Open Button Toggle"
             >
@@ -109,7 +108,7 @@ const Navbar = ({}) => {
                   </Link>
                 </li>
                 <li className="nav-item pl-md-3">
-                  <Link href="">
+                  <Link href="#0">
                     <a
                       className="nav-link"
                       aria-label="Turn On Dark Mood"

@@ -12,7 +12,7 @@ const Projects = () => {
   const projectsData = useContext(ProjectsContext);
   return (
     <Layout title="Project">
-      <Header>
+      <PageSection>
         <PageWrapper>
           <h1 className="intro__text">Projects.</h1> <br />
           <Tabs>
@@ -53,31 +53,20 @@ const Projects = () => {
                 )}
               </MansoryLayout>
             </TabItems>
-            <TabItems label="Others">
-              <MansoryLayout>
-                {projectsData.map(
-                  (item, index) =>
-                    item.type.includes('others') && (
-                      <MansoryItem key={index} index={index} item={item} />
-                    )
-                )}
-              </MansoryLayout>
-            </TabItems>
           </Tabs>
         </PageWrapper>
-      </Header>
-      <Section>
-        <PageWrapper>
-          <FooterLink goto="/resume" className="mt-3 mb-5">
-            Lets Go To My Resume.
-          </FooterLink>
-          <br />
-        </PageWrapper>
-      </Section>
+      </PageSection>
+
+      <PageWrapper>
+        <FooterLink goto="/resume" className="mt-3 mb-5">
+          Lets Go To My Resume.
+        </FooterLink>
+        <br />
+      </PageWrapper>
     </Layout>
   );
 };
-const Header = styled.header`
+export const PageSection = styled.div`
   .intro__text {
     font-size: 54px;
     font-weight: 900;
@@ -91,46 +80,6 @@ const Header = styled.header`
     border-radius: 5px;
     padding: 0px 9px;
   }
-  ul.timeline {
-    list-style-type: none;
-    position: relative;
-    &:before {
-      content: ' ';
-      background: #d4d9df;
-      display: inline-block;
-      position: absolute;
-      left: 0px;
-      width: 1px;
-      height: 100%;
-      z-index: 400;
-    }
-    li {
-      margin: 3rem 0;
-      padding-left: 20px;
-      &:before {
-        content: ' ';
-        background: var(--mark);
-        display: inline-block;
-        position: absolute;
-        border-radius: 50%;
-        border: 2px solid var(--cw);
-        left: -7px;
-        width: 15px;
-        height: 15px;
-        margin-top: 3px;
-        z-index: 400;
-      }
-      a {
-        font-size: 18px;
-        font-weight: 500;
-        color: var(--cw);
-      }
-      a svg {
-        margin-top: -0.4rem;
-        zoom: 60%;
-      }
-    }
-  }
 `;
-const Section = styled.div``;
+
 export default Projects;

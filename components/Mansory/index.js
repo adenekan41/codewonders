@@ -61,7 +61,7 @@ const Layout = styled.div`
 `;
 
 MansoryLayout.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
 };
 
 export default MansoryLayout;

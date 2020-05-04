@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
@@ -7,12 +6,13 @@ import Tabs, { TabItems } from '../components/Tabs';
 import MansoryLayout from '../components/Mansory';
 import MansoryItem from '../components/Mansory/mansory-item';
 import { LensContext } from '../components/Utils/context';
+import { PageSection } from './projects';
 
 const LensPage = () => {
   const lens = useContext(LensContext);
   return (
     <Layout title="Lens">
-      <Header>
+      <PageSection>
         <PageWrapper>
           <h1 className="intro__text">Lens.</h1> <br />
           <Tabs>
@@ -65,72 +65,16 @@ const LensPage = () => {
             </TabItems>
           </Tabs>
         </PageWrapper>
-      </Header>
-      <Section>
-        <PageWrapper>
-          <FooterLink goto="/projects" className="mt-3 mb-5">
-            Lets Go To My Projects.
-          </FooterLink>
-          <br />
-        </PageWrapper>
-      </Section>
+      </PageSection>
+
+      <PageWrapper>
+        <FooterLink goto="/projects" className="mt-3 mb-5">
+          Lets Go To My Projects.
+        </FooterLink>
+        <br />
+      </PageWrapper>
     </Layout>
   );
 };
-const Header = styled.header`
-  .intro__text {
-    font-size: 54px;
-    font-weight: 900;
-    margin: 4rem 0rem 1.5rem;
-    position: relative;
-  }
-  button {
-    font-size: 16px;
-    background: var(--mark);
-    border: none;
-    border-radius: 5px;
-    padding: 0px 9px;
-  }
-  ul.timeline {
-    list-style-type: none;
-    position: relative;
-    &:before {
-      content: ' ';
-      background: #d4d9df;
-      display: inline-block;
-      position: absolute;
-      left: 0px;
-      width: 1px;
-      height: 100%;
-      z-index: 400;
-    }
-    li {
-      margin: 3rem 0;
-      padding-left: 20px;
-      &:before {
-        content: ' ';
-        background: var(--mark);
-        display: inline-block;
-        position: absolute;
-        border-radius: 50%;
-        border: 2px solid var(--cw);
-        left: -7px;
-        width: 15px;
-        height: 15px;
-        margin-top: 3px;
-        z-index: 400;
-      }
-      a {
-        font-size: 18px;
-        font-weight: 500;
-        color: var(--cw);
-      }
-      a svg {
-        margin-top: -0.4rem;
-        zoom: 60%;
-      }
-    }
-  }
-`;
-const Section = styled.div``;
+
 export default LensPage;

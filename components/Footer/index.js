@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
@@ -18,7 +18,7 @@ const FooterLink = ({ children, goto, ...rest }) => {
     <>
       <FooterStyle>
         <Link href={`${goto}`}>
-          <a href="#!">
+          <a href="#!" aria-label={children}>
             <p {...rest}>
               {children}
               <IconRight />
@@ -77,7 +77,7 @@ const FooterLink = ({ children, goto, ...rest }) => {
   );
 };
 
-const FooterStyle = styled.div`
+const FooterStyle = styled.footer`
   p {
     font-size: 14px;
     transition: all 1s ease;
@@ -101,8 +101,12 @@ const FooterStyle = styled.div`
   }
 `;
 
+FooterLink.defaultProps = {
+  children: {},
+};
+
 FooterLink.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
   goto: PropTypes.string.isRequired,
 };
 

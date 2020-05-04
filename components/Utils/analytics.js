@@ -1,7 +1,21 @@
 import ReactGA from 'react-ga';
 
 export const initGA = () => {
-  console.log('🐶 CW.');
+  console.log(
+    `%c
+    CONTACT ME
+   ----------------------------------------
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     || 
+                
+  Hey There i'm glad you liked the site and what to see whats going on, sure check the repo at https://github.com/adenekan41/codewonders 
+  
+  And dont forget to shoot me an email at hellocodewonders@gmail.com if you need me to come do awesome work at your company`,
+    'font-family:inherit'
+  );
   ReactGA.initialize('UA-128989337-1');
 };
 

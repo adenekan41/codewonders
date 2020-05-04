@@ -1,60 +1,52 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 
-const theme = css`
-  ${(props) =>
-    props.theme
-      ? `
-  // @desc Dark Theme
+const LightTheme = css`
+  :root {
+    --bg: #fff;
+    --button-index: #eeeeee;
+    --cw: #000;
+    --invert: 0;
+    --mark: #f6f6f6;
+    --theme-amount: 0;
+    --border-color: #2e2e2e;
+    --gray: #888;
+    --pattern: #d0d0d0;
+    --light-gray: #dedede;
+    --lighter-gray: #f5f5f5;
+    --article-color: #464646;
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --gray-alpha: rgba(255, 255, 255, 0.95);
+    --token: #666;
+    --border-color: #e4e4e4;
+    --nav-link: rgba(0, 0, 0, 0.5);
+  }
+`;
+
+const DarkTheme = css`
   :root {
     --bg: #090909;
     --invert: 1;
     --theme-amount: 1;
     --cw: #e1e1e1;
     --gray: #a8a8a8;
+    --pattern: #252525;
     --light-gray: #444;
     --lighter-gray: #222;
     --article-color: #c6c6c6;
-    --header-bg: rgba(19,20,21,0.8);
+    --header-bg: rgba(19, 20, 21, 0.8);
     --gray-alpha: rgba(0, 0, 0, 0.95);
     --token: #999;
     --border-color: #3d3d3d;
-    --button-index:#1a1a1a;;
-    --mark:#131313;
+    --button-index: #1a1a1a;
+    --mark: #131313;
     --nav-link: rgba(255, 255, 255, 0.8);
-}
-  `
-      : `
-  // @desc Light Theme
-  :root {
-   --bg: #fff;
-   --button-index:#eeeeee;
-   --cw: #000;
-   --invert:0; 
-   --mark: #f6f6f6;
-   --theme-amount:0;
-   --border-color: #2e2e2e;
-   --gray: #888;
-   --light-gray: #dedede;
-   --lighter-gray: #f5f5f5;
-   --article-color: #464646;
-   --header-bg: rgba(255,255,255,0.8);
-   --gray-alpha: rgba(255,255,255,0.95);
-   --token: #666;
-   --border-color: #e4e4e4;
-   --nav-link: rgba(0,0,0,.5);
-}
-  `}
+  }
 `;
+
 export const BodyStyling = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
-${theme}
-@media (prefers-color-scheme: dark) {
-  ${theme}
-}
 
-@media (prefers-color-scheme: light) {
-  ${theme}
-}
+${(props) => (props.theme ? DarkTheme : LightTheme)}
 
 ::selection {
   background: var(--token);
@@ -88,32 +80,34 @@ ${theme}
   margin: 0;
   padding: 0;
   box-sizing: border-box; 
-  cursor: url(${(props) =>
-    props.theme ? '/wcursor.png' : '/cursor.png'}), auto;
+
 }
+
+
 :global(body) {
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
       Helvetica, sans-serif;
 }
+
+
 body {
   background: var(--bg) !important;
   padding-right: 0px !important;
   font-family: "Blorado", sans-serif;
+  margin:0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing: antialiased;
+
 }
 
 html{
-    font-family:Poppins,sans-serif;
     scroll-behavior: smooth;
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%
 }
-body{
-    margin:0;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -moz-osx-font-smoothing:grayscale;
-    -webkit-font-smoothing: antialiased;
-}
+
+
 svg{
   fill: var(--article-color);
   &.logo__section{
@@ -127,11 +121,9 @@ a, h1, h2, h3, h4, h5, h6, p, button, input[type=text], input[type=date], input[
   text-rendering: geometricPrecision;
   color: var(--cw)
 }
+
 a{
   cursor: pointer;
-  p{
-    cursor: pointer;
-  }
 }
 
 mark.mark {
@@ -141,13 +133,27 @@ mark.mark {
   background-image: linear-gradient(120deg, var(--mark) 0%, var(--mark) 100%);
   background-repeat: no-repeat;
   background-size: 0% .3em;
-  // font-weight: 700;
   background-position: 0 80%;
   position: relative;
   background-size: 100% .3em;
 }
 
+.page-transition-enter {
+    opacity: 0;
+  }
+  .page-transition-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+  .page-transition-exit {
+    opacity: 1;
+  }
+  .page-transition-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
 `;
+
 export const Header = styled.header`
     padding: 50px 0; 
     transition: all .5s ease;
@@ -218,7 +224,9 @@ export const Header = styled.header`
       font-weight:900;
       border-bottom: 1px solid var(--cw);
       color: var(--cw) !important;
+      display: none;
     }
+
     .navbar-border-collapse.show{
         background: red;
         position: fixed;
@@ -227,9 +235,6 @@ export const Header = styled.header`
         bottom: 0;
         z-index: 99;
         height: 84vh;
-        /* display: flex; */
-        /* align-items: center; */
-        /* justify-content: center; */
     }
    
     @media( max-width : 585px ) {
@@ -378,6 +383,7 @@ export const Header = styled.header`
       }
     }
 `;
+
 export const SocialMedia = styled.div`
   background: transparent;
   padding: 1rem 0;
@@ -443,7 +449,9 @@ export const SocialMedia = styled.div`
     justify-content: space-evenly;
   }
 `;
-export const BackLay = styled.div`
+
+export const BackLay = styled.figure`
+  margin: 0;
   h1 {
     font-family: Abril FatFace;
     font-size: 29.42vh;
@@ -456,4 +464,12 @@ export const BackLay = styled.div`
     transition: all 0.8s ease;
     left: -4rem;
   }
+`;
+
+export const Main = styled.main`
+  background-image: radial-gradient(var(--pattern) 0.5px, transparent 0.5px),
+    radial-gradient(var(--pattern) 0.5px, transparent 0.5px);
+  background-size: calc(20 * 0.5px) calc(20 * 0.5px);
+  background-position: 0 0, calc(10 * 0.5px) calc(10 * 0.5px);
+  min-height: 100vh;
 `;

@@ -12,16 +12,17 @@ const PROJECTS_DATA = [
     description: 'Discover Yourself Through Your Genes.',
     link: 'https://54gene.com',
     imageUrl:
-      'https://i.ibb.co/Z85CmV8/Screen-Shot-2019-11-23-at-1-48-13-PM.png',
-    type: ['others'],
+      'https://i.ibb.co/6gZckMz/Screenshot-2020-05-04-at-4-34-31-AM.png',
+    type: ['others', 'project'],
   },
+
   {
     title: 'Zeedas',
     description: 'Engineering Team On Steriod.',
     link: 'https://zeedas.com',
     imageUrl:
       'https://i.ibb.co/bXTCNhY/Screen-Shot-2019-11-23-at-2-15-47-PM.png',
-    type: ['others'],
+    type: ['others', 'project'],
   },
   {
     title: 'Nester Verify',
@@ -30,6 +31,14 @@ const PROJECTS_DATA = [
     link: 'https://nesterverify.com',
     imageUrl:
       'https://i.ibb.co/5K2pY54/Screen-Shot-2019-11-23-at-2-16-30-PM.png',
+    type: ['project'],
+  },
+  {
+    title: 'Clinified',
+    description: 'Accessing healthcare will never be the same again',
+    link: 'https://clinified.com/',
+    imageUrl:
+      'https://i.ibb.co/ZhmzLdv/Screenshot-2020-05-04-at-4-26-10-AM.png',
     type: ['project'],
   },
   {
@@ -57,20 +66,21 @@ const PROJECTS_DATA = [
       'https://i.ibb.co/ykQmbVw/Screen-Shot-2019-11-23-at-2-20-17-PM.png',
     type: ['others', 'project'],
   },
-  {
-    title: 'Joblink',
-    description: 'Get to know everything about teaching and living in China',
-    link: 'https://joblink4u.com',
-    imageUrl:
-      'https://i.ibb.co/Zfs0nNB/Screen-Shot-2019-11-23-at-2-21-16-PM.png',
-    type: ['project'],
-  },
+
   {
     title: 'Truegiven',
     description: 'Addressing current and future workforce needs',
     link: 'https://truegiven.com',
     imageUrl:
       'https://i.ibb.co/LnCz8Vx/Screen-Shot-2019-11-23-at-2-24-07-PM.png',
+    type: ['project'],
+  },
+  {
+    title: 'Joblink',
+    description: 'Get to know everything about teaching and living in China',
+    link: 'https://joblink4u.com',
+    imageUrl:
+      'https://i.ibb.co/Zfs0nNB/Screen-Shot-2019-11-23-at-2-21-16-PM.png',
     type: ['project'],
   },
   {
@@ -110,15 +120,6 @@ const PROJECTS_DATA = [
     type: ['tools'],
   },
   {
-    title: 'Despatch',
-    description:
-      'Local Same Day Delivery Courier Specialists For Personal / Business Clients.',
-    link: 'https://despatch.com.ng',
-    imageUrl:
-      'https://i.ibb.co/RcgJt6w/Screen-Shot-2019-11-23-at-2-31-47-PM.png',
-    type: ['project'],
-  },
-  {
     title: 'Atara Pay',
     description: 'Buy and Sell Anywhere with Zero Risk',
     link: 'https://atarapay.com',
@@ -126,39 +127,7 @@ const PROJECTS_DATA = [
       'https://i.ibb.co/dk7bZ9L/Screen-Shot-2019-11-23-at-3-16-38-PM.png',
     type: ['portfolio', 'project'],
   },
-  {
-    title: 'Iyanu',
-    description: 'Social Conscience As A Service',
-    link: 'https://iyanu.io',
-    imageUrl:
-      'https://i.ibb.co/VBk5JzH/Screen-Shot-2019-11-23-at-3-17-50-PM.png',
-    type: ['portfolio'],
-  },
-  {
-    title: 'Payer',
-    description: 'The Easietst way To But Airtime Make Payments,',
-    link: 'https://www.codewonders.us/payer',
-    imageUrl:
-      'https://i.ibb.co/6ZHSPH0/Screen-Shot-2019-11-23-at-3-19-39-PM.png',
-    type: ['others'],
-  },
-  {
-    title: 'Artisan Inc',
-    description:
-      'Artisan Is a platform for engaging workers all over the country with easy task and small platform to work with',
-    link: 'https://www.codewonders.us/Artisan/',
-    imageUrl:
-      'https://i.ibb.co/6s4mcqc/Screen-Shot-2019-11-24-at-11-30-22-PM.png',
-    type: ['others'],
-  },
-  {
-    title: 'Drum Root',
-    description: 'A React Web App for Creating and Sharing Drum Loops.',
-    link: 'https://github.com/zero-to-mastery/drum-root',
-    imageUrl:
-      'https://i.ibb.co/8MG46Ts/Smart-Select-20191111-111937-Fiverr.jpg',
-    type: ['open-source'],
-  },
+
   {
     title: 'VSCode Nice Index',
     description:
@@ -175,21 +144,20 @@ const PROJECTS_DATA = [
     type: ['open-source', 'tools'],
   },
   {
-    title: 'Wondafu',
-    description:
-      'You can pay bills on WhatsApp now! My number is +1 (954) 621-1426.',
-    link: 'https://wondafu.ng',
-    imageUrl:
-      'https://i.ibb.co/0tYR5Mb/Screen-Shot-2019-11-23-at-6-47-50-PM.png',
-    type: ['project', 'others'],
-  },
-  {
     title: '#payme',
     description:
       'Create your personal hashtag to make & receive payments across all messaging apps.',
     link: 'https://hashtagpay.me/',
     imageUrl:
       'https://i.ibb.co/7p3Cz7K/Screen-Shot-2020-01-20-at-11-44-45-PM.png',
+    type: ['project', 'others'],
+  },
+  {
+    title: 'YAP',
+    description: 'Yet Another Portfolio.',
+    link: 'https://minimalpeace.com/',
+    imageUrl:
+      'https://i.ibb.co/KrqPDWH/Screenshot-2020-05-04-at-2-00-47-AM.png',
     type: ['project', 'others'],
   },
   {
@@ -209,11 +177,20 @@ const PROJECTS_DATA = [
     type: ['open-source', 'tools'],
   },
   {
+    title: 'Unit Css',
+    description: '💪 A cli tool to convert units in your css file',
+    link: 'https://www.npmjs.com/package/unitcss',
+    imageUrl: 'https://i.ibb.co/X2f8nWf/unitcsss.png',
+    type: ['open-source', 'tools'],
+  },
+  {
     title: 'Helix',
     description:
-      'A Visual Studio Code theme for the notion lovers out there.',
-    link: 'https://marketplace.visualstudio.com/items?itemName=codewonders.helix&ssr=false',
-    imageUrl: 'https://i.ibb.co/kxKY97y/Screen-Shot-2019-11-24-at-9-00-13-PM.png',
+      '🌄A minimal monochrome UI theme for Vscode ~ 🎑 A notion like theme',
+    link:
+      'https://marketplace.visualstudio.com/items?itemName=codewonders.helix&ssr=false',
+    imageUrl:
+      'https://i.ibb.co/kxKY97y/Screen-Shot-2019-11-24-at-9-00-13-PM.png',
     type: ['open-source', 'tools'],
   },
   {
@@ -229,7 +206,8 @@ const PROJECTS_DATA = [
     description:
       'A small state management with less setup and super scalability in your react app.',
     link: 'https://www.npmjs.com/package/over-stateful',
-    imageUrl: 'https://i.ibb.co/vwXydQy/Group-1-1.png',
+    imageUrl:
+      'https://i.ibb.co/YT6fXLB/Screenshot-2020-05-04-at-4-41-05-AM.png',
     type: ['open-source', 'tools'],
   },
 ];

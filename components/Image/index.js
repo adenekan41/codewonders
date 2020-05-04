@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import ProgressiveImage from 'react-progressive-image';
 
 const Image = ({ src, alt, className }) => (

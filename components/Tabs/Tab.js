@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-const TabStyle = styled.span``;
-const Tab = ({ activeTab, label, onClick }) => {
+const Tab = ({ activeTab, label, onClick, ...rest }) => {
   return (
-    <TabStyle>
+    <>
       <button
         className={`tab-list-item ${
           activeTab === label ? 'tab-list-active' : ''
@@ -13,10 +11,11 @@ const Tab = ({ activeTab, label, onClick }) => {
         type="button"
         onClick={() => onClick(label)}
         aria-label={`Open ${label}`}
+        {...rest}
       >
         {label}
       </button>
-    </TabStyle>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ import FooterLink from '../components/Footer';
 
 const Home = () => {
   const [color] = useState(arrayRandomItem(['#37609c', '#34c759', '#5856d6']));
-  const copyText = (e) => {
+  const copyText = () => {
     const textField = document.createElement('textarea');
     textField.innerText = 'hellocodewonders@gmail.com';
     document.body.appendChild(textField);
@@ -19,84 +19,86 @@ const Home = () => {
 
   return (
     <Layout>
-      <Header color={color}>
+      <PageSection color={color}>
         <PageWrapper>
-          <h1 data-text="I'm Adenekan Wonderful" className="intro__text">
-            <mark className="mark">I'm Adenekan Wonderful</mark>
-          </h1>
-          <p>
-            {' '}
-            Frontend developer and javascript engineer,{' '}
-            <Link href="/lens">
-              <a href="#!" aria-label="Go to Lens Page">
-                <button type="button">Photochromic Lens</button>
-              </a>
-            </Link>{' '}
-            enthusiast, practicing minimalist, and{' '}
-            <a
-              href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View Music Playlist"
-            >
-              <button type="button">Pop Music & Jazz lover</button>
-            </a>{' '}
-            in search of flow.
-          </p>
-
-          <p>
-            Working with my hands to make magic happen on the internet. View my{' '}
-            <Link href="/projects">
-              <a href="#!" aria-label="Go to Projects Page">
-                <button type="button">Projects</button>
-              </a>
-            </Link>
-            ,{' '}
-            <Link href="/articles">
-              <button type="button">Articles</button>
-            </Link>
-            ,{' '}
-            <Link href="/resume">
-              <button type="button">Resumé</button>
-            </Link>
-            ,{' '}
-            <Link href="/contact">
-              <a href="#!" aria-label="Go to Contact Page">
-                <button type="button">Contact Me</button>
-              </a>
-            </Link>
-            , or send me an email at{' '}
-            <button
-              style={{ cursor: 'crosshair' }}
-              title="Copy to clipboard"
-              onClick={copyText}
-              type="button"
-              aria-label="Send an email"
-            >
-              hellocodewonders@gmail.com
-            </button>
-            .
-          </p>
+          <article>
+            <h1 data-text="I'm Adenekan Wonderful" className="intro__text">
+              <mark className="mark">I&apos;m Adenekan Wonderful</mark>
+            </h1>
+            <p>
+              {' '}
+              Frontend developer and Javascript engineer,{' '}
+              <Link href="/lens">
+                <a href="#!" aria-label="Go to Lens Page">
+                  <button type="button">Photochromic Lens</button>
+                </a>
+              </Link>{' '}
+              enthusiast, practicing minimalist, and{' '}
+              <a
+                href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Music Playlist"
+              >
+                <button type="button">Pop Music & Jazz lover</button>
+              </a>{' '}
+              in search of flow.
+            </p>
+            <p>
+              Working with my hands to make magic happen on the internet. View
+              my{' '}
+              <Link href="/projects">
+                <a href="#!" aria-label="Go to Projects Page">
+                  <button type="button">Projects</button>
+                </a>
+              </Link>
+              ,{' '}
+              <Link href="/articles">
+                <button type="button">Articles</button>
+              </Link>
+              ,{' '}
+              <Link href="/resume">
+                <button type="button">Resumé</button>
+              </Link>
+              ,{' '}
+              <Link href="/contact">
+                <a href="#!" aria-label="Go to Contact Page">
+                  <button type="button">Contact Me</button>
+                </a>
+              </Link>
+              , or send me an email at{' '}
+              <button
+                style={{ cursor: 'crosshair' }}
+                title="Copy to clipboard"
+                onClick={copyText}
+                type="button"
+                aria-label="Send an email"
+              >
+                hellocodewonders@gmail.com
+              </button>
+              .
+            </p>
+          </article>
           <br />
           <FooterLink goto="/about">See More About Me</FooterLink>
           <br />
         </PageWrapper>
-      </Header>
+      </PageSection>
     </Layout>
   );
 };
 
-const Header = styled.header`
+const PageSection = styled.div`
   min-height: calc(100vh - 39vh);
   display: flex;
   align-items: center;
-  justify-contents: center;
+  justify-content: center;
   .intro__text {
-    font-size: 54px;
+    font-size: 60px;
     font-weight: 900;
     margin: 2rem 0rem 1.5rem;
     position: relative;
-    // &:hover{
+
     &::before,
     &::after {
       content: attr(data-text);
@@ -109,14 +111,12 @@ const Header = styled.header`
     &::before {
       left: 2px;
       text-shadow: -1px 0 blue;
-      background: var(--bg);
       animation: noise-anim-2 15s infinite linear alternate-reverse;
     }
     &::after {
       left: -2px;
       text-shadow: 3px 0 red;
       animation: noise-anim 2s infinite linear alternate-reverse;
-      background: var(--bg);
     }
     @keyframes noise-anim {
       0% {
@@ -248,16 +248,15 @@ const Header = styled.header`
         clip-path: inset(1% 0 81% 0);
       }
     }
-    // }
   }
   p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 2.3;
     font-weight: 400;
     color: var(--article-color) !important;
   }
   button {
-    font-size: 16px;
+    font-size: 14px;
     background: var(--button-index);
     border: none;
     border-radius: 5px;

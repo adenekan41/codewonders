@@ -7,13 +7,15 @@ import FooterLink from '../components/Footer';
 const Contact = () => {
   return (
     <Layout title="Contact">
-      <Header>
+      <PageSection>
         <PageWrapper>
           <h1 className="intro__text">Contact.</h1>
-          <p>
-            Get in touch or shoot me an email directly on{' '}
-            <b>hellocodewonders@gmail.com</b>
-          </p>
+          <article>
+            <p>
+              Get in touch or shoot me an email directly on{' '}
+              <b>hellocodewonders@gmail.com</b>
+            </p>
+          </article>
           <br />
           <form
             method="POST"
@@ -27,6 +29,7 @@ const Contact = () => {
                   id="name"
                   className="form-control"
                   placeholder="Name"
+                  aria-required="true"
                   required
                 />
               </div>
@@ -37,6 +40,7 @@ const Contact = () => {
                   id="email"
                   className="form-control"
                   placeholder="Email"
+                  aria-required="true"
                   required
                 />
               </div>
@@ -47,6 +51,7 @@ const Contact = () => {
                   rows="5"
                   className="form-control"
                   placeholder="Message"
+                  aria-required="true"
                   required
                 />
               </div>
@@ -60,20 +65,19 @@ const Contact = () => {
             </button>
           </form>
         </PageWrapper>
-      </Header>
-      <Section>
-        <PageWrapper>
-          <FooterLink goto="/" className="mt-3 mb-5">
-            Go Back Home
-          </FooterLink>
-          <br />
-        </PageWrapper>
-      </Section>
+      </PageSection>
+
+      <PageWrapper>
+        <FooterLink goto="/" className="mt-3 mb-5">
+          Go Back Home
+        </FooterLink>
+        <br />
+      </PageWrapper>
     </Layout>
   );
 };
 
-const Header = styled.header`
+const PageSection = styled.div`
   .intro__text {
     font-size: 54px;
     font-weight: 900;
@@ -128,5 +132,5 @@ const Header = styled.header`
     }
   }
 `;
-const Section = styled.div``;
+
 export default Contact;

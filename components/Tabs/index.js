@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
@@ -11,8 +11,8 @@ const Tabs = ({ children }) => {
   };
 
   return (
-    <div className="tabs">
-      <Wrapper className="d-md-flex d-block">
+    <>
+      <Wrapper className="d-md-flex d-block tabs">
         {children.map((child) => {
           const { label } = child.props;
 
@@ -21,6 +21,7 @@ const Tabs = ({ children }) => {
               activeTab={activeTab}
               key={label}
               label={label}
+              aria-current={activeTab}
               onClick={onClickTabItem}
             />
           );
@@ -32,11 +33,11 @@ const Tabs = ({ children }) => {
           return child.props.children;
         })}
       </div>
-    </div>
+    </>
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;

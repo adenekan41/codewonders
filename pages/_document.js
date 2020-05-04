@@ -171,7 +171,8 @@ export default class MyDocument extends Document {
             `,
             }}
           />
-          <link rel="stylesheet" href="/css/style.css" />
+          <link rel="stylesheet" href="/css/normalize.css" />
+          <link rel="stylesheet" href="/css/base.css" />
         </Head>
         <body>
           <Main />

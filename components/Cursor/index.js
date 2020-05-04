@@ -34,13 +34,13 @@ const Cursor = () => {
     };
   });
   return (
-    <Wrapper>
+    <CursorThumb>
       <div className="cursor d-none d-md-inline" ref={cursor} />
-    </Wrapper>
+    </CursorThumb>
   );
 };
 
-const Wrapper = styled.div`
+const CursorThumb = styled.div`
   .cursor {
     width: 70px;
     height: 70px;

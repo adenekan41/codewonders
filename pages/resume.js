@@ -14,27 +14,29 @@ const Resume = () => {
   return (
     <Layout title="Resume">
       <PageWrapper>
-        <Container>
-          <h1 className="intro__text">Resumé.</h1>
-          <p>
-            Reach out to me via my{' '}
-            <b>
-              <Link href="/contact">
-                <a href="#!">contact page</a>
-              </Link>
-            </b>{' '}
-            or download the resume{' '}
-            <b>
-              <a
-                href={previewData}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Go to Resumé Page"
-              >
-                download
-              </a>
-            </b>
-          </p>
+        <PageSection>
+          <article>
+            <h1 className="intro__text">Resumé.</h1>
+            <p>
+              Reach out to me via my{' '}
+              <b>
+                <Link href="/contact">
+                  <a href="#!">contact page</a>
+                </Link>
+              </b>{' '}
+              or download the resume{' '}
+              <b>
+                <a
+                  href={previewData}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Go to Resumé Page"
+                >
+                  download
+                </a>
+              </b>
+            </p>
+          </article>
           <br />
           <iframe
             src={resumeData}
@@ -43,7 +45,7 @@ const Resume = () => {
             scrolling="no"
             title="Adenekan Wonderful Resumé"
           />
-        </Container>
+        </PageSection>
         <br />
         <br />
         <FooterLink goto="/contact" className="mt-3 mb-5">
@@ -55,7 +57,7 @@ const Resume = () => {
   );
 };
 
-const Container = styled.div`
+const PageSection = styled.div`
   .intro__text {
     font-size: 54px;
     font-weight: 900;
