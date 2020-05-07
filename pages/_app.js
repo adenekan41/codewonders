@@ -32,7 +32,6 @@ export default class MyApp extends App {
     this.setState({ theme: !theme });
   };
   closeShow = () => {
-    const { show } = this.state;
     this.setState({ show: false });
   };
   static async getInitialProps({ Component, ctx }) {

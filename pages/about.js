@@ -28,7 +28,7 @@ const About = () => {
                 >
                   Human Centered Design 101. <small>Acumen</small>
                 </a>
-                <a href="#!" className="float-right">
+                <a className="float-right" tabIndex="-1">
                   <Date /> <b>2017 - 2018</b>
                 </a>
                 <p>
@@ -49,7 +49,7 @@ const About = () => {
                 >
                   Data Structure And Algorithm. <small>Udemy</small>
                 </a>
-                <a href="#!" className="float-right">
+                <a className="float-right" tabIndex="-1">
                   <Date /> <b>2019</b>
                 </a>
                 <p>
@@ -69,7 +69,7 @@ const About = () => {
                 >
                   Adaptive Leadership. <small>edX</small>
                 </a>
-                <a href="#!" className="float-right">
+                <a className="float-right" tabIndex="-1">
                   <Date /> <b>2019</b>
                 </a>
                 <p>
@@ -82,8 +82,10 @@ const About = () => {
                 </p>
               </li>
               <li>
-                <a href="#!">Learning Something Great 😉</a>
-                <a href="#!" className="float-right">
+                <Link href="/articles">
+                  <a>Learning Something Great 😉</a>
+                </Link>
+                <a className="float-right" tabIndex="-1">
                   <Date /> <b>Currently</b>
                 </a>
                 <p>We continue learning everyday. </p>
@@ -175,14 +177,12 @@ const About = () => {
             <ul className="timeline">
               <li>
                 <Link href="/lens">
-                  <a href="#!">
+                  <a>
                     Adenekan's Collection. <small>©Adenekan</small>
                   </a>
                 </Link>
                 <Link href="/lens">
-                  <a className="float-right" href="#!">
-                    Visit Page
-                  </a>
+                  <a className="float-right">Visit Page</a>
                 </Link>
                 <p>
                   This is an intensive, curation of the photochromic lenses that

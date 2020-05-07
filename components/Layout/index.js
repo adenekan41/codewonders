@@ -8,6 +8,7 @@ import Navbar from '../Navbar';
 import AppContext from '../Utils/context';
 import { initGA, logPageView } from '../Utils/analytics';
 import Cursor from '../Cursor';
+import SkipToMain from '../A11y/skip-to-main';
 
 const Layout = ({ children, title = 'Home' }) => {
   const { theme, loadTheme } = useContext(AppContext);
@@ -36,6 +37,7 @@ const Layout = ({ children, title = 'Home' }) => {
         />
         <meta name="theme-color" content={`${theme ? '#000000' : '#FFFFFF'}`} />
       </Helmet>
+      <SkipToMain content="main-content" />
       <Navbar />
       <BackLay>
         <h1 aria-hidden="true">
@@ -55,7 +57,7 @@ Layout.propTypes = {
 
 export const PageWrapper = ({ children, className = '', ...rest }) => {
   return (
-    <section {...rest}>
+    <section {...rest} id="main-content" tabIndex="-1">
       <div className={`container  ${className}`}>
         <div className="row align-items-center justify-content-center">
           <div className="col-md-10">{children}</div>

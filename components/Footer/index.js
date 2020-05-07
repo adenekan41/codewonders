@@ -18,7 +18,7 @@ const FooterLink = ({ children, goto, ...rest }) => {
     <>
       <FooterStyle>
         <Link href={`${goto}`}>
-          <a href="#!" aria-label={children}>
+          <a aria-label={children}>
             <p {...rest}>
               {children}
               <IconRight />

@@ -29,8 +29,10 @@ const Home = () => {
               {' '}
               Frontend developer and Javascript engineer,{' '}
               <Link href="/lens">
-                <a href="#!" aria-label="Go to Lens Page">
-                  <button type="button">Photochromic Lens</button>
+                <a aria-label="Go to Lens Page">
+                  <button type="button" tabIndex="-1">
+                    Photochromic Lens
+                  </button>
                 </a>
               </Link>{' '}
               enthusiast, practicing minimalist, and{' '}
@@ -40,7 +42,9 @@ const Home = () => {
                 rel="noopener noreferrer"
                 aria-label="View Music Playlist"
               >
-                <button type="button">Pop Music & Jazz lover</button>
+                <button type="button" tabIndex="-1">
+                  Pop Music & Jazz lover
+                </button>
               </a>{' '}
               in search of flow.
             </p>
@@ -48,22 +52,34 @@ const Home = () => {
               Working with my hands to make magic happen on the internet. View
               my{' '}
               <Link href="/projects">
-                <a href="#!" aria-label="Go to Projects Page">
-                  <button type="button">Projects</button>
+                <a aria-label="Go to Projects Page">
+                  <button type="button" tabIndex="-1">
+                    Projects
+                  </button>
                 </a>
               </Link>
               ,{' '}
               <Link href="/articles">
-                <button type="button">Articles</button>
+                <a aria-label="Go to Articles Page And Check What I Read">
+                  <button type="button" tabIndex="-1">
+                    Articles
+                  </button>
+                </a>
               </Link>
               ,{' '}
               <Link href="/resume">
-                <button type="button">Resumé</button>
+                <a aria-label="Go to Resume Page">
+                  <button type="button" tabIndex="-1">
+                    Resumé
+                  </button>
+                </a>
               </Link>
               ,{' '}
               <Link href="/contact">
-                <a href="#!" aria-label="Go to Contact Page">
-                  <button type="button">Contact Me</button>
+                <a aria-label="Go to Contact Page">
+                  <button type="button" tabIndex="-1">
+                    Contact Me
+                  </button>
                 </a>
               </Link>
               , or send me an email at{' '}

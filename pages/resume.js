@@ -21,7 +21,7 @@ const Resume = () => {
               Reach out to me via my{' '}
               <b>
                 <Link href="/contact">
-                  <a href="#!">contact page</a>
+                  <a>contact page</a>
                 </Link>
               </b>{' '}
               or download the resume{' '}
