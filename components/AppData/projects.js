@@ -3,8 +3,7 @@ const PROJECTS_DATA = [
     title: 'Shoprrr',
     description: 'An E-commerce Application For Buying Cotton Products.',
     link: 'https://shoprrr.netlify.com',
-    imageUrl:
-      'https://i.ibb.co/pW8TLch/Screen-Shot-2019-11-23-at-2-11-51-PM.png',
+    imageUrl: 'https://i.ibb.co/T0XwFsQ/Screen-Recording-2020-05-06-at-3.gif',
     type: ['project'],
   },
   {
@@ -58,6 +57,15 @@ const PROJECTS_DATA = [
       'https://i.ibb.co/s5ppyjx/Screen-Shot-2019-11-23-at-2-17-57-PM.png',
     type: ['others'],
   },
+  {
+    title: 'Opus Insights',
+    description:
+      'A forcasting platform for farmers  that bring intelligent insights to agricultural supply chains',
+    link: 'https://opus2frontend.azurewebsites.net/',
+    imageUrl: 'https://i.ibb.co/zFT3HQR/Screen-Recording-2020-05-06-at-1.gif',
+    type: ['others', 'project'],
+  },
+
   {
     title: 'Lentora',
     description: 'Learn a New Skill, Boost Your Career',
@@ -115,8 +123,7 @@ const PROJECTS_DATA = [
     description:
       'Discover & access to on-demand Information leisure and utility over the world from your chrome.',
     link: 'https://bellza.surge.sh',
-    imageUrl:
-      'https://i.ibb.co/VNh4BNS/Screen-Shot-2019-11-23-at-2-29-40-PM.png',
+    imageUrl: 'https://i.ibb.co/W6859mc/ezgif-com-optimize.gif',
     type: ['tools'],
   },
   {
@@ -153,11 +160,10 @@ const PROJECTS_DATA = [
     type: ['project', 'others'],
   },
   {
-    title: 'YAP',
+    title: 'Another Portfolio',
     description: 'Yet Another Portfolio.',
     link: 'https://minimalpeace.com/',
-    imageUrl:
-      'https://i.ibb.co/KrqPDWH/Screenshot-2020-05-04-at-2-00-47-AM.png',
+    imageUrl: 'https://i.ibb.co/zs38X9q/Screen-Recording-2020-05-06-at-4-1.gif',
     type: ['project', 'others'],
   },
   {
