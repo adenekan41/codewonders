@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
           <meta property="og:locale" content="en-US" />
           <meta property="og:type" content="website" />
           <meta
-            property="description"
+            name="description"
             content="Hi, I&#x27;m Adenekan Wonderful, Frontend Developer and Javascript Engineer."
           />
           <meta
