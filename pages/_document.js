@@ -28,11 +28,11 @@ export default class MyDocument extends Document {
           <meta property="og:locale" content="en-US" />
           <meta property="og:type" content="website" />
           <meta
-            name="description"
+            property="description"
             content="Hi, I&#x27;m Adenekan Wonderful, Frontend Developer and Javascript Engineer."
           />
           <meta
-            name="og:description"
+            property="og:description"
             content="Hi, I&#x27;m Adenekan Wonderful, Frontend Developer and Javascript Engineer."
           />
           <meta name="twitter:card" content="summary_large_image" />
@@ -124,10 +124,10 @@ export default class MyDocument extends Document {
             rel="author"
             href="https://lh3.googleusercontent.com/KUg3rbUWiVpV83Sdsy5FcsGeOlpcOgi1o3wLhcZGmGkjDmWCj4Hh4kLEEn_1b4dGsm9hzW7lGGvEsUpH2wpCRk9vlfod3ojbJyG7Rdb3ViBaBric9MwvP6J422dIifjzdT4gMJdKkWB4TIlfouuwVm9lxBgxoXEoGm3yiF7xMtFPNIEOTbbgG-WcV6I6jGhLj4AKoRJS_M2g2m5g132WKRTgWSLO4D4sL05lRPAATNq2h3bD72vFGm_Zk-r53dJGBe7FlHIcTV6rU85XD7wwF5sKtmddNbO9nbKg1L-W5pGcU-Ntvx9ayUmxMmGck0FXhf3saN6Qys_dh_C31jy1StMNeceswq1cH8712PvVmca1uNircDdNUbgKIstcn2Q3Egw1w_P5fJ17H6Ru7ZB8gmgEtivx8enUeE_TknyYz37p71GEGCg9-E2m5bl9YaUNTnODjQ2Lh8xeXYnsnCFkvw-XTlWFi799mxtjQFbPK32oAbV728dCld7eB8oTcvB4msAah-hukPKOr83q4GeiZlUe-w_L9hXzFDXF5d86CQbD7ypeUnlhdMaZi8KXOXrkEUMD_njXWSFEh9Xdcnt87Yvkz7VqRxbDHUz4Nid5oiUFAYtUgV917fg1PHroY1Iy0R3g97GXAxHsVc0PfzKLcKgZvoDVURscN8jlpDvbwGfiJ_4HwRHFRys=w1080-h1440-no"
           />
-          <meta name="og:title" content="Adenekan Wonderful" />
-          <meta name="og:url" content="https://codewonders.dev" />
+          <meta property="og:title" content="Adenekan Wonderful" />
+          <meta property="og:url" content="https://codewonders.dev" />
           <meta
-            name="og:image"
+            property="og:image"
             content="https://i.ibb.co/jz5Qwx1/Group-7.png"
           />
           <meta
