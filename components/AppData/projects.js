@@ -151,6 +151,13 @@ const PROJECTS_DATA = [
     type: ['open-source', 'tools'],
   },
   {
+    title: 'Urley',
+    description: "A powerful utility library to work with URL's",
+    link: 'https://urley.netlify.com',
+    imageUrl: 'https://i.ibb.co/cD4jjDy/image.png',
+    type: ['open-source', 'tools'],
+  },
+  {
     title: '#payme',
     description:
       'Create your personal hashtag to make & receive payments across all messaging apps.',
@@ -160,8 +167,8 @@ const PROJECTS_DATA = [
     type: ['project', 'others'],
   },
   {
-    title: 'Another Portfolio',
-    description: 'Yet Another Portfolio.',
+    title: 'Minimal Peace',
+    description: 'A UI/UX designer of over 5+ years experience portfolio',
     link: 'https://minimalpeace.com/',
     imageUrl: 'https://i.ibb.co/zs38X9q/Screen-Recording-2020-05-06-at-4-1.gif',
     type: ['project', 'others'],
