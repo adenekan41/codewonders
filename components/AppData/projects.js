@@ -112,7 +112,7 @@ const PROJECTS_DATA = [
     title: '70Shops',
     description:
       'Helps business owners create an eCommerce platform for their businesses',
-    link: 'https://joblink4u.com',
+    link: 'https://70shops.com',
     imageUrl:
       'https://i.ibb.co/q939Wxd/Screen-Shot-2019-11-23-at-2-27-08-PM.png',
     type: ['others', 'project'],
@@ -141,20 +141,20 @@ const PROJECTS_DATA = [
       'VSCode package to rename "index.js" files to their parent dir.',
     link: 'https://github.com/iamuchejude/vs-nice-index',
     imageUrl: 'https://i.ibb.co/Fz8wGvg/msvschero.jpg',
-    type: ['open-source', 'tools'],
+    type: ['open-source'],
   },
   {
     title: 'NodeStorage.js',
     description: 'File system storage utility with localStorage like API',
     link: 'https://npm.im/nodestorage.js',
     imageUrl: 'https://i.ibb.co/QPBqVL2/Group-12-2-1.png',
-    type: ['open-source', 'tools'],
+    type: ['open-source'],
   },
   {
     title: 'Urley',
-    description: "A powerful utility library to work with URL's",
+    description: 'A cross-platform utility library to work with URLs',
     link: 'https://urley.netlify.com',
-    imageUrl: 'https://i.ibb.co/cD4jjDy/image.png',
+    imageUrl: 'https://i.ibb.co/FDh7T07/image.png',
     type: ['open-source', 'tools'],
   },
   {
