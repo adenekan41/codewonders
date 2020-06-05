@@ -79,7 +79,7 @@ const FooterLink = ({ children, goto, ...rest }) => {
 
 const FooterStyle = styled.footer`
   p {
-    font-size: 14px;
+    font-size: var(--font-sm);
     transition: all 1s ease;
     svg {
       margin-left: 1rem;

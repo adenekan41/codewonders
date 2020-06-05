@@ -110,7 +110,7 @@ const PageSection = styled.div`
   align-items: center;
   justify-content: center;
   .intro__text {
-    font-size: 60px;
+    font-size: calc(var(--font-x-lg) + 3px);
     font-weight: 900;
     margin: 2rem 0rem 1.5rem;
     position: relative;
@@ -266,13 +266,13 @@ const PageSection = styled.div`
     }
   }
   p {
-    font-size: 15px;
+    font-size: calc(var(--font-sm) + 0.9px);
     line-height: 2.3;
     font-weight: 400;
     color: var(--article-color) !important;
   }
   button {
-    font-size: 14px;
+    font-size: var(--font-sm);
     background: var(--button-index);
     border: none;
     border-radius: 5px;

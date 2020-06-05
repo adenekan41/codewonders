@@ -42,7 +42,7 @@ const Wrapper = styled.div`
     text-align: center;
     font-size: 1.2em;
     font-weight: 500;
-    font-size: 14px;
+    font-size: var(--font-sm);
     z-index: 9999999;
   }
 `;

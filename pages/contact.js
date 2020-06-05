@@ -79,13 +79,13 @@ const Contact = () => {
 
 const PageSection = styled.div`
   .intro__text {
-    font-size: 54px;
+    font-size: var(--font-x-lg);
     font-weight: 900;
     margin: 4rem 0rem 1.5rem;
     position: relative;
   }
   p {
-    font-size: 15px;
+    font-size: calc(var(--font-sm) + 0.9px);
     margin-top: 0.6rem;
     line-height: 2;
     font-weight: 400;
@@ -105,12 +105,12 @@ const PageSection = styled.div`
     }
   }
   button {
-    font-size: 16px;
+    font-size: calc(var(--font-sm) + 1.1px);
     background: var(--border-color);
     border: none;
     color: var(--cw);
     border-radius: 5px;
-    padding: 17px 40px;
+    padding: 15px 40px;
     margin-bottom: 3rem;
   }
   form {

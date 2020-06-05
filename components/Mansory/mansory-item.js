@@ -17,7 +17,9 @@ const MansoryItem = ({ item }) => {
     >
       <MansoryItemStyle
         {...{ item }}
-        style={{ height: arrayRandomItem(['400px', '454px', '310px']) }}
+        style={{
+          height: arrayRandomItem(['400px', '454px', '310px']),
+        }}
       >
         <Image src={item.imageUrl} alt={item.imageUrl} />
         <div>
@@ -99,12 +101,12 @@ const MansoryItemStyle = styled.div`
 
   h3 {
     color: #fff;
-    font-size: 31px;
+    font-size: var(--font-x-md);
     font-weight: 800;
   }
   p {
     color: #d5d5d5 !important;
-    font-size: 15px;
+    font-size: calc(var(--font-sm) + 0.9px);
   }
   div {
     opacity: 0;

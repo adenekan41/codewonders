@@ -60,7 +60,7 @@ const Wrapper = styled.nav`
   }
   .tab-list-item {
     margin: 0 1rem 0 0;
-    font-size: 15px;
+    font-size: calc(var(--font-sm) + 0.9px);
     transition: all 0.3s ease;
     background: transparent;
     color: var(--gray);

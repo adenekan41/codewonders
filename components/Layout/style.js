@@ -1,5 +1,20 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 
+const FontToken = css`
+  @media (min-width: 787px) {
+    --font-sm: 0.875em;
+    --font-md: 1.124em;
+    --font-x-md: 1.667em;
+    --font-x-lg: 3.275em;
+  }
+  @media (max-width: 787px) {
+    --font-sm: 0.779em;
+    --font-md: 1.011em;
+    --font-x-md: 1.517em;
+    --font-x-lg: 2.775em;
+  }
+`;
+
 const LightTheme = css`
   :root {
     --bg: #fff;
@@ -19,6 +34,7 @@ const LightTheme = css`
     --token: #666;
     --border-color: #e4e4e4;
     --nav-link: rgba(0, 0, 0, 0.5);
+    ${FontToken}
   }
 `;
 
@@ -40,6 +56,7 @@ const DarkTheme = css`
     --button-index: #1a1a1a;
     --mark: #131313;
     --nav-link: rgba(255, 255, 255, 0.8);
+    ${FontToken}
   }
 `;
 
@@ -220,7 +237,7 @@ export const Header = styled.header`
     }
     .nav-item > a {
         padding: 8px 15px !important;
-        font-size: 15px;
+        font-size: calc(var(--font-sm) + 0.9px);
         cursor:pointer;
     }
     #collapsibleNavbar .is-active{
@@ -240,57 +257,14 @@ export const Header = styled.header`
         height: 84vh;
     }
    
-    @media( max-width : 585px ) {
-      padding:20px 0 0;
-      .navbar-collapse{
-        background: var(--bg);
-        position: fixed;
-        z-index: 9999;
-        width: 100%;
-        animation-name:opacitys;
-        transition:all 1s ease;
-        animation-duration:1s;
-        left: 0;
-        bottom: 0;
-
-        height: 100%;
-        svg{
-          position: absolute;
-          right: 60px;
-          top: 60px;
-          cursor: pointer;
-        }
-        ul {
-          display: flex;
-          height: 100%;
-          width: 100%;
-          align-items: center;
-          justify-content: center;
-          li{
-            margin-bottom: 2rem;
-            .nav-link{
-              font-size: 20px;
-              font-weight: 800;
-              text-transform: uppercase;
-            }
-            &:nth-of-type(6) svg{
-              left:60px !important;
-            }
-          }
-        }
-        
-      }
-      @keyframes opacity {
-        from{
-          opacity:0.5;
-        }
-        from{
-          opacity:1;
-        }
-      }
-    }
+    
     @media( max-width : 762px ) {
       padding:20px 0 0;
+      .navbar-brand {
+        svg {
+          width: 60px;
+        }
+      }
       .navbar-collapse{
         background: var(--bg);
         position: fixed;
@@ -306,6 +280,7 @@ export const Header = styled.header`
           position: absolute;
           right: 60px;
           top: 60px;
+        
           cursor: pointer;
         }
         ul {
@@ -317,7 +292,7 @@ export const Header = styled.header`
           li{
             margin-bottom: 2rem;
             .nav-link{
-              font-size: 20px;
+              font-size: calc(var(--font-md) + 1.8px);
               font-weight: 800;
               text-transform: uppercase;
             }
@@ -337,54 +312,7 @@ export const Header = styled.header`
         }
       }
     }
-    @media( max-width : 220px ){
-      padding:20px 0 0;
-      .navbar-collapse{
-        background: var(--bg);
-        position: fixed;
-        z-index: 9999;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        transition:all 1s ease;
-        animation-name:opacitys;
-        animation-duration:1s;
-        height: 100%;
-        svg{
-          position: absolute;
-          right: 60px;
-          top: 60px;
-          cursor: pointer;
-        }
-        ul {
-          display: flex;
-          height: 100%;
-          width: 100%;
-          align-items: center;
-          justify-content: center;
-          li{
-            margin-bottom: 2rem;
-            .nav-link{
-              font-size: 20px;
-              font-weight: 800;
-              text-transform: uppercase;
-            }
-            &:nth-of-type(6) svg{
-              left:60px !important;
-            }
-          }
-        }
-        
-      }
-      @keyframes opacitys {
-        from{
-          opacity:0.5;
-        }
-        from{
-          opacity:1;
-        }
-      }
-    }
+   
 `;
 
 export const SocialMedia = styled.div`

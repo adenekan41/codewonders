@@ -207,13 +207,16 @@ const About = () => {
 
 const PageSection = styled.div`
   .intro__text {
-    font-size: 54px;
+    font-size: var(--font-x-lg);
     font-weight: 900;
     margin: 4rem 0rem 1.5rem;
     position: relative;
   }
+  h4 {
+    font-size: calc(var(--font-md) + 1.5px);
+  }
   p {
-    font-size: 15px;
+    font-size: calc(var(--font-sm) + 0.9px);
     margin-top: 0.6rem;
     line-height: 2;
     font-weight: 400;
@@ -250,13 +253,13 @@ const PageSection = styled.div`
         z-index: 400;
       }
       a {
-        font-size: 18px;
+        font-size: var(--font-md);
         font-weight: 500;
 
         color: var(--cw);
         &.float-right {
           text-decoration: underline;
-          font-size: 15px;
+          font-size: calc(var(--font-sm) + 0.9px);
         }
       }
       a svg {

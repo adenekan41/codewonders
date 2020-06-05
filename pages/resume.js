@@ -59,13 +59,13 @@ const Resume = () => {
 
 const PageSection = styled.div`
   .intro__text {
-    font-size: 54px;
+    font-size: var(--font-x-lg);
     font-weight: 900;
     margin: 4rem 0rem 1.5rem;
     position: relative;
   }
   p {
-    font-size: 15px;
+    font-size: calc(var(--font-sm) + 0.9px);
     margin-top: 0.6rem;
     line-height: 2;
     font-weight: 400;

@@ -68,13 +68,13 @@ const Projects = () => {
 };
 export const PageSection = styled.div`
   .intro__text {
-    font-size: 54px;
+    font-size: var(--font-x-lg);
     font-weight: 900;
     margin: 4rem 0rem 1.5rem;
     position: relative;
   }
   button {
-    font-size: 16px;
+    font-size: calc(var(--font-sm) + 1.5px);
     background: var(--mark);
     border: none;
     border-radius: 5px;
