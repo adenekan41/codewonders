@@ -1,5 +1,9 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import React, { useContext } from 'react';
 
+/* -------------------------- Internal Dependencies ------------------------- */
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
 import Tabs, { TabItems } from '../components/Tabs';

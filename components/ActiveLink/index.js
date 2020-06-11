@@ -1,8 +1,19 @@
+/* -------------------------------------------------------------------------- */
+/*                           External Dependencies                        */
+/* -------------------------------------------------------------------------- */
+
+import React, { Children } from 'react';
 import { withRouter } from 'next/router';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-import React, { Children } from 'react';
+/* -------------------------- ActiveLink PropTypes -------------------------- */
+const propTypes = {
+  router: PropTypes.any,
+  children: PropTypes.any,
+  activeClassName: PropTypes.string,
+  href: PropTypes.any,
+};
 
 const ActiveLink = ({ router, children, ...props }) => {
   const child = Children.only(children);
@@ -20,11 +31,6 @@ const ActiveLink = ({ router, children, ...props }) => {
   return <Link {...props}>{React.cloneElement(child, { className })}</Link>;
 };
 
-ActiveLink.propTypes = {
-  router: PropTypes.any,
-  children: PropTypes.any,
-  activeClassName: PropTypes.string,
-  href: PropTypes.any,
-};
+ActiveLink.propTypes = propTypes;
 
 export default withRouter(ActiveLink);

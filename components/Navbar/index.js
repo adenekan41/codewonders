@@ -1,8 +1,15 @@
+/* -------------------------------------------------------------------------- */
+/*                             External Dependency                            */
+/* -------------------------------------------------------------------------- */
 import React, { useContext } from 'react';
+
+/* -------------------------- Internal Dependencies ------------------------- */
 import { Header } from '../Layout/style';
-import { Logo, Moon, Icon } from '../Icons';
 import Link from '../ActiveLink';
 import AppContext from '../Utils/context';
+
+/* ---------------------------- Image Dependency ---------------------------- */
+import { Logo, Moon, Icon } from '../Icons';
 
 const Navbar = () => {
   const { show, handleopen, setTheme, closeShow } = useContext(AppContext);
@@ -38,6 +45,7 @@ const Navbar = () => {
                 className="d-block d-md-none"
                 onClick={handleopen}
                 role="button"
+                focusable="true"
               >
                 <Icon />
               </span>

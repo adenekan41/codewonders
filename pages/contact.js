@@ -1,5 +1,11 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
+
 import React from 'react';
 import styled from 'styled-components';
+
+/* -------------------------- Internal Dependencies ------------------------- */
 
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';

@@ -1,13 +1,21 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
+/* -------------------------- SkipToMain PropTypes -------------------------- */
+const propTypes = {
+  content: PropTypes.string.isRequired,
+};
 
 const SkipToMain = ({ content = '0' }) => {
   return (
     <Wrapper>
       <a
         className="skip-main animated fadeIn"
-        href={'#' + content}
+        href={`#${content}`}
         aria-label="Skip navigation and go to main content"
       >
         Skip to main content
@@ -47,8 +55,6 @@ const Wrapper = styled.div`
   }
 `;
 
-SkipToMain.propTypes = {
-  content: PropTypes.string,
-};
+SkipToMain.propTypes = propTypes;
 
 export default memo(SkipToMain);

@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
+
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
@@ -14,6 +18,7 @@ const Cursor = () => {
       }
     });
   };
+
   const click = () => {
     document.addEventListener('click', () => {
       if (cursor && cursor.current) {
@@ -26,6 +31,7 @@ const Cursor = () => {
       }, 500);
     });
   };
+
   useEffect(() => {
     mouseMove();
     click();
@@ -33,6 +39,7 @@ const Cursor = () => {
       click();
     };
   });
+
   return (
     <CursorThumb>
       <div className="cursor d-none d-md-inline" ref={cursor} />
@@ -42,8 +49,8 @@ const Cursor = () => {
 
 const CursorThumb = styled.div`
   .cursor {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     visibility: hidden;
     border: 1px solid var(--gray);
     border-radius: 50%;
@@ -60,8 +67,8 @@ const CursorThumb = styled.div`
 
   .cursor::after {
     content: '';
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     position: absolute;
     background: var(--gray);
     border-radius: 50%;

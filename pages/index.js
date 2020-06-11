@@ -1,8 +1,14 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
+
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-
 import { arrayRandomItem } from 'codewonders-helpers';
+
+/* -------------------------- Internal Dependencies ------------------------- */
+
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
 

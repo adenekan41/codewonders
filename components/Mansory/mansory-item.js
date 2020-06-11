@@ -1,9 +1,18 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
 import { arrayRandomItem } from 'codewonders-helpers';
+
+/* -------------------------- Internal Dependencies ------------------------- */
 import Image from '../Image';
+
+/* -------------------------- MansoryItem PropTypes ------------------------- */
+const propTypes = {
+  item: PropTypes.object,
+};
 
 const MansoryItem = ({ item }) => {
   return (
@@ -150,8 +159,6 @@ const MansoryItemStyle = styled.div`
   }
 `;
 
-MansoryItem.propTypes = {
-  item: PropTypes.object,
-};
+MansoryItem.propTypes = propTypes;
 
 export default MansoryItem;

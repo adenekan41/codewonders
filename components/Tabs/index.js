@@ -1,8 +1,17 @@
-import React, { useState, Fragment } from 'react';
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+/* -------------------------- Internal Dependecies -------------------------- */
 import styled from 'styled-components';
 import Tab from './Tab';
+
+/* ------------------------------ Tab PropTypes ----------------------------- */
+const propTypes = {
+  children: PropTypes.instanceOf(Array).isRequired,
+};
 
 const Tabs = ({ children }) => {
   const [activeTab, setActiveTab] = useState(children[0].props.label);
@@ -14,13 +23,14 @@ const Tabs = ({ children }) => {
     <>
       <Wrapper className="d-md-flex d-block tabs">
         {children.map((child) => {
-          const { label } = child.props;
+          const { label, href } = child.props;
 
           return (
             <Tab
               activeTab={activeTab}
               key={label}
               label={label}
+              href={href}
               aria-current={activeTab}
               onClick={onClickTabItem}
             />
@@ -73,8 +83,9 @@ const Wrapper = styled.nav`
   }
 `;
 
-export const TabItems = styled.div``;
-Tabs.propTypes = {
-  children: PropTypes.instanceOf(Array).isRequired,
-};
+export const TabItems = styled.div`
+  display: block;
+`;
+Tabs.propTypes = propTypes;
+
 export default Tabs;

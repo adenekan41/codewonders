@@ -11,6 +11,10 @@ export const loadState = () => {
   }
 };
 
+/**
+ * Save Localstorage state
+ * @param {String} state
+ */
 export const saveState = (state) => {
   try {
     const serializedState = JSON.stringify(state);
@@ -20,6 +24,10 @@ export const saveState = (state) => {
   }
 };
 
+/**
+ * Clear Localstorage state
+ * @param {String} state
+ */
 export const clearState = () => {
   try {
     localStorage.removeItem(STATE);

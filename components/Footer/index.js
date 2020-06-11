@@ -1,8 +1,13 @@
-import React, { Fragment } from 'react';
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
+import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-
 import styled from 'styled-components';
+
+/* -------------------------- Image Dependecy -------------------------- */
+
 import {
   IconRight,
   Twitter,
@@ -10,8 +15,23 @@ import {
   Linkedin,
   Github,
   Instagram,
+  Dribble,
 } from '../Icons';
+
+/* ---------------------------- Style Dependency ---------------------------- */
 import { SocialMedia } from '../Layout/style';
+
+/* -------------------------- FooterLink PropTypes -------------------------- */
+const propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
+  goto: PropTypes.string.isRequired,
+};
+
+/* ------------------------- FooterLink defaultProps ------------------------ */
+
+const defaultProps = {
+  children: {},
+};
 
 const FooterLink = ({ children, goto, ...rest }) => {
   return (
@@ -66,6 +86,15 @@ const FooterLink = ({ children, goto, ...rest }) => {
         <a
           target="_blank"
           rel="noopener noreferrer"
+          href="https://dribbble.com/codewonders"
+          aria-label="Go To Adenekan Wonderful Dribble Page"
+          title="Dribbble Page"
+        >
+          <Dribble />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://instagram.com/codewonders"
           aria-label="Go To Adenekan Wonderful Instagram Page"
           title="Instagram Page"
@@ -101,13 +130,8 @@ const FooterStyle = styled.footer`
   }
 `;
 
-FooterLink.defaultProps = {
-  children: {},
-};
+FooterLink.defaultProps = defaultProps;
 
-FooterLink.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
-  goto: PropTypes.string.isRequired,
-};
+FooterLink.propTypes = propTypes;
 
 export default FooterLink;

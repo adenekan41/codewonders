@@ -1,5 +1,12 @@
 const PROJECTS_DATA = [
   {
+    title: 'Piggment',
+    description: 'The Gradients and colours for the next smart creator',
+    link: 'https://piggment.co',
+    imageUrl: 'https://i.ibb.co/tCZFDhL/Screen-Recording-2020-06-11-at-1.gif',
+    type: ['project', 'open-source', 'tools'],
+  },
+  {
     title: 'Shoprrr',
     description: 'An E-commerce Application For Buying Cotton Products.',
     link: 'https://shoprrr.netlify.com',
@@ -12,6 +19,13 @@ const PROJECTS_DATA = [
     link: 'https://54gene.com',
     imageUrl:
       'https://i.ibb.co/6gZckMz/Screenshot-2020-05-04-at-4-34-31-AM.png',
+    type: ['others', 'project'],
+  },
+  {
+    title: 'Fast',
+    description: 'The fastest way to buy the things you love',
+    link: 'https://fastasf.netlify.app/',
+    imageUrl: 'https://i.ibb.co/KsnZhLP/Screenshot-2020-06-11-at-15-10-06.png',
     type: ['others', 'project'],
   },
 
@@ -135,21 +149,6 @@ const PROJECTS_DATA = [
     type: ['portfolio', 'project'],
   },
 
-  {
-    title: 'VSCode Nice Index',
-    description:
-      'VSCode package to rename "index.js" files to their parent dir.',
-    link: 'https://github.com/iamuchejude/vs-nice-index',
-    imageUrl: 'https://i.ibb.co/Fz8wGvg/msvschero.jpg',
-    type: ['open-source'],
-  },
-  {
-    title: 'NodeStorage.js',
-    description: 'File system storage utility with localStorage like API',
-    link: 'https://npm.im/nodestorage.js',
-    imageUrl: 'https://i.ibb.co/QPBqVL2/Group-12-2-1.png',
-    type: ['open-source'],
-  },
   {
     title: 'Urley',
     description: 'A cross-platform utility library to work with URLs',

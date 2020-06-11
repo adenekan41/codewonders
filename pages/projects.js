@@ -1,5 +1,11 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
+
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+/* -------------------------- Internal Dependencies ------------------------- */
 
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
@@ -53,6 +59,7 @@ const Projects = () => {
                 )}
               </MansoryLayout>
             </TabItems>
+            <TabItems label="Designs" href="https://dribbble.com/codewonders" />
           </Tabs>
         </PageWrapper>
       </PageSection>

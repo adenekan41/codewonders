@@ -1,6 +1,23 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProgressiveImage from 'react-progressive-image';
+
+/* ----------------------------- Image PropTypes ---------------------------- */
+const propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  className: PropTypes.string,
+};
+
+/* --------------------------- Image defaultProps --------------------------- */
+const defaultProps = {
+  alt: 'codewonders',
+  className: '',
+};
 
 const Image = ({ src, alt, className }) => (
   <ProgressiveImage
@@ -22,14 +39,7 @@ const Image = ({ src, alt, className }) => (
   </ProgressiveImage>
 );
 
-Image.defaultProps = {
-  alt: 'codewonders',
-  className: '',
-};
+Image.defaultProps = defaultProps;
 
-Image.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string,
-  className: PropTypes.string,
-};
+Image.propTypes = propTypes;
 export default Image;

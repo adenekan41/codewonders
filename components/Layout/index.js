@@ -1,14 +1,25 @@
-import React, { useContext, useEffect, Fragment } from 'react';
+/* -------------------------------------------------------------------------- */
+/*                            External Dependecies                            */
+/* -------------------------------------------------------------------------- */
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { BackLay, BodyStyling, Main } from './style';
-
+/* -------------------------- Internal Dependencies ------------------------- */
 import Navbar from '../Navbar';
 import AppContext from '../Utils/context';
 import { initGA, logPageView } from '../Utils/analytics';
 import Cursor from '../Cursor';
 import SkipToMain from '../A11y/skip-to-main';
+
+/* ---------------------------- Style Dependency ---------------------------- */
+import { BackLay, BodyStyling, Main } from './style';
+
+/* ---------------------------- Layout PropTypes ---------------------------- */
+const propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
+  title: PropTypes.string,
+};
 
 const Layout = ({ children, title = 'Home' }) => {
   const { theme, loadTheme } = useContext(AppContext);
@@ -50,10 +61,7 @@ const Layout = ({ children, title = 'Home' }) => {
   );
 };
 
-Layout.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
-  title: PropTypes.string,
-};
+Layout.propTypes = propTypes;
 
 export const PageWrapper = ({ children, className = '', ...rest }) => {
   return (
