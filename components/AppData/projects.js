@@ -75,7 +75,7 @@ const PROJECTS_DATA = [
     title: 'Opus Insights',
     description:
       'A forcasting platform for farmers  that bring intelligent insights to agricultural supply chains',
-    link: 'https://opus2frontend.azurewebsites.net/',
+    link: 'https://opusinsight.netlify.app',
     imageUrl: 'https://i.ibb.co/zFT3HQR/Screen-Recording-2020-05-06-at-1.gif',
     type: ['others', 'project'],
   },
