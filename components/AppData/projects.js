@@ -22,6 +22,14 @@ const PROJECTS_DATA = [
     type: ['others', 'project'],
   },
   {
+    title: 'Piggment Chrome Extension',
+    description: 'The gradient you have always wanted in a new tab',
+    link:
+      'https://chrome.google.com/webstore/detail/piggment-crafted-to-inspi/eifkhhlfjplpakoddkndkgjhfajnhffg',
+    imageUrl: 'https://i.ibb.co/Pxm6yzy/Screenshot-2020-07-28-at-02-48-43.png',
+    type: ['project', 'open-source', 'tools'],
+  },
+  {
     title: 'Fast',
     description: 'The fastest way to buy the things you love',
     link: 'https://fastasf.netlify.app/',
