@@ -229,6 +229,15 @@ const PROJECTS_DATA = [
       'https://i.ibb.co/YT6fXLB/Screenshot-2020-05-04-at-4-41-05-AM.png',
     type: ['open-source', 'tools'],
   },
+    {
+    title: 'Broadstate',
+    description:
+      'Easy state manager for state values from one component to the other with useState and React Hooks in < 1KB!',
+    link: 'https://www.npmjs.com/package/broad-state',
+    imageUrl:
+      'https://i.ibb.co/GVdt9Jq/Dribbble-Shot-HD-3broad.png',
+    type: ['open-source', 'tools'],
+  },
 ];
 
 export default PROJECTS_DATA;
