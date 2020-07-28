@@ -29,6 +29,7 @@ const MansoryItem = ({ item }) => {
         style={{
           height: arrayRandomItem(['400px', '454px', '310px']),
         }}
+        role="gridcell"
       >
         <Image src={item.imageUrl} alt={item.imageUrl} />
         <div>

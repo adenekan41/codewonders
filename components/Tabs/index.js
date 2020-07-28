@@ -21,7 +21,7 @@ const Tabs = ({ children }) => {
 
   return (
     <>
-      <Wrapper className="d-md-flex d-block tabs">
+      <Wrapper className="d-md-flex d-block tabs" role="tablist">
         {children.map((child) => {
           const { label, href } = child.props;
 

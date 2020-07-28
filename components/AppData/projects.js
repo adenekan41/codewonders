@@ -106,12 +106,11 @@ const PROJECTS_DATA = [
     type: ['project'],
   },
   {
-    title: 'Joblink',
-    description: 'Get to know everything about teaching and living in China',
-    link: 'https://joblink4u.com',
-    imageUrl:
-      'https://i.ibb.co/Zfs0nNB/Screen-Shot-2019-11-23-at-2-21-16-PM.png',
-    type: ['project'],
+    title: 'Freespace (WIP)',
+    description: '100% Anonymously tell the world your mind.',
+    link: 'https://afreespace.netlify.app/',
+    imageUrl: 'https://i.ibb.co/q5ZDjLd/image.png',
+    type: ['others', 'project'],
   },
   {
     title: 'Liveizy',
@@ -206,7 +205,7 @@ const PROJECTS_DATA = [
   {
     title: 'Helix',
     description:
-      '🌄A minimal monochrome UI theme for Vscode ~ 🎑 A notion like theme',
+      '🌄 A minimal monochrome theme for Vscode ~ 🎑 A light notion like theme for vscode.',
     link:
       'https://marketplace.visualstudio.com/items?itemName=codewonders.helix&ssr=false',
     imageUrl:
