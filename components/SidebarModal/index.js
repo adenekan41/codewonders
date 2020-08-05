@@ -56,11 +56,7 @@ const SideBarModal = ({
                   >
                     <Close />
                   </button>
-                  <a
-                    href={data.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={data.link} target="_blank" rel="noopener noreferrer">
                     View Project
                   </a>
                 </div>
@@ -184,7 +180,7 @@ const Wrapper = styled.div`
     @media (max-width: 768px) {
       width: 100% !important;
     }
-
+    height: 100%;
     position: fixed;
     right: 0;
     top: 0;
@@ -218,7 +214,7 @@ const Wrapper = styled.div`
       position: relative;
       padding: 2rem 2rem 4rem;
       overflow-x: overlay;
-      height: 100vh;
+      max-height: 100%;
     }
     .open__project {
       background: var(--sidebar-cta);
