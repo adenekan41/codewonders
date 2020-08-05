@@ -16,7 +16,7 @@ import { Date, Github, Dribble, Product } from '../components/Icons';
 
 const About = () => {
   return (
-    <Layout title="About">
+    <Layout title="About Me">
       <PageSection>
         <PageWrapper
           className="mb-5"

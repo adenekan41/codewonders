@@ -8,6 +8,7 @@ import styled from 'styled-components';
 const Cursor = () => {
   const cursor = useRef();
   const mouseMove = () => {
+    const div = document.querySelectorAll('#cardHover');
     document.addEventListener('mousemove', (e) => {
       if (cursor && cursor.current) {
         cursor.current.setAttribute(
@@ -15,6 +16,15 @@ const Cursor = () => {
           `top: ${e.pageY - 10}px; left: ${e.pageX -
             10}px; visibility: visible;`
         );
+      }
+      for (let i = 0; i < div.length; i++) {
+        div[i].mouseIsOver = false;
+        div[i].onmouseover = function() {
+          cursor.current.classList.add('hovered');
+        };
+        div[i].onmouseout = function() {
+          cursor.current.classList.remove('hovered');
+        };
       }
     });
   };
@@ -38,7 +48,7 @@ const Cursor = () => {
     return () => {
       click();
     };
-  });
+  }, []);
 
   return (
     <CursorThumb>
@@ -71,10 +81,27 @@ const CursorThumb = styled.div`
     height: 10px;
     position: absolute;
     background: var(--gray);
-    border-radius: 50%;
+    border-radius: 1px;
     opacity: 0.5;
     top: 18px;
     left: 18px;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-animation: rotateAnim 2s infinite alternate;
+    animation: rotateAnim 2s infinite alternate;
+  }
+  .cursor::before {
+    content: unset !important;
+  }
+  @keyframes rotateAnim {
+    from {
+      transform: rotate(1deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes cursorAnim {
@@ -111,6 +138,26 @@ const CursorThumb = styled.div`
   .expand {
     animation: cursorAnim3 0.5s forwards;
     border: 1px solid var(--gray);
+  }
+  .hovered {
+    border: 1px solid var(--gray);
+    width: 110px;
+    background: #00000052;
+    height: 110px;
+    &::after {
+      content: unset;
+    }
+    &::before {
+      content: 'Open' !important;
+      position: absolute;
+      top: 50%;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      left: 50%;
+      color: #fff !important;
+      transform: translate(-50%, -50%);
+    }
   }
 `;
 export default Cursor;

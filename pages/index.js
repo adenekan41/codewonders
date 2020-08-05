@@ -116,11 +116,11 @@ const PageSection = styled.div`
   align-items: center;
   justify-content: center;
   .intro__text {
-    font-size: calc(var(--font-x-lg) + 3px);
+    font-size: calc(var(--font-x-lg) + 9px);
     font-weight: 900;
     margin: 2rem 0rem 1.5rem;
     position: relative;
-
+    letter-spacing: -1.1px;
     &::before,
     &::after {
       content: attr(data-text);
@@ -283,7 +283,7 @@ const PageSection = styled.div`
     border: none;
     border-radius: 5px;
     transition: all 0.4s ease;
-    padding: 0px 9px;
+    padding: 1px 12px;
     &:hover {
       background: ${(props) => props.color};
       color: #fff;
@@ -292,13 +292,16 @@ const PageSection = styled.div`
   }
   @media (max-width: 585px) {
     margin: 3rem 0;
+    display: block;
     min-height: 80vh;
   }
   @media (max-width: 989px) {
     margin: 3rem 0;
+    display: block;
   }
   @media (max-width: 220px) {
     margin: 3rem 0;
+    display: block;
     min-height: 80vh;
   }
   @media (prefers-reduced-motion: reduce) {

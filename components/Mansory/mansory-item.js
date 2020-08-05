@@ -1,45 +1,95 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { arrayRandomItem } from 'codewonders-helpers';
 
 /* -------------------------- Internal Dependencies ------------------------- */
 import Image from '../Image';
+import SideBarModal from '../SidebarModal';
+import { withRouter } from 'next/router';
 
 /* -------------------------- MansoryItem PropTypes ------------------------- */
 const propTypes = {
   item: PropTypes.object,
 };
 
-const MansoryItem = ({ item }) => {
+const MansoryItem = withRouter(({ item, router }) => {
+  const [show, setShow] = useState(false);
+  const { pathname } = router;
+
   return (
-    <a
-      href={item.link}
-      target="_blank"
-      style={{ color: 'inherit', textDecoration: 'none', display: 'block' }}
-      rel="noopener noreferrer"
-      title={item.title}
-      aria-label={`${item.title} ${item.description}`}
-    >
-      <MansoryItemStyle
-        {...{ item }}
-        style={{
-          height: arrayRandomItem(['400px', '454px', '310px']),
-        }}
-        role="gridcell"
-      >
-        <Image src={item.imageUrl} alt={item.imageUrl} />
-        <div>
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
-        </div>
-      </MansoryItemStyle>
-    </a>
+    <>
+      {!pathname.includes('/projects') ? (
+        <a
+          href={item.link}
+          target="_blank"
+          style={{ color: 'inherit', textDecoration: 'none', display: 'block' }}
+          rel="noopener noreferrer"
+          title={item.title}
+          id="cardHover"
+          aria-label={`${item.title} ${item.description}`}
+        >
+          <MansoryItemStyle
+            {...{ item }}
+            style={{
+              height: arrayRandomItem(['400px', '454px', '310px']),
+            }}
+            role="gridcell"
+          >
+            <Image src={item.imageUrl} alt={item.imageUrl} />
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              {item.technologies && (
+                <p>
+                  {item.technologies.map((tech, index) => (
+                    <span key={index}>{tech}</span>
+                  ))}
+                </p>
+              )}
+            </div>
+          </MansoryItemStyle>
+        </a>
+      ) : (
+        <>
+          <MansoryItemStyle
+            {...{ item }}
+            style={{
+              height: arrayRandomItem(['400px', '454px', '310px']),
+            }}
+            role="gridcell"
+            id="cardHover"
+            aria-label={`${item.title} ${item.description}`}
+            onClick={() => setShow(true)}
+          >
+            <Image src={item.imageUrl} alt={item.imageUrl} />
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              {item.technologies && (
+                <p>
+                  {item.technologies.map((tech, index) => (
+                    <span key={index}>{tech}</span>
+                  ))}
+                </p>
+              )}
+            </div>
+          </MansoryItemStyle>
+
+          <SideBarModal
+            show={show}
+            closeShow={() => setShow(false)}
+            size="lg"
+            data={item}
+          />
+        </>
+      )}
+    </>
   );
-};
+});
 
 const MansoryItemStyle = styled.div`
   margin: 0 0 1.5em;
@@ -92,13 +142,19 @@ const MansoryItemStyle = styled.div`
     bottom: 0px;
     left: 0px;
     opacity: 0.3;
-    background: linear-gradient(
+    /* background: linear-gradient(
       191deg,
       rgba(0, 0, 0, 0.1) 20%,
       rgba(0, 0, 0, 0.76) 100%
+    ); */
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.1) 10%,
+      rgb(0 0 0 / 78%) 80%
     );
   }
   &:hover {
+    cursor: none;
     &:after {
       opacity: 1;
     }
@@ -117,7 +173,18 @@ const MansoryItemStyle = styled.div`
   p {
     color: #d5d5d5 !important;
     font-size: calc(var(--font-sm) + 0.9px);
+    span {
+      background: #ffc926;
+      padding: 4px 10px;
+      border-radius: 50px;
+      text-transform: capitalize;
+      font-size: 11px;
+      margin-right: 6px;
+      color: #423103;
+      font-weight: 700;
+    }
   }
+
   div {
     opacity: 0;
     transform: translateY(10%);

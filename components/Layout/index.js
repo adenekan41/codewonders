@@ -50,7 +50,7 @@ const Layout = ({ children, title = 'Home' }) => {
       </Helmet>
       <SkipToMain content="main-content" />
       <Navbar />
-      <BackLay>
+      <BackLay title={title}>
         <h1 aria-hidden="true">
           {title === 'Home' ? 'Hello.' : title.concat('.')}
         </h1>

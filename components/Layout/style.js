@@ -20,44 +20,49 @@ const FontToken = css`
 
 const LightTheme = css`
   :root {
-    --bg: #fff;
-    --button-index: #eeeeee;
+    --bg: #fff4e9;
+    --button-index: #f3e5d9;
     --cw: #000;
     --invert: 0;
-    --mark: #f6f6f6;
+    --mark: #f9ede2;
     --theme-amount: 0;
-    --border-color: #2e2e2e;
-    --gray: #888;
-    --pattern: #d0d0d0;
+    --gray: #b9ad9a;
+    --pattern: transparent;
     --light-gray: #dedede;
     --lighter-gray: #f5f5f5;
-    --article-color: #464646;
+    --article-color: #545454;
     --header-bg: rgba(255, 255, 255, 0.8);
     --token: #666;
-    --border-color: #e4e4e4;
+    --border-color: #e8dacf;
+    --sidebar-tag: #efd6c1;
+    --gray-alpha: #f7e4d4;
+    --sidebar-cta: #ea4e1c;
     --nav-link: rgba(0, 0, 0, 0.5);
-    --timeline: #d6d6d6;
+    --timeline: #eadfd6;
     ${FontToken}
   }
 `;
 
 const DarkTheme = css`
   :root {
-    --bg: #090909;
+    --bg: #020a13;
     --invert: 1;
     --theme-amount: 1;
     --cw: #e1e1e1;
-    --gray: #a8a8a8;
-    --pattern: #252525;
+    --gray: #8694a0;
+    --pattern: transparent;
     --light-gray: #444;
     --lighter-gray: #222;
     --article-color: #c6c6c6;
     --header-bg: rgba(19, 20, 21, 0.8);
     --token: #999;
-    --border-color: #3d3d3d;
-    --button-index: #1a1a1a;
-    --mark: #131313;
-    --timeline: #424242;
+    --border-color: #14202b;
+    --button-index: #091521;
+    --mark: #080f18;
+    --sidebar-tag: #13283e;
+    --sidebar-cta: #0da51b;
+    --gray-alpha: #07121d;
+    --timeline: #0f1923;
     --nav-link: rgba(255, 255, 255, 0.8);
     ${FontToken}
   }
@@ -389,8 +394,17 @@ export const BackLay = styled.figure`
   h1 {
     font-family: Abril FatFace;
     font-size: 29.42vh;
-    writing-mode: tb-rl;
+    ${(props) =>
+      props.title === 'About Me' || props.title === 'Contact'
+        ? css`
+            writing-mode: unset;
+          `
+        : css`
+            writing-mode: tb-rl;
+          `}
+
     position: fixed;
+    letter-spacing: -0.3rem;
     z-index: -1;
     color: var(--mark);
     bottom: 0px;

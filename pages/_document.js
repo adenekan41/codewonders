@@ -152,21 +152,21 @@ export default class MyDocument extends Document {
               
               @font-face{
                 font-family:'Blorado';
-                src:url("/fonts/BRFirmaCW-Regular.woff2") format("woff2");
+                src:url("/fonts/GT-Walsheim-Regular.woff2") ;
                 font-weight:normal;
                 font-display:swap;
                 font-style:normal
               }
               @font-face{
                 font-family:'Blorado';
-                src:url("/fonts/BRFirmaCW-Medium.woff2") format("woff2");
+                src:url("/fonts/GT-Walsheim-Medium.woff2");
                 font-weight:500;
                 font-display:swap;
                 font-style:normal
               }
               @font-face{
                 font-family:'Blorado';
-                src:url("/fonts/BRFirmaCW-SemiBold.woff2") format("woff2");
+                src:url("/fonts/GT-Walsheim-Bold.woff2");
                 font-weight:600;
                 font-display:swap;
                 font-style:normal

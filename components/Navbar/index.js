@@ -49,6 +49,7 @@ const Navbar = () => {
               >
                 <Icon />
               </span>
+
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item hover__bottom d-block d-md-none">
                   <Link href="/" activeClassName="is-active">
