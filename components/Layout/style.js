@@ -11,7 +11,7 @@ const FontToken = css`
     --font-x-lg: 3.275em;
   }
   @media (max-width: 787px) {
-    --font-sm: 0.779em;
+    --font-sm: 0.813em;
     --font-md: 1.011em;
     --font-x-md: 1.517em;
     --font-x-lg: 2.775em;

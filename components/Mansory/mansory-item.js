@@ -43,13 +43,6 @@ const MansoryItem = withRouter(({ item, router }) => {
             <div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-              {item.technologies && (
-                <p>
-                  {item.technologies.map((tech, index) => (
-                    <span key={index}>{tech}</span>
-                  ))}
-                </p>
-              )}
             </div>
           </MansoryItemStyle>
         </a>
@@ -70,9 +63,11 @@ const MansoryItem = withRouter(({ item, router }) => {
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               {item.technologies && (
-                <p>
+                <p className="d-flex flex-wrap">
                   {item.technologies.map((tech, index) => (
-                    <span key={index}>{tech}</span>
+                    <span key={index} className="d-block mb-1">
+                      {tech}
+                    </span>
                   ))}
                 </p>
               )}

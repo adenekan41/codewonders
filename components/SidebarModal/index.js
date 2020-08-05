@@ -48,13 +48,23 @@ const SideBarModal = ({
             />
             <aside className="fadeInLeft">
               <div className="pos__relative">
-                <button
-                  onClick={() => closeShow()}
-                  className="none-button"
-                  type="button"
-                >
-                  <Close />
-                </button>
+                <div className="d-flex justify-content-between header">
+                  <button
+                    onClick={() => closeShow()}
+                    className="none-button"
+                    type="button"
+                  >
+                    <Close />
+                  </button>
+                  <a
+                    href={data.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Project
+                  </a>
+                </div>
+
                 <div className="main__post">
                   <h3 className="mt-4">{data.title}</h3>
                   <p className="te mb-4">{data.description}</p>
@@ -62,10 +72,13 @@ const SideBarModal = ({
                   <h4>About</h4>
                   <p>{data.about && data.about}</p>
                   <h4>Technologies</h4>
+
                   {data.technologies && (
-                    <p>
+                    <p className="d-flex flex-wrap">
                       {data.technologies.map((tech, index) => (
-                        <span key={index}>{tech}</span>
+                        <span key={index} className="d-block mb-1">
+                          {tech}
+                        </span>
                       ))}
                     </p>
                   )}
@@ -182,6 +195,24 @@ const Wrapper = styled.div`
       animation-name: fadeLeft;
       animation-duration: 0.5s;
       animation-fill-mode: both;
+    }
+    .header {
+      margin-bottom: 2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border-color);
+      svg {
+        /* path {
+          stroke: var(--article-color);
+          &:last-child {
+            fill: var(--article-color);
+          }
+        } */
+      }
+      a {
+        font-size: var(--font-sm);
+        font-weight: 900;
+        color: var(--sidebar-cta);
+      }
     }
     .pos__relative {
       position: relative;
