@@ -13,11 +13,12 @@ import FooterLink from '../components/Footer';
 
 const Resume = () => {
   const resumeData =
-    'https://docs.google.com/file/d/1Ll91-P5r9gIaYh76tBLd1XH0nxIIzskJYt2gfJ29svc/preview';
+    'https://www.canva.com/design/DAEEkidwA2Q/view?utm_content=DAEEkidwA2Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink';
+
   const previewData = `${resumeData.substr(
     0,
     resumeData.lastIndexOf('/') + 1
-  )}view?usp=sharingC`;
+  )}view?embed`;
   return (
     <Layout title="Resume">
       <PageWrapper>
@@ -31,25 +32,37 @@ const Resume = () => {
                   <a>contact page</a>
                 </Link>
               </b>{' '}
-              or download the resume{' '}
+              .{' '}
               <b>
                 <a
-                  href={previewData}
+                  href="https://drive.google.com/file/d/1mfwbdqqUSF7qCl7r75YVqKjKCVNl1V7R/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Go to Resumé Page"
+                >
+                  view
+                </a>
+              </b>{' '}
+              or{' '}
+              <b>
+                <a
+                  href="https://drive.google.com/file/d/1mfwbdqqUSF7qCl7r75YVqKjKCVNl1V7R/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Go to Resumé Page"
                 >
                   download
                 </a>
-              </b>
+              </b>{' '}
+              the resume{' '}
             </p>
           </article>
           <br />
           <iframe
-            src={resumeData}
-            width="640"
-            height="480"
-            scrolling="no"
+            src={previewData}
+            allowFullscreen
+            width="740"
+            height="780"
             title="Adenekan Wonderful Resumé"
           />
         </PageSection>
@@ -80,11 +93,12 @@ const PageSection = styled.div`
   }
   iframe {
     width: 100%;
-    filter: invert(var(--invert));
+    filter: invert(var(--invert)) grayscale(calc(var(--invert) - 0.15));
     border: none;
-    height: 800px;
+    height: 44.5rem;
     @media (min-width: 768px) {
-      width: 80% !important;
+      width: 82.8% !important;
+      height: 70.4rem !important;
     }
   }
 `;

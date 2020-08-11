@@ -56,8 +56,16 @@ const SideBarModal = ({
                   >
                     <Close />
                   </button>
-                  <a href={data.link} target="_blank" rel="noopener noreferrer">
-                    View Project
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      closeShow();
+                    }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Back To Projects.
                   </a>
                 </div>
 

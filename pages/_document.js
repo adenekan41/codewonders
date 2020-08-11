@@ -142,6 +142,7 @@ export default class MyDocument extends Document {
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: `
+              
               @font-face{
                 font-family:'Blorado';
                 src:url("/fonts/BRFirmaCW-Bold.woff2") format("woff2");
