@@ -19,6 +19,7 @@ const Resume = () => {
     0,
     resumeData.lastIndexOf('/') + 1
   )}view?embed`;
+
   return (
     <Layout title="Resume">
       <PageWrapper>
@@ -35,7 +36,7 @@ const Resume = () => {
               .{' '}
               <b>
                 <a
-                  href="https://drive.google.com/file/d/1mfwbdqqUSF7qCl7r75YVqKjKCVNl1V7R/view?usp=sharing"
+                  href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Go to Resumé Page"
@@ -46,7 +47,7 @@ const Resume = () => {
               or{' '}
               <b>
                 <a
-                  href="https://drive.google.com/file/d/1mfwbdqqUSF7qCl7r75YVqKjKCVNl1V7R/view?usp=sharing"
+                  href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Go to Resumé Page"
@@ -60,7 +61,7 @@ const Resume = () => {
           <br />
           <iframe
             src={previewData}
-            allowFullscreen
+            allowFullScreen
             width="740"
             height="780"
             title="Adenekan Wonderful Resumé"
