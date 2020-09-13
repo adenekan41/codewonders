@@ -48,7 +48,7 @@ const PROJECTS_DATA = [
     title: 'Fast',
     description: 'The fastest way to buy the things you love',
     about:
-      'One click.No passwords.The worlds fastest checkout.Forget passwords. Skip long entry forms. Shop online and securely check out with a single click. It’s safe, easy, and yep, fast.',
+      'One click. No passwords. The worlds fastest checkout. Forget passwords. Skip long entry forms. Shop online and securely check out with a single click. It’s safe, easy, and yep, fast.',
     link: 'https://fastasf.netlify.app/',
     imageUrl: 'https://i.ibb.co/KsnZhLP/Screenshot-2020-06-11-at-15-10-06.png',
     type: ['others', 'project'],
@@ -229,18 +229,6 @@ const PROJECTS_DATA = [
     technologies: ['Javascript', 'Rollup'],
   },
   {
-    title: '#payme',
-    description:
-      'Create your personal hashtag to make & receive payments across all messaging apps.',
-    link: 'https://hashtagpay.me/',
-    about:
-      'Make payments swiftly within your chat. Make payments and complete transactions to your friends, family and vendors online, using your Personal Hashtag.',
-    imageUrl:
-      'https://i.ibb.co/7p3Cz7K/Screen-Shot-2020-01-20-at-11-44-45-PM.png',
-    type: ['project', 'others'],
-    technologies: ['HTML', 'CSS'],
-  },
-  {
     title: 'Minimal Peace',
     description: 'A UI/UX designer of over 5+ years experience portfolio',
     about:
@@ -250,17 +238,6 @@ const PROJECTS_DATA = [
     imageUrl: 'https://i.ibb.co/zs38X9q/Screen-Recording-2020-05-06-at-4-1.gif',
     type: ['project', 'others'],
     technologies: ['Gatsby', 'React', 'javascript'],
-  },
-  {
-    title: 'Todolst',
-    description: 'Create Your first Todo with todolist.io we manage your todo.',
-    about: 'Todolst helps you manage and re-organize your todo per day',
-    link: 'https://exquis.surge.sh/',
-    github: 'https://github.com/adenekan41/todolst',
-    imageUrl:
-      'https://i.ibb.co/7Y5BHXK/Screen-Shot-2020-01-20-at-11-35-35-PM.png',
-    type: ['project', 'others'],
-    technologies: ['React', 'Node', 'Javascript', 'HTML & CSS'],
   },
   {
     title: 'Codewonders Helpers',
