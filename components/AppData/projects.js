@@ -153,7 +153,7 @@ const PROJECTS_DATA = [
     description: '100% Anonymously tell the world your mind.',
     about:
       'Freespace can be utilized as your own safe place where you can freely un-conceal your thoughts and emotions without any apprehensions. Freespace requires no log-in, your IP address is not tracked and we do not leave any cache files on your browser or SERVER.  This is to assure our users that we give utmost importance to their privacy and anonymity.  Keeping this in mind, we have also ensured that no comment section is available for the posts.  This is to further protect the writer of the post and to ensure no negative interactions or cyberbullying takes place.  We are hopeful that this will further encourage our users to share openly and to read stories of others, who are just like them or might be different but can still connect and learn at a certain level.',
-    link: 'https://afreespace.netlify.app/',
+    link: 'https://freespaace.com',
     imageUrl: 'https://i.ibb.co/q5ZDjLd/image.png',
     type: ['others', 'project'],
     technologies: ['React', 'Redux', 'Javascript', 'Firebase'],
@@ -310,6 +310,18 @@ const PROJECTS_DATA = [
     link: 'https://www.npmjs.com/package/broad-state',
     github: 'https://github.com/adenekan41/broad-state',
     imageUrl: 'https://i.ibb.co/GVdt9Jq/Dribbble-Shot-HD-3broad.png',
+    type: ['open-source', 'tools'],
+    technologies: ['Javascript', 'Rollup', 'React'],
+  },
+   {
+    title: 'Aim Scroll',
+    about:
+      'Have you ever tried to add a feature to an element when the users scrolls to a certain extent ? or even tried the popular scroll aesthetic of adding a box-shadow to your navbar when the user scrolls up ?. aimscroll is Painless utility libary to handle scroll positions and methods in React.',
+    description:
+      'Painless utility libary to handle scroll positions and methods in react.',
+    link: 'https://www.npmjs.com/package/aimscroll',
+    github: 'https://github.com/adenekan41/aimscroll',
+    imageUrl: 'https://i.ibb.co/1X27zFt/Group-6.png',
     type: ['open-source', 'tools'],
     technologies: ['Javascript', 'Rollup', 'React'],
   },
