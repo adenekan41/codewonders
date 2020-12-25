@@ -5,9 +5,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { arrayRandomItem } from 'codewonders-helpers';
+import Image from 'next/image';
 
 /* -------------------------- Internal Dependencies ------------------------- */
-import Image from '../Image';
 import SideBarModal from '../SidebarModal';
 import { withRouter } from 'next/router';
 
@@ -39,8 +39,8 @@ const MansoryItem = withRouter(({ item, router }) => {
             }}
             role="gridcell"
           >
-            <Image src={item.imageUrl} alt={item.imageUrl} />
-            <div>
+            <Image src={item.imageUrl} alt={item.imageUrl} layout="fill" />
+            <div className="content__slate">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>
@@ -58,8 +58,8 @@ const MansoryItem = withRouter(({ item, router }) => {
             aria-label={`${item.title} ${item.description}`}
             onClick={() => setShow(true)}
           >
-            <Image src={item.imageUrl} alt={item.imageUrl} />
-            <div>
+            <Image src={item.imageUrl} alt={item.imageUrl} layout="fill" />
+            <div className="content__slate">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               {item.technologies && (
@@ -103,11 +103,11 @@ const MansoryItemStyle = styled.div`
   border-radius: 9px;
   break-inside: avoid;
   img {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0 !important;
+    top: 0 !important;
     object-fit: cover;
   }
   &:before {
@@ -153,7 +153,7 @@ const MansoryItemStyle = styled.div`
     &:after {
       opacity: 1;
     }
-    div {
+    div.content__slate {
       z-index: 999;
       transform: none;
       opacity: 1;
@@ -180,7 +180,7 @@ const MansoryItemStyle = styled.div`
     }
   }
 
-  div {
+  div.content__slate {
     opacity: 0;
     transform: translateY(10%);
     transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
@@ -194,7 +194,7 @@ const MansoryItemStyle = styled.div`
     &:after {
       opacity: 1 !important;
     }
-    div {
+    div.content__slate {
       z-index: 999 !important;
       transform: none !important;
       opacity: 1 !important;
@@ -204,7 +204,7 @@ const MansoryItemStyle = styled.div`
     &:after {
       opacity: 1 !important;
     }
-    div {
+    div.content__slate {
       z-index: 999 !important;
       transform: none !important;
       opacity: 1 !important;
@@ -214,7 +214,7 @@ const MansoryItemStyle = styled.div`
     &:after {
       opacity: 1 !important;
     }
-    div {
+    div.content__slate {
       z-index: 999 !important;
       transform: none !important;
       opacity: 1 !important;

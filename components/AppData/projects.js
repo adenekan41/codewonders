@@ -229,6 +229,16 @@ const PROJECTS_DATA = [
     technologies: ['Javascript', 'Rollup'],
   },
   {
+    title: 'Eze Wholesale',
+    description: 'Buy & sell iPhones in wholesale quantities.',
+    link: 'https://ezewholesale.com',
+    about:
+      'Eze connects electronics traders from all around the globe, enabling access to invaluable resources that improve the day-to-day lives of people everywhere.',
+    imageUrl: 'https://i.ibb.co/NZgQ7P0/image.png',
+    type: ['project', 'others'],
+    technologies: ['Nextjs (React)', 'AWS', 'D3', 'Javascript', 'MobX'],
+  },
+  {
     title: 'Minimal Peace',
     description: 'A UI/UX designer of over 5+ years experience portfolio',
     about:
@@ -313,7 +323,7 @@ const PROJECTS_DATA = [
     type: ['open-source', 'tools'],
     technologies: ['Javascript', 'Rollup', 'React'],
   },
-   {
+  {
     title: 'Aim Scroll',
     about:
       'Have you ever tried to add a feature to an element when the users scrolls to a certain extent ? or even tried the popular scroll aesthetic of adding a box-shadow to your navbar when the user scrolls up ?. aimscroll is Painless utility libary to handle scroll positions and methods in React.',

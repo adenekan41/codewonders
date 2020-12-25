@@ -7,6 +7,9 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
   },
+  images: {
+    domains: ['i.ibb.co'],
+  },
   experimental: {
     publicDirectory: true,
   },

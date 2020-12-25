@@ -307,6 +307,26 @@ const About = () => {
                 </a>
                 <p>One of the finest rap in UK. Cover: Aitch</p>
               </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Link"
+                  href="https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=wF0gpf3RRa-2oT1GYTBQ_w"
+                >
+                  Mood Booster 🎅🏽 <small>Spotify</small>
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Link"
+                  href="https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=wF0gpf3RRa-2oT1GYTBQ_w"
+                  className="float-right"
+                >
+                  View Playlist
+                </a>
+                <p>Get happy with today's dose of feel-good songs!</p>
+              </li>
             </ul>
           </article>
         </PageWrapper>

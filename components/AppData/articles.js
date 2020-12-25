@@ -10,6 +10,15 @@ const ARTICLE_DATA = [
     type: ['article'],
   },
   {
+    title: 'Architecting Large-scale Javascript Applications',
+    description:
+      'In the past we have worked with large javascript applications and frameworks and it...',
+    link:
+      'https://www.canva.com/design/DAEP8soDA7Y/LhN_G3Z6vbratkAlslugaQ/view?utm_content=DAEP8soDA7Y&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink',
+    imageUrl: 'https://i.ibb.co/bscsh9q/image.png',
+    type: ['article'],
+  },
+  {
     title: 'A Chat App With Vuejs & NodeJs',
     description:
       'As part of my learning I decided to make some application and found interesti...',
