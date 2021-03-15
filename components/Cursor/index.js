@@ -2,53 +2,50 @@
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 
 const Cursor = () => {
-  const cursor = useRef();
-  const mouseMove = () => {
-    const div = document.querySelectorAll('#cardHover');
-    document.addEventListener('mousemove', (e) => {
-      if (cursor && cursor.current) {
+  const cursor = useRef(null);
+  const mouseMove = useCallback(
+    (e) => {
+      const elements = document.querySelectorAll('#cardHover');
+      if (cursor.current) {
         cursor.current.setAttribute(
           'style',
           `top: ${e.pageY - 10}px; left: ${e.pageX -
             10}px; visibility: visible;`
         );
       }
-      for (let i = 0; i < div.length; i++) {
-        div[i].mouseIsOver = false;
-        div[i].onmouseover = function() {
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].mouseIsOver = false;
+        elements[i].onmouseover = () => {
           cursor.current.classList.add('hovered');
         };
-        div[i].onmouseout = function() {
+        elements[i].onmouseout = () => {
           cursor.current.classList.remove('hovered');
         };
       }
-    });
-  };
+    },
+    [cursor.current]
+  );
 
-  const click = () => {
-    document.addEventListener('click', () => {
-      if (cursor && cursor.current) {
-        cursor.current.classList.add('expand');
-      }
-      setTimeout(() => {
-        if (cursor && cursor.current) {
-          return cursor.current.classList.remove('expand');
-        }
-      }, 500);
-    });
-  };
+  const click = useCallback(() => {
+    if (cursor.current) cursor.current.classList.add('expand');
+
+    setTimeout(() => {
+      if (cursor.current) return cursor.current.classList.remove('expand');
+    }, 500);
+  }, [cursor.current]);
 
   useEffect(() => {
-    mouseMove();
-    click();
+    document.addEventListener('mousemove', mouseMove);
+    document.addEventListener('click', click);
     return () => {
-      click();
+      document.removeEventListener('click', click);
+      document.removeEventListener('mousemove', mouseMove);
     };
-  }, []);
+  }, [click, mouseMove]);
 
   return (
     <CursorThumb>

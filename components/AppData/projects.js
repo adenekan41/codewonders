@@ -226,7 +226,7 @@ const PROJECTS_DATA = [
       'Urley, A cross-platform utility library to work with URLs. Urely has a collection of handy helpers to use when working with URLs, with just a few imports you are set.',
     imageUrl: 'https://i.ibb.co/FDh7T07/image.png',
     type: ['open-source', 'tools'],
-    technologies: ['Javascript', 'Rollup'],
+    technologies: ['Javascript', 'Typescript', 'Rollup'],
   },
   {
     title: 'Eze Wholesale',
@@ -334,6 +334,18 @@ const PROJECTS_DATA = [
     imageUrl: 'https://i.ibb.co/1X27zFt/Group-6.png',
     type: ['open-source', 'tools'],
     technologies: ['Javascript', 'Rollup', 'React'],
+  },
+  {
+    title: 'Use Responsive Query',
+    about:
+      ' An extremely powerful but easy to use hook for listening to media events in React. URQ create an experience of a javascript like reactive accomodation for your react application.',
+    description:
+      'An extremely powerful but easy to use hook for listening to media events in react.',
+    link: 'https://www.npmjs.com/package/use-responsive-query',
+    github: 'https://github.com/adenekan41/use-responsive-query',
+    imageUrl: 'https://i.ibb.co/CPK4YzL/Group-38dd.png',
+    type: ['open-source', 'tools'],
+    technologies: ['Typescript', 'Rollup', 'React'],
   },
 ];
 

@@ -145,7 +145,7 @@ export default class MyDocument extends Document {
               
               @font-face{
                 font-family:'Blorado';
-                src:url("/fonts/BRFirmaCW-Bold.woff2") format("woff2");
+                src:url("/fonts/NeurialGrotesk-Extrabold.otf");
                 font-weight:bold;
                 font-display:swap;
                 font-style:normal
@@ -153,21 +153,21 @@ export default class MyDocument extends Document {
               
               @font-face{
                 font-family:'Blorado';
-                src:url("/fonts/GT-Walsheim-Regular.woff2") ;
+                src:url("/fonts/NeurialGrotesk-Regular.otf");
                 font-weight:normal;
                 font-display:swap;
                 font-style:normal
               }
               @font-face{
                 font-family:'Blorado';
-                src:url("/fonts/GT-Walsheim-Medium.woff2");
+                src:url("/fonts/NeurialGrotesk-Medium.otf");
                 font-weight:500;
                 font-display:swap;
                 font-style:normal
               }
               @font-face{
                 font-family:'Blorado';
-                src:url("/fonts/GT-Walsheim-Bold.woff2");
+                src:url("/fonts/NeurialGrotesk-Bold.otf");
                 font-weight:600;
                 font-display:swap;
                 font-style:normal

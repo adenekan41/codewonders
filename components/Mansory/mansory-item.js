@@ -16,9 +16,8 @@ const propTypes = {
   item: PropTypes.object,
 };
 
-const MansoryItem = withRouter(({ item, router }) => {
+const MansoryItem = withRouter(({ item, router: { pathname } }) => {
   const [show, setShow] = useState(false);
-  const { pathname } = router;
 
   return (
     <>

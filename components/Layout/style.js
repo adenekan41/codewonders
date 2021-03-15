@@ -20,14 +20,14 @@ const FontToken = css`
 
 const LightTheme = css`
   :root {
-    --bg: #fff4e9;
-    --button-index: #f3e5d9;
+    --bg: #fffdfc;
+    --button-index: #f4f1ee;
     --cw: #000;
     --invert: 0;
-    --mark: #f9ede2;
+    --mark: #f9f7f6;
     --theme-amount: 0;
     --gray: #b9ad9a;
-    --pattern: transparent;
+    --pattern: #f5f5f5bf;
     --light-gray: #dedede;
     --lighter-gray: #f5f5f5;
     --article-color: #545454;
@@ -38,7 +38,7 @@ const LightTheme = css`
     --gray-alpha: #f7e4d4;
     --sidebar-cta: #ea4e1c;
     --nav-link: rgba(0, 0, 0, 0.5);
-    --timeline: #eadfd6;
+    --timeline: #e0e0e0;
     ${FontToken}
   }
 `;
@@ -389,13 +389,16 @@ export const SocialMedia = styled.div`
   }
 `;
 
-export const BackLay = styled.figure`
+export const BackLay = styled.div`
   margin: 0;
+
   h1 {
     font-family: Abril FatFace;
-    font-size: 29.42vh;
+    font-size: 29.42vmin;
     ${(props) =>
-      props.title === 'About Me' || props.title === 'Contact'
+      props.title === 'About Me' ||
+      props.title === 'Contact' ||
+      props.title === 'Home'
         ? css`
             writing-mode: unset;
           `
@@ -403,21 +406,32 @@ export const BackLay = styled.figure`
             writing-mode: tb-rl;
           `}
 
-    position: fixed;
     letter-spacing: -0.3rem;
-    z-index: -1;
+    white-space: pre;
     color: var(--mark);
-    bottom: 0px;
-    opacity: 1;
-    transition: all 0.8s ease;
+    position: fixed;
     left: -4rem;
+    transition: all 0.8s ease;
+    opacity: 1;
+    z-index: -1;
+    bottom: 0px;
   }
 `;
 
 export const Main = styled.main`
-  background-image: radial-gradient(var(--pattern) 0.5px, transparent 0.5px),
+  /* background-image: radial-gradient(var(--pattern) 0.5px, transparent 0.5px),
     radial-gradient(var(--pattern) 0.5px, transparent 0.5px);
   background-size: calc(20 * 0.5px) calc(20 * 0.5px);
-  background-position: 0 0, calc(10 * 0.5px) calc(10 * 0.5px);
+  background-position: 0 0, calc(10 * 0.5px) calc(10 * 0.5px); */
+  background-image: repeating-linear-gradient(
+    0deg,
+    var(--pattern),
+    var(--pattern) 1px,
+    transparent 2px,
+    transparent
+  );
+
+  background-size: 1px 101px;
+
   min-height: 100vh;
 `;

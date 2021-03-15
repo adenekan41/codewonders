@@ -52,7 +52,7 @@ const Layout = ({ children, title = 'Home' }) => {
       <Navbar />
       <BackLay title={title}>
         <h1 aria-hidden="true">
-          {title === 'Home' ? 'Hello.' : title.concat('.')}
+          {title === 'Home' ? 'Hello, There.' : title.concat('.')}
         </h1>
       </BackLay>
       <Cursor />

@@ -287,7 +287,6 @@ const PageSection = styled.div`
     &:hover {
       background: ${(props) => props.color};
       color: #fff;
-      font-weight: 600;
     }
   }
   @media (max-width: 585px) {
