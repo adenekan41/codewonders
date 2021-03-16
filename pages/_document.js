@@ -49,6 +49,14 @@ export default class MyDocument extends Document {
             name="twitter:image"
             content="https://i.ibb.co/jz5Qwx1/Group-7.png"
           />
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"
+          />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link rel="preconnect" href="https://i.ibb.co/" crossOrigin />
+          git a
           <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
