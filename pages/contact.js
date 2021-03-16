@@ -112,9 +112,9 @@ const PageSection = styled.div`
   }
   button {
     font-size: calc(var(--font-sm) + 1.1px);
-    background: var(--border-color);
+    background: var(--cw);
     border: none;
-    color: var(--cw);
+    color: var(--bg);
     border-radius: 5px;
     padding: 15px 40px;
     margin-bottom: 3rem;

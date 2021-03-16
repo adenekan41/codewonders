@@ -33,10 +33,10 @@ const LightTheme = css`
     --article-color: #545454;
     --header-bg: rgba(255, 255, 255, 0.8);
     --token: #666;
-    --border-color: #e8dacf;
-    --sidebar-tag: #efd6c1;
+    --border-color: #eaeaea;
+    --sidebar-tag: #efe9e4;
     --gray-alpha: #f6f4f06b;
-    --sidebar-cta: #ea4e1c;
+    --sidebar-cta: #0b0c15;
     --nav-link: rgba(0, 0, 0, 0.5);
     --timeline: #e0e0e0;
     ${FontToken}
@@ -49,7 +49,7 @@ const DarkTheme = css`
     --invert: 1;
     --theme-amount: 1;
     --cw: #e1e1e1;
-    --gray: #8694a0;
+    --gray: #9e9e9c;
     --pattern: transparent;
     --light-gray: #444;
     --lighter-gray: #222;
@@ -60,7 +60,7 @@ const DarkTheme = css`
     --button-index: #091521;
     --mark: #080f18;
     --sidebar-tag: #13283e;
-    --sidebar-cta: #0da51b;
+    --sidebar-cta: #081e35;
     --gray-alpha: #07121dd4;
     --timeline: #0f1923;
     --nav-link: rgba(255, 255, 255, 0.8);

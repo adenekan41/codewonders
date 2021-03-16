@@ -167,14 +167,14 @@ const MansoryItemStyle = styled.div`
     color: #d5d5d5 !important;
     font-size: calc(var(--font-sm) + 0.9px);
     span {
-      background: #ffc926;
+      background: #696869;
       padding: 4px 10px;
       border-radius: 50px;
       text-transform: capitalize;
       font-size: 11px;
       margin-right: 6px;
-      color: #423103;
-      font-weight: 700;
+      color: #fff;
+      font-weight: 500;
     }
   }
 

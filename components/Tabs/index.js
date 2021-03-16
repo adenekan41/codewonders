@@ -76,8 +76,8 @@ const Wrapper = styled.nav`
     color: var(--gray);
     &.tab-list-active {
       font-weight: 900 !important;
-      color: var(--cw);
-      background: var(--mark);
+      color: #e8e8e8;
+      background: var(--gray-dark);
       padding: 5px 22px;
     }
   }
