@@ -5,11 +5,10 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { arrayRandomItem } from 'codewonders-helpers';
-import Image from 'next/image';
-
-/* -------------------------- Internal Dependencies ------------------------- */
-import SideBarModal from '../SidebarModal';
 import { withRouter } from 'next/router';
+/* -------------------------- Internal Dependencies ------------------------- */
+import Image from '../Image';
+import SideBarModal from '../SidebarModal';
 
 /* -------------------------- MansoryItem PropTypes ------------------------- */
 const propTypes = {
@@ -38,7 +37,7 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
             }}
             role="gridcell"
           >
-            <Image src={item.imageUrl} alt={item.imageUrl} layout="fill" />
+            <Image src={item.imageUrl} alt={item.imageUrl} />
             <div className="content__slate">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
@@ -57,7 +56,7 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
             aria-label={`${item.title} ${item.description}`}
             onClick={() => setShow(true)}
           >
-            <Image src={item.imageUrl} alt={item.imageUrl} layout="fill" />
+            <Image src={item.imageUrl} alt={item.imageUrl} />
             <div className="content__slate">
               <h3>{item.title}</h3>
               <p>{item.description}</p>

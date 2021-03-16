@@ -35,7 +35,7 @@ const LightTheme = css`
     --token: #666;
     --border-color: #e8dacf;
     --sidebar-tag: #efd6c1;
-    --gray-alpha: #f7e4d4;
+    --gray-alpha: #f6f4f06b;
     --sidebar-cta: #ea4e1c;
     --nav-link: rgba(0, 0, 0, 0.5);
     --timeline: #e0e0e0;
@@ -61,7 +61,7 @@ const DarkTheme = css`
     --mark: #080f18;
     --sidebar-tag: #13283e;
     --sidebar-cta: #0da51b;
-    --gray-alpha: #07121d;
+    --gray-alpha: #07121dd4;
     --timeline: #0f1923;
     --nav-link: rgba(255, 255, 255, 0.8);
     ${FontToken}
@@ -193,6 +193,12 @@ export const Header = styled.header`
             cursor:pointer;
           }
       }
+      .navbar-nav {
+        @media(max-width: 992px){
+         display: block !important;    
+         overflow: auto;
+        }
+      }
     }
     #nav{
       transition: all .5s ease;
@@ -222,6 +228,12 @@ export const Header = styled.header`
       box-shadow: 0 0 1px rgba(0, 0, 0, 0);
       position: relative;
       overflow: hidden;
+      @media(max-width: 992px){
+        display: block;    
+        text-align: center;
+        width: fit-content;
+        margin: 3rem auto;
+      }
         &:before {
           content: "";
           position: absolute;
@@ -252,7 +264,9 @@ export const Header = styled.header`
       font-weight:900;
       border-bottom: 1px solid var(--cw);
       color: var(--cw) !important;
-      display: none;
+      @media(min-width: 992px){
+        display: none;
+      }
     }
 
     .navbar-border-collapse.show{
@@ -345,36 +359,9 @@ export const SocialMedia = styled.div`
       stroke-opacity: 0.8;
     }
   }
-  @media (max-width: 585px) {
+  @media (max-width: 992px) {
     position: fixed;
-    background: var(--gray-alpha) !important;
-    width: 100% !important;
-    display: flex;
-    padding: 0 !important;
-    right: 0;
-    z-index: 999;
-    flex-direction: row !important;
-    height: 60px !important;
-    bottom: 0px !important;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  @media (max-width: 989px) {
-    position: fixed;
-    background: var(--gray-alpha) !important;
-    width: 100% !important;
-    display: flex;
-    padding: 0 !important;
-    right: 0;
-    z-index: 999;
-    flex-direction: row !important;
-    height: 60px !important;
-    bottom: 0px !important;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  @media (max-width: 220px) {
-    position: fixed;
+    backdrop-filter: blur(6px) saturate(2.5);
     background: var(--gray-alpha) !important;
     width: 100% !important;
     display: flex;
@@ -430,8 +417,7 @@ export const Main = styled.main`
     transparent 2px,
     transparent
   );
-
+  background-attachment: fixed;
   background-size: 1px 101px;
-
   min-height: 100vh;
 `;
