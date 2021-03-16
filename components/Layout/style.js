@@ -26,8 +26,8 @@ const LightTheme = css`
     --invert: 0;
     --mark: #f9f7f6;
     --theme-amount: 0;
-    --gray: #b9ad9a;
-    --pattern: #f5f5f5bf;
+    --gray: #d6d6d6;
+    --pattern: #f8f7f7;
     --light-gray: #dedede;
     --lighter-gray: #f5f5f5;
     --article-color: #545454;
@@ -414,7 +414,7 @@ export const Main = styled.main`
     0deg,
     var(--pattern),
     var(--pattern) 1px,
-    transparent 2px,
+    transparent 1px,
     transparent
   );
   background-attachment: fixed;

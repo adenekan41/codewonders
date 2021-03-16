@@ -137,7 +137,7 @@ const CursorThumb = styled.div`
     border: 1px solid var(--gray);
   }
   .hovered {
-    border: 1px solid var(--gray);
+    border: 2px solid var(--gray);
     width: 110px;
     background: #00000052;
     height: 110px;
@@ -148,8 +148,8 @@ const CursorThumb = styled.div`
       content: 'Open' !important;
       position: absolute;
       top: 50%;
-      font-size: 13px;
-      font-weight: 800;
+      font-weight: 600;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
       left: 50%;
       color: #fff !important;

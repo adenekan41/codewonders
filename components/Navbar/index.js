@@ -55,6 +55,7 @@ const Navbar = () => {
                   <Link href="/" activeClassName="is-active">
                     <a
                       className="nav-link"
+                      id="cardHover"
                       onClick={closeShow}
                       href="#!"
                       aria-label="Go Home"
@@ -68,6 +69,7 @@ const Navbar = () => {
                   <Link href="/about" activeClassName="is-active">
                     <a
                       className="nav-link"
+                      id="cardHover"
                       onClick={closeShow}
                       href="#!"
                       aria-label="Go To About Page"
@@ -81,6 +83,7 @@ const Navbar = () => {
                   <Link href="/projects" activeClassName="is-active">
                     <a
                       className="nav-link"
+                      id="cardHover"
                       onClick={closeShow}
                       href="#!"
                       aria-label="Go To Projects Page"
@@ -94,6 +97,7 @@ const Navbar = () => {
                   <Link href="/resume" activeClassName="is-active">
                     <a
                       className="nav-link"
+                      id="cardHover"
                       onClick={closeShow}
                       href="#!"
                       aria-label="Go To Resume Page"
@@ -107,6 +111,7 @@ const Navbar = () => {
                   <Link href="/contact" activeClassName="is-active">
                     <a
                       className="nav-link"
+                      id="cardHover"
                       onClick={closeShow}
                       href="#!"
                       aria-label="Go To Contacts Page"

@@ -56,7 +56,6 @@ export default class MyDocument extends Document {
           />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link rel="preconnect" href="https://i.ibb.co/" crossOrigin />
-          git a
           <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
