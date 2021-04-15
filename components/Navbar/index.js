@@ -12,17 +12,20 @@ import AppContext from '../Utils/context';
 import { Logo, Moon, Icon } from '../Icons';
 
 const Navbar = () => {
-  const { show, handleopen, setTheme, closeShow } = useContext(AppContext);
+  const { show, handleopen, setTheme, closeShow, theme } = useContext(
+    AppContext
+  );
   return (
     <>
       <Header>
-        <nav className="navbar navbar-expand-md bg-light navbar-light">
+        <nav className="navbar navbar-expand-lg bg-light navbar-light">
           <div className="container">
             <Link href="/">
               <a
                 href="#!"
                 className="navbar-brand"
                 aria-label="Adenekan Wonderful Home"
+                tabIndex={show ? '-1' : undefined}
               >
                 <Logo />
               </a>
@@ -32,23 +35,22 @@ const Navbar = () => {
               className="navbar-toggler pr-0"
               type="button"
               onClick={handleopen}
+              tabIndex={show ? '-1' : undefined}
               aria-label="Open Button Toggle"
             >
               <span className="navbar-toggler-icon" />
             </button>
 
             <div
-              className={`collapse navbar-collapse ${show && 'show'}`}
+              className={`collapse navbar-collapse  ${show && 'show'}`}
               id="collapsibleNavbar"
             >
-              <span
-                className="d-block d-md-none"
+              <button
+                className="d-block d-md-none close-nav"
                 onClick={handleopen}
-                role="button"
-                focusable="true"
               >
                 <Icon />
-              </span>
+              </button>
 
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item hover__bottom d-block d-md-none">
@@ -124,8 +126,10 @@ const Navbar = () => {
                 <li className="nav-item pl-md-3">
                   <Link href="#0">
                     <a
-                      className="nav-link"
-                      aria-label="Turn On Dark Mood"
+                      className="nav-link nav-svg"
+                      aria-label={`Turn On ${
+                        theme === false ? 'Light' : 'Dark'
+                      } Mood`}
                       onClick={setTheme}
                       href="#!"
                     >

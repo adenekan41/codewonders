@@ -29,7 +29,7 @@ const About = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open Link"
+                  aria-label="Open Github Link"
                   href="https://github.com/adenekan41"
                 >
                   Engineering{' '}
@@ -40,7 +40,7 @@ const About = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open Link"
+                  aria-label="Open Github Link"
                   href="https://github.com/adenekan41"
                   className="float-right"
                 >
@@ -59,7 +59,7 @@ const About = () => {
               </li>
               <li>
                 <Link href="/projects">
-                  <a aria-label="Open Codewonders Spotify Playlist">
+                  <a aria-label="Open Products Page">
                     Product{' '}
                     <small>
                       <Product />
@@ -67,7 +67,7 @@ const About = () => {
                   </a>
                 </Link>
                 <Link href="/projects">
-                  <a aria-label="Open Lofii Playlist" className="float-right">
+                  <a aria-label="Open Products Page" className="float-right">
                     View Products
                   </a>
                 </Link>
@@ -84,7 +84,7 @@ const About = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open Link"
+                  aria-label="Open Design Link"
                   href="https://dribbble.com/codewonders"
                 >
                   Design{' '}
@@ -95,7 +95,7 @@ const About = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open Link"
+                  aria-label="Open Design Link"
                   href="https://dribbble.com/codewonders"
                   className="float-right"
                 >
@@ -203,7 +203,9 @@ const About = () => {
               </li>
               <li>
                 <Link href="/articles">
-                  <a>Learning Something Great 😉</a>
+                  <a aria-label="Check my articles and recent reads">
+                    Learning Something Great 😉
+                  </a>
                 </Link>
                 <a className="float-right" tabIndex="-1">
                   <Date /> <b>Currently</b>

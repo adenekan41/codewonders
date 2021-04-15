@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css, createGlobalStyle } from 'styled-components';
 
@@ -35,6 +35,20 @@ const SideBarModal = ({
   css: styling,
   data,
 }) => {
+  const handleKeyPress = useCallback((e) => {
+    if (e.key === 'Escape') {
+      console.log('sdsdsd');
+      closeShow();
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
   return (
     <>
       {show && (

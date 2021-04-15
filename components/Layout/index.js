@@ -22,7 +22,7 @@ const propTypes = {
 };
 
 const Layout = ({ children, title = 'Home' }) => {
-  const { theme, loadTheme } = useContext(AppContext);
+  const { theme, loadTheme, show } = useContext(AppContext);
 
   const logPage = () => {
     if (!window.GA_INITIALIZED) {
@@ -56,7 +56,8 @@ const Layout = ({ children, title = 'Home' }) => {
         </h1>
       </BackLay>
       <Cursor />
-      {children}
+
+      {!show && <>{children}</>}
     </Main>
   );
 };

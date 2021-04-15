@@ -17,6 +17,7 @@ const propTypes = {
 
 const MansoryItem = withRouter(({ item, router: { pathname } }) => {
   const [show, setShow] = useState(false);
+  const [height] = useState(arrayRandomItem(['400px', '454px', '310px']));
 
   return (
     <>
@@ -33,7 +34,7 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
           <MansoryItemStyle
             {...{ item }}
             style={{
-              height: arrayRandomItem(['400px', '454px', '310px']),
+              height,
             }}
             role="gridcell"
           >
@@ -49,12 +50,16 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
           <MansoryItemStyle
             {...{ item }}
             style={{
-              height: arrayRandomItem(['400px', '454px', '310px']),
+              height,
             }}
             role="gridcell"
             id="cardHover"
             aria-label={`${item.title} ${item.description}`}
             onClick={() => setShow(true)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') return setShow(true);
+            }}
+            tabIndex="0"
           >
             <Image src={item.imageUrl} alt={item.imageUrl} />
             <div className="content__slate">
@@ -146,7 +151,8 @@ const MansoryItemStyle = styled.div`
       rgb(0 0 0 / 78%) 80%
     );
   }
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: none;
     &:after {
       opacity: 1;

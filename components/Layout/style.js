@@ -298,11 +298,13 @@ export const Header = styled.header`
         animation-name:opacitys;
         animation-duration:1s;
         height: 100%;
-        svg{
+        .nav-svg, .close-nav{
           position: absolute;
           right: 60px;
           top: 60px;
-        
+          border: none;
+          background: transparent;
+          width: fit-content;
           cursor: pointer;
         }
         ul {
@@ -317,8 +319,13 @@ export const Header = styled.header`
               font-size: calc(var(--font-md) + 1.8px);
               font-weight: 800;
               text-transform: uppercase;
+              @media (max-width: 992px) {
+                &:focus {
+                  border: 1px solid var(--cw);
+                }
+              }
             }
-            &:nth-of-type(6) svg{
+            .nav-svg{
               left:60px !important;
             }
           }
