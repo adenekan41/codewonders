@@ -22,7 +22,7 @@ const defaultProps = {
 const Image = ({ src, alt, className }) => (
   <ProgressiveImage
     src={src}
-    placeholder="https://i.ibb.co/1RWFqf2/spinner.gif"
+    placeholder="https://i.ibb.co/BTvLMXq/Ripple-1-9s-201px.gif"
   >
     {(currentSrc, loading) => (
       <>

@@ -33,7 +33,7 @@ const Home = () => {
             </h1>
             <p>
               {' '}
-              Frontend developer and Javascript engineer,{' '}
+              Frontend developer, UX architect and Javascript engineer,{' '}
               <Link href="/lens">
                 <a aria-label="Go to Lens Page">
                   <button type="button" tabIndex="-1">
