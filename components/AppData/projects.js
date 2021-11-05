@@ -11,6 +11,17 @@ const PROJECTS_DATA = [
     technologies: ['React', 'Sass & CSS', 'Javascript', 'Context'],
   },
   {
+    title: 'Scoutbar',
+    about: 'Spotlight Experience for your App',
+    description:
+      'Navigation tool that significantly increases efficiency by reducing the number of clicks it takes you to navigate the web.',
+    link: 'https://scoutbar.co',
+    github: 'https://github.com/adenekan41/scoutbar',
+    imageUrl: 'https://i.ibb.co/txPxtCP/Frame-21-1.png',
+    type: ['open-source', 'tools'],
+    technologies: ['Typescript', 'Rollup', 'React', 'Nextjs'],
+  },
+  {
     title: 'Shoprrr',
     description: 'An E-commerce Application For Buying Cotton Products.',
     github: 'https://github.com/adenekan41/shoprrr',
