@@ -4,7 +4,7 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { ScoutBar } from '../bundle-cjs/index';
+import { ScoutBar } from 'scoutbar';
 
 /* -------------------------- Internal Dependencies ------------------------- */
 import Navbar from '../Navbar';
