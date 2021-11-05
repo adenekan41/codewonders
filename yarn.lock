@@ -5533,6 +5533,11 @@ schema-utils@^3.0.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+scoutbar@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/scoutbar/-/scoutbar-1.1.6.tgz#115b0692960a78e1231e66f96aa96fb0a0d27e8d"
+  integrity sha512-t8xokI5+IHDpdt2LHyJF4MU7VRGAucx7YpwiVYji+vYtt5nXmggRScTi7Wvy269RtLWPJKitd+t4f2i8Zqabfg==
+
 semver-compare@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
