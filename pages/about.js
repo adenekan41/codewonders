@@ -47,14 +47,15 @@ const About = () => {
                   View Github
                 </a>
                 <p>
-                  First impressions mean everything in business and good website
-                  design is the key to exploiting this. In my opinion, a great
-                  site is not measured by looks alone, but also by functionality
-                  and usability. I am an experienced programmer who can find
-                  creative solutions to technical challenges, whilst at the same
-                  time designing sleek and visually appealing websites. I have
-                  extensive knowledge of recognized technical standards and i'm
-                  familiar with modern build practices.
+                  When it comes to business, first impressions matter, and good
+                  website design is the key to capitalizing on them. An
+                  excellent site is not judged solely on its looks, but on its
+                  functionality and usability as well. My experience as a
+                  programmer allows me to come up with intelligent solutions to
+                  technical challenges, while at the same time designing sleek
+                  and visually appealing websites. Aside from having extensive
+                  knowledge of recognized technical standards, I am conversant
+                  with modern building practices.
                 </p>
               </li>
               <li>
@@ -72,11 +73,12 @@ const About = () => {
                   </a>
                 </Link>
                 <p>
-                  Usually I'm not the atypical product manager, Hence I'm
-                  strongly in depth in research, product design and product
-                  co-ordination. that would help the product grow from 0 - 1. My
-                  first-rate analytical abilities helps me maintian the product
-                  vision from start to finish, both technical and product wise.
+                  In spite of not being an atypical product manager, I have
+                  strong backgrounds in research, product design, and product
+                  coordination that can help the product grow from 0 to 1. As a
+                  first-rate analytical thinker, I am able to maintain the
+                  product's vision from start to finish, both technically and
+                  product-wise.
                 </p>
               </li>
 
@@ -102,13 +104,13 @@ const About = () => {
                   View Dribbble
                 </a>
                 <p>
-                  I'm not the atypical designer but then i possess good visual
-                  abilities and this has helped greatly with my presentation
-                  skills which allow me to successfully present design ideas to
-                  stakeholders and even design teams. My strong
-                  conceptualization ability allows me to picture and then bring
-                  to life beautiful work. Finally you'd mostly find me in
-                  stylesheets tweaking and creating fluent user experiences.
+                  Although I am not the typical designer, I do possess excellent
+                  visual abilities, and this makes me an excellent presenter,
+                  allowing me to successfully communicate design ideas to
+                  stakeholders and design teams. With my strong
+                  conceptualization ability, I am able to visualize and create
+                  beautiful works. Lastly, you can find me mostly tweaking
+                  stylesheets and creating fluid user experiences.
                 </p>
               </li>
             </ul>

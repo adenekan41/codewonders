@@ -4,6 +4,7 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { ScoutBar } from '../bundle-cjs/index';
 
 /* -------------------------- Internal Dependencies ------------------------- */
 import Navbar from '../Navbar';
@@ -14,6 +15,7 @@ import SkipToMain from '../A11y/skip-to-main';
 
 /* ---------------------------- Style Dependency ---------------------------- */
 import { BackLay, BodyStyling, Main } from './style';
+import { actions } from './data';
 
 /* ---------------------------- Layout PropTypes ---------------------------- */
 const propTypes = {
@@ -22,7 +24,7 @@ const propTypes = {
 };
 
 const Layout = ({ children, title = 'Home' }) => {
-  const { theme, loadTheme, show } = useContext(AppContext);
+  const { theme, loadTheme, show, setTheme } = useContext(AppContext);
 
   const logPage = () => {
     if (!window.GA_INITIALIZED) {
@@ -56,7 +58,7 @@ const Layout = ({ children, title = 'Home' }) => {
         </h1>
       </BackLay>
       <Cursor />
-
+      <ScoutBar actions={actions(setTheme)} brandColor="var(--cw)" />
       {!show && <>{children}</>}
     </Main>
   );

@@ -180,6 +180,16 @@ mark.mark {
     opacity: 0;
     transition: opacity 300ms;
   }
+  .scout__bar-wrapper{
+  --scout-white: var(--bg);
+  --scout-theme-black: var(--cw);
+  --scout-light-grey: var(--border-color);
+  --scout-theme-grey: var(--gray);
+  --scout-theme-card-hover: var(--gray-alpha);
+  --scout-theme-keyboard: 0px 2px 0px 2px #8d8d8d;
+  --scout-tutorial-grey: #494949
+  --scout-box-shadow: 1px 2px 16px 10px rgba(0, 0, 0, 0.05);
+  }
 `;
 
 export const Header = styled.header`
