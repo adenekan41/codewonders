@@ -12,13 +12,13 @@ const PROJECTS_DATA = [
   },
   {
     title: 'Scoutbar',
-    about: 'Spotlight Experience for your App',
+    about: 'Spotlight experience for your App',
     description:
       'Navigation tool that significantly increases efficiency by reducing the number of clicks it takes you to navigate the web.',
     link: 'https://scoutbar.co',
     github: 'https://github.com/adenekan41/scoutbar',
     imageUrl: 'https://i.ibb.co/txPxtCP/Frame-21-1.png',
-    type: ['open-source', 'tools'],
+    type: ['project', 'open-source', 'tools'],
     technologies: ['Typescript', 'Rollup', 'React', 'Nextjs'],
   },
   {
@@ -245,9 +245,29 @@ const PROJECTS_DATA = [
     link: 'https://ezewholesale.com',
     about:
       'Eze connects electronics traders from all around the globe, enabling access to invaluable resources that improve the day-to-day lives of people everywhere.',
-    imageUrl: 'https://i.ibb.co/NZgQ7P0/image.png',
+    imageUrl: 'https://i.ibb.co/Kyn18dm/Screenshot-2021-11-30-at-3-08-36-AM.png',
     type: ['project', 'others'],
     technologies: ['Nextjs (React)', 'AWS', 'D3', 'Javascript', 'MobX'],
+  },
+   {
+    title: 'DrugStoc',
+    description: 'Empowering Pharmacies Toward a Healthier Africa.',
+    link: 'https://techcrunch.com/2021/11/14/nigerian-e-health-pharmaceutical-distribution-startup-drugstoc-secures-4-4-million-series-a-funding-embarks-on-expansion-drive/',
+    about:
+      'Drugstoc makes use of unmatched technology, supply chain innovation, financial solutions, and product knowledge to unlock access to medications in emerging Economies.',
+    imageUrl: 'https://i.ibb.co/mC4z0c4/Screenshot-2021-11-30-at-3-12-33-AM.png',
+    type: ['project', 'others'],
+    technologies: ['Nextjs (React)', 'Javascript'],
+  },
+   {
+    title: 'Developp',
+    description: 'Test engineers on their skills and competence.',
+    link: 'https://testing.tunga.io',
+    about:
+      'Test Engineers on their skills and competence.',
+    imageUrl: 'https://i.ibb.co/PQXmbwK/Screenshot-2021-11-30-at-3-22-24-AM.png',
+    type: ['project', 'others'],
+    technologies: ['React', 'Redux', 'Javascript'],
   },
   {
     title: 'Minimal Peace',
