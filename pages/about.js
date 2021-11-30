@@ -41,6 +41,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Github Link"
+                  id="cardHover"
                   href="https://github.com/adenekan41"
                   className="float-right"
                 >
@@ -68,7 +69,11 @@ const About = () => {
                   </a>
                 </Link>
                 <Link href="/projects">
-                  <a aria-label="Open Products Page" className="float-right">
+                  <a
+                    aria-label="Open Products Page"
+                    id="cardHover"
+                    className="float-right"
+                  >
                     View Products
                   </a>
                 </Link>
@@ -98,6 +103,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Design Link"
+                  id="cardHover"
                   href="https://dribbble.com/codewonders"
                   className="float-right"
                 >
@@ -128,6 +134,7 @@ const About = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
+                  id="cardHover"
                   aria-label="Open Human Centered Design 101"
                   href="https://www.plusacumen.org/courses/introduction-human-centered-design"
                 >
@@ -149,6 +156,7 @@ const About = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
+                  id="cardHover"
                   aria-label="Open Link Data Structure And Algorithm"
                   href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/"
                 >
@@ -169,6 +177,7 @@ const About = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
+                  id="cardHover"
                   aria-label="Open Link Adaptive Leadership"
                   href="https://www.edx.org/course/adaptive-leadership-in-development"
                 >
@@ -190,6 +199,7 @@ const About = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
+                  id="cardHover"
                   aria-label="Open Link Learning to Learn [Efficient Learning] "
                   href="https://www.udemy.com/course/learning-to-learn-efficient-learning-zero-to-mastery/"
                 >
@@ -205,7 +215,10 @@ const About = () => {
               </li>
               <li>
                 <Link href="/articles">
-                  <a aria-label="Check my articles and recent reads">
+                  <a
+                    aria-label="Check my articles and recent reads"
+                    id="cardHover"
+                  >
                     Learning Something Great 😉
                   </a>
                 </Link>
@@ -236,6 +249,7 @@ const About = () => {
                 </a>
                 <a
                   target="_blank"
+                  id="cardHover"
                   rel="noopener noreferrer"
                   aria-label="Open Lofii Playlist"
                   href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V"
@@ -261,6 +275,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Link"
+                  id="cardHover"
                   href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS"
                   className="float-right"
                 >
@@ -284,6 +299,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Link"
+                  id="cardHover"
                   href="https://open.spotify.com/playlist/37i9dQZF1DWUACcBjzMiIY?si=KbZW7Cz1TpaABPXV_fH4-A"
                   className="float-right"
                 >
@@ -304,6 +320,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Link"
+                  id="cardHover"
                   href="https://open.spotify.com/playlist/37i9dQZF1DX6PKX5dyBKeq?si=jRd8iiIER260sRzE6ZV44g"
                   className="float-right"
                 >
@@ -324,6 +341,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Link"
+                  id="cardHover"
                   href="https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=wF0gpf3RRa-2oT1GYTBQ_w"
                   className="float-right"
                 >
@@ -346,7 +364,9 @@ const About = () => {
                   </a>
                 </Link>
                 <Link href="/lens">
-                  <a className="float-right">Visit Page</a>
+                  <a className="float-right" id="cardHover">
+                    Visit Page
+                  </a>
                 </Link>
                 <p>
                   This is an intensive, curation of the photochromic lenses that

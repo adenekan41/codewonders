@@ -134,6 +134,7 @@ const SideBarModal = ({
                   href={data.link}
                   className="open__project"
                   target="_blank"
+                  id="cardHover"
                   rel="noopener noreferrer"
                 >
                   Open Project{' '}

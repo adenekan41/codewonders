@@ -73,7 +73,7 @@ const Wrapper = styled.nav`
     font-size: calc(var(--font-sm) + 0.9px);
     transition: all 0.3s ease;
     background: transparent;
-    color: var(--gray);
+    color: var(--article-color);
     &.tab-list-active {
       font-weight: 900 !important;
       color: #e8e8e8;

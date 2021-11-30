@@ -60,7 +60,7 @@ const DarkTheme = css`
     --button-index: #091521;
     --mark: #080f18;
     --sidebar-tag: #13283e;
-    --sidebar-cta: #081e35;
+    --sidebar-cta: #3f566e;
     --gray-alpha: #07121dd4;
     --timeline: #0f1923;
     --nav-link: rgba(255, 255, 255, 0.8);
@@ -164,6 +164,11 @@ mark.mark {
   background-position: 0 80%;
   position: relative;
   background-size: 100% .3em;
+}
+
+.loading-img {
+  object-fit: contain !important;
+  transform: scale(0.5);
 }
 
 .page-transition-enter {
@@ -288,6 +293,7 @@ export const Header = styled.header`
         z-index: 99;
         height: 84vh;
     }
+
    
     
     @media( max-width : 762px ) {

@@ -20,6 +20,7 @@ const Tab = ({ activeTab, label, onClick, href, ...rest }) => {
           activeTab === label ? 'tab-list-active' : ''
         }`}
         href={href}
+        id="cardHover"
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Open ${label}`}
@@ -36,6 +37,7 @@ const Tab = ({ activeTab, label, onClick, href, ...rest }) => {
           activeTab === label ? 'tab-list-active' : ''
         }`}
         type="button"
+        id="cardHover"
         onClick={() => onClick(label)}
         aria-label={`Open ${label}`}
         {...rest}
