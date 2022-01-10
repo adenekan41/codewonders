@@ -6773,10 +6773,10 @@ schema-utils@^3.1.1:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
-scoutbar@^1.1.8:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/scoutbar/-/scoutbar-1.1.8.tgz#e03b2a978162fc40730cd23a411d15b609bb92ba"
-  integrity sha512-N44AWPnSn6tddXvKybBq3Mbh+yxN8XsfjgCl2wKRdOE1MzPBRlyN/kJ5r4cgKC14IPS1H6SuYkkDD0DGa31ZkA==
+scoutbar@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/scoutbar/-/scoutbar-1.1.9.tgz#deb9d412e58783d12c65bcbaf6eada5149356ee9"
+  integrity sha512-N74nED/MBwrWdHeECNHWZpD+0jQL5l+J3SAk477hHSflLq0jZVBXMg3QPd/bNhYhoo3JlhzEMb5eH2ELXfHCmg==
 
 semver-compare@^1.0.0:
   version "1.0.0"
