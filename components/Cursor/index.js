@@ -1,160 +1,207 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import styled, { css } from 'styled-components';
 
-import React, { useRef, useEffect, useCallback } from 'react';
-import styled from 'styled-components';
+/* -------------------------- Internal Dependencies ------------------------- */
+import useIsMounted from '../Utils/useIsMounted';
 
 const Cursor = () => {
-  const cursor = useRef(null);
-  const mouseMove = useCallback(
-    (e) => {
-      const elements = document.querySelectorAll('#cardHover');
-      if (cursor.current) {
-        cursor.current.setAttribute(
-          'style',
-          `top: ${e.pageY - 10}px; left: ${e.pageX -
-            10}px; visibility: visible;`
-        );
+  const dot = useRef(null);
+  const dotOutline = useRef(null);
+  const isMounted = useIsMounted();
+  const [mouseActive, setMouseActive] = useState(false);
+
+  const delay = 8;
+  const _x = useRef(0);
+  const _y = useRef(0);
+  const endX = useRef(process.browser ? window.innerWidth / 2 : 0);
+  const endY = useRef(process.browser ? window.innerHeight / 2 : 0);
+
+  const cursorVisible = useRef(true);
+  const cursorEnlarged = useRef(false);
+
+  const requestRef = useRef(null);
+
+  const toggleCursorVisibility = useCallback(() => {
+    if (dot?.current && dotOutline?.current)
+      if (cursorVisible.current) {
+        dot.current.style.opacity = '1';
+        dotOutline.current.style.opacity = '1';
+      } else {
+        dot.current.style.opacity = '0';
+        dotOutline.current.style.opacity = '0';
       }
-      for (let i = 0; i < elements.length; i++) {
-        elements[i].mouseIsOver = false;
-        elements[i].onmouseover = () => {
-          cursor.current.classList.add('hovered');
-        };
-        elements[i].onmouseout = () => {
-          cursor.current.classList.remove('hovered');
-        };
+  }, []);
+
+  const toggleCursorSize = useCallback(() => {
+    if (dot?.current && dotOutline?.current)
+      if (cursorEnlarged.current) {
+        setMouseActive(true);
+      } else {
+        setMouseActive(false);
+      }
+  }, []);
+
+  const mouseOverEvent = useCallback(
+    (e) => {
+      if (e.target.id === 'cardHover') {
+        cursorEnlarged.current = true;
+        toggleCursorSize();
       }
     },
-    [cursor.current]
+    [toggleCursorSize]
   );
 
-  const click = useCallback(() => {
-    if (cursor.current) cursor.current.classList.add('expand');
+  const mouseOutEvent = useCallback(
+    (e) => {
+      if (e.target.id === 'cardHover') {
+        cursorEnlarged.current = false;
+        toggleCursorSize();
+      }
+    },
+    [toggleCursorSize]
+  );
 
-    setTimeout(() => {
-      if (cursor.current) return cursor.current.classList.remove('expand');
-    }, 500);
-  }, [cursor.current]);
+  const mouseEnterEvent = useCallback(() => {
+    cursorEnlarged.current = true;
+    toggleCursorVisibility();
+  }, [toggleCursorVisibility]);
+
+  const mouseLeaveEvent = useCallback(() => {
+    cursorEnlarged.current = false;
+    toggleCursorVisibility();
+  }, [toggleCursorVisibility]);
+
+  const mouseMoveEvent = useCallback(
+    (e) => {
+      cursorVisible.current = true;
+      toggleCursorVisibility();
+
+      endX.current = e.pageX;
+      endY.current = e.pageY;
+      if (dot?.current) {
+        dot.current.style.top = endY.current + 'px';
+        dot.current.style.left = endX.current + 'px';
+      }
+    },
+    [toggleCursorVisibility]
+  );
+
+  const animateDotOutline = useCallback(() => {
+    _x.current += (endX.current - _x.current) / delay;
+    _y.current += (endY.current - _y.current) / delay;
+
+    if (dotOutline?.current) {
+      dotOutline.current.style.top = _y.current + 'px';
+      dotOutline.current.style.left = _x.current + 'px';
+    }
+
+    requestRef.current = requestAnimationFrame(animateDotOutline);
+  }, [endX, endY]);
 
   useEffect(() => {
-    document.addEventListener('mousemove', mouseMove);
-    document.addEventListener('click', click);
+    const requestRefs = requestRef?.current;
+
+    if (isMounted()) {
+      document.addEventListener('mousemove', mouseMoveEvent);
+      document.addEventListener('mouseenter', mouseEnterEvent);
+      document.addEventListener('mouseleave', mouseLeaveEvent);
+      document.addEventListener('mouseover', mouseOverEvent);
+      document.addEventListener('mouseout', mouseOutEvent);
+
+      animateDotOutline();
+    }
     return () => {
-      document.removeEventListener('click', click);
-      document.removeEventListener('mousemove', mouseMove);
+      document.removeEventListener('mousemove', mouseMoveEvent);
+      document.removeEventListener('mouseenter', mouseEnterEvent);
+      document.removeEventListener('mouseleave', mouseLeaveEvent);
+      document.removeEventListener('mouseover', mouseOverEvent);
+      document.removeEventListener('mouseout', mouseOutEvent);
+
+      cancelAnimationFrame(requestRefs);
     };
-  }, [click, mouseMove]);
+  }, [
+    isMounted,
+    mouseMoveEvent,
+    mouseEnterEvent,
+    mouseLeaveEvent,
+    mouseOverEvent,
+    mouseOutEvent,
+    animateDotOutline,
+  ]);
 
   return (
-    <CursorThumb>
-      <div className="cursor d-none d-md-inline" ref={cursor} />
-    </CursorThumb>
+    <CursorStyle cursorActive={mouseActive}>
+      <div ref={dotOutline} className="cursor-dot-outline"></div>
+      <div ref={dot} className="cursor-dot"></div>
+    </CursorStyle>
   );
 };
 
-const CursorThumb = styled.div`
-  .cursor {
-    width: 65px;
-    height: 65px;
-    visibility: hidden;
-    border: 1px solid var(--gray);
-    border-radius: 50%;
-    position: absolute;
-    z-index: 99999999999;
-    -webkit-transition-duration: 200ms;
-    transition-duration: 200ms;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-animation: cursorAnim 0.5s infinite alternate;
-    animation: cursorAnim 0.5s infinite alternate;
-    pointer-events: none;
-  }
-
-  .cursor::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    background: var(--gray);
-    border-radius: 1px;
-    opacity: 0.5;
-    top: 18px;
-    left: 18px;
-    -webkit-transition-duration: 200ms;
-    transition-duration: 200ms;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-animation: rotateAnim 2s infinite alternate;
-    animation: rotateAnim 2s infinite alternate;
-  }
-  .cursor::before {
-    content: unset !important;
-  }
-  @keyframes rotateAnim {
-    from {
-      transform: rotate(1deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes cursorAnim {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.7);
-    }
-  }
-
-  @keyframes cursorAnim2 {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.4);
-    }
-  }
-
-  @keyframes cursorAnim3 {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(3);
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0;
-    }
-  }
-
-  .expand {
-    animation: cursorAnim3 0.5s forwards;
-    border: 1px solid var(--gray);
-  }
-  .hovered {
-    border: none;
-    width: 110px;
-    background: var(--cw);
-    height: 110px;
-    &::after {
-      content: unset;
-    }
-    &::before {
-      content: 'Open' !important;
+const CursorStyle = styled.div`
+  @media (min-width: 989px) {
+    .cursor-dot,
+    .cursor-dot-outline {
+      pointer-events: none;
       position: absolute;
       top: 50%;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
       left: 50%;
-      color: var(--bg) !important;
+      border-radius: 50%;
+      opacity: 0;
+      z-index: 9222;
       transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease-in-out, transform 0.5s ease-in-out;
     }
+
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      box-shadow: inset 0 0 0px 0.5px var(--light-gray);
+      background-color: var(--gray);
+    }
+
+    .cursor-dot-outline {
+      width: 65px;
+      height: 65px;
+      border: 1px solid var(--gray);
+      box-shadow: inset 0 0 0px 0.5px var(--light-gray);
+    }
+
+    ${({ cursorActive }) =>
+      cursorActive
+        ? css`
+            .cursor-dot {
+              transform: translate(-50%, -50%) scale(0.75);
+              &::before {
+                content: 'Open';
+                position: absolute;
+                top: 50%;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                left: 50%;
+                color: var(--bg);
+                background: var(--cw);
+                border-radius: 50px;
+                padding: 2px 8px;
+                transform: translate(-50%, -50%);
+              }
+            }
+            .cursor-dot-outline {
+              box-shadow: none;
+              transform: translate(-50%, -50%) scale(1.7);
+            }
+          `
+        : css`
+            .cursor-dot {
+              transform: translate(-50%, -50%) scale(1);
+            }
+            .cursor-dot-outline {
+              transform: translate(-50%, -50%) scale(1);
+            }
+          `}
   }
 `;
 export default Cursor;
