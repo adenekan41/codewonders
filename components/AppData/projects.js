@@ -160,7 +160,7 @@ const PROJECTS_DATA = [
     technologies: ['HTML', 'CSS', 'Javascript', 'Compiled HTML'],
   },
   {
-    title: 'Freespace (WIP)',
+    title: 'Freespace',
     description: '100% Anonymously tell the world your mind.',
     about:
       'Freespace can be utilized as your own safe place where you can freely un-conceal your thoughts and emotions without any apprehensions. Freespace requires no log-in, your IP address is not tracked and we do not leave any cache files on your browser or SERVER.  This is to assure our users that we give utmost importance to their privacy and anonymity.  Keeping this in mind, we have also ensured that no comment section is available for the posts.  This is to further protect the writer of the post and to ensure no negative interactions or cyberbullying takes place.  We are hopeful that this will further encourage our users to share openly and to read stories of others, who are just like them or might be different but can still connect and learn at a certain level.',
@@ -235,7 +235,7 @@ const PROJECTS_DATA = [
       'Discover & access to on-demand Information leisure and utility over the world from your chrome.',
     about:
       'Bellza, a chrome extension, will open up an era of high customization for the new tab pages of your Chrome and Firefox. Common websites can be added to Speed Dial in one step and displayed with icons; the customizable search engines, select HD wallpapers and widgets like Weather, Notes, Bookmarks, To-do List, History, Gmail Notifier, etc. can increase your productivity.',
-    link: 'https://bellza.surge.sh',
+    link: 'https://chrome.google.com/webstore/detail/bellza-always-informed/fhnmdmmmdclgjnjlbodahlcmabjnngde',
     imageUrl: 'https://i.ibb.co/W6859mc/ezgif-com-optimize.gif',
     type: ['tools'],
     technologies: ['Vue', 'javascript', 'HTML & CSS'],
