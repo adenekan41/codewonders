@@ -46,11 +46,11 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             name="description"
-            content="Hi, I&#x27;m Adenekan Wonderful, Frontend Developer and Javascript Engineer."
+            content="Hi, I&#x27;m Adenekan Wonderful, Frontend developer, UX architect, and JavaScript engineer."
           />
           <meta
             property="og:description"
-            content="Hi, I&#x27;m Adenekan Wonderful, Frontend Developer and Javascript Engineer."
+            content="Hi, I&#x27;m Adenekan Wonderful, Frontend developer, UX architect, and JavaScript engineer."
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="mobile-web-app-capable" content="yes" />
@@ -61,7 +61,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:site" content="@code_wonders" />
           <meta
             name="twitter:image"
-            content="https://i.ibb.co/jz5Qwx1/Group-7.png"
+            content="https://i.ibb.co/SxxqTRk/Mac-Book-Pro-16-10.png"
           />
           <link
             rel="preload"
@@ -152,7 +152,7 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://codewonders.dev" />
           <meta
             property="og:image"
-            content="https://i.ibb.co/jz5Qwx1/Group-7.png"
+            content="https://i.ibb.co/SxxqTRk/Mac-Book-Pro-16-10.png"
           />
           <meta
             name="apple-mobile-web-app-title"
