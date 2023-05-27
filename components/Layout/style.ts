@@ -197,7 +197,7 @@ mark.mark {
   --scout-theme-grey: var(--gray);
   --scout-theme-card-hover: var(--gray-alpha);
   --scout-theme-keyboard: 0px 2px 0px 2px #8d8d8d;
-  --scout-tutorial-grey: #494949
+  --scout-tutorial-grey: var(--article-color);
   --scout-box-shadow: 1px 2px 16px 10px rgba(0, 0, 0, 0.05);
 }
 `;
