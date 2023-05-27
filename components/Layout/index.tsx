@@ -1,9 +1,12 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependecies                            */
 /* -------------------------------------------------------------------------- */
-import React, { useContext, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import React, {
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import { ScoutBar } from 'scoutbar';
 
 /* -------------------------- Internal Dependencies ------------------------- */
@@ -13,23 +16,19 @@ import { initGA, logPageView } from '../Utils/analytics';
 import Cursor from '../Cursor';
 import SkipToMain from '../A11y/skip-to-main';
 
-/* ---------------------------- Style Dependency ---------------------------- */
 import { BackLay, BodyStyling, Main } from './style';
 import { actions } from './data';
+import Head from 'next/head';
 
-/* ---------------------------- Layout PropTypes ---------------------------- */
-const propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
-  title: PropTypes.string,
-};
-
-const Layout = ({ children, title = 'Home' }) => {
+const Layout: React.FC<PropsWithChildren<{
+  title?: string;
+}>> = ({ children, title = 'Home' }) => {
   const { theme, loadTheme, show, setTheme } = useContext(AppContext);
-
+  const [skew, setSkew] = useState(10);
   const logPage = () => {
-    if (!window.GA_INITIALIZED) {
+    if (!(window as any).GA_INITIALIZED) {
       initGA();
-      window.GA_INITIALIZED = true;
+      (window as any).GA_INITIALIZED = true;
     }
     logPageView();
   };
@@ -42,19 +41,19 @@ const Layout = ({ children, title = 'Home' }) => {
   return (
     <Main>
       <BodyStyling theme={theme} />
-      <Helmet>
+      <Head>
         <title>{`${title} | Adenekan Wonderful | Codewonders`}</title>
         <meta
           name="msapplication-TileColor"
           content={`${theme ? '#000000' : '#FFFFFF'}`}
         />
         <meta name="theme-color" content={`${theme ? '#000000' : '#FFFFFF'}`} />
-      </Helmet>
+      </Head>
       <SkipToMain content="main-content" />
       <Navbar />
       <BackLay title={title}>
         <h1 aria-hidden="true">
-          {title === 'Home' ? 'Hello, There.' : title.concat('.')}
+          {title === 'Home' ? 'CW.' : title.concat('.')}
         </h1>
       </BackLay>
       <Cursor />
@@ -64,11 +63,14 @@ const Layout = ({ children, title = 'Home' }) => {
   );
 };
 
-Layout.propTypes = propTypes;
-
-export const PageWrapper = ({ children, className = '', ...rest }) => {
+export const PageWrapper: React.FC<PropsWithChildren<{}> &
+  React.HTMLAttributes<HTMLDivElement>> = ({
+  children,
+  className = '',
+  ...rest
+}) => {
   return (
-    <section {...rest} id="main-content" tabIndex="-1">
+    <section {...rest} id="main-content">
       <div className={`container  ${className}`}>
         <div className="row align-items-center justify-content-center">
           <div className="col-md-10">{children}</div>
@@ -76,11 +78,6 @@ export const PageWrapper = ({ children, className = '', ...rest }) => {
       </div>
     </section>
   );
-};
-
-PageWrapper.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
-  className: PropTypes.string,
 };
 
 export default Layout;

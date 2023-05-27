@@ -3,7 +3,6 @@
 /* -------------------------------------------------------------------------- */
 import React from 'react';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /* -------------------------- Image Dependecy -------------------------- */
@@ -21,29 +20,25 @@ import {
 /* ---------------------------- Style Dependency ---------------------------- */
 import { SocialMedia } from '../Layout/style';
 
-/* -------------------------- FooterLink PropTypes -------------------------- */
-const propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
-  goto: PropTypes.string.isRequired,
-};
+interface IFooterLink {
+  children: string | React.ReactNode;
+  goto?: string;
+}
 
-/* ------------------------- FooterLink defaultProps ------------------------ */
-
-const defaultProps = {
-  children: {},
-};
-
-const FooterLink = ({ children, goto, ...rest }) => {
+const FooterLink: React.FC<IFooterLink &
+  React.AnchorHTMLAttributes<HTMLParagraphElement>> = ({
+  children,
+  goto,
+  ...rest
+}) => {
   return (
     <>
       <FooterStyle>
         <Link href={`${goto}`}>
-          <a aria-label={children}>
-            <p {...rest}>
-              {children}
-              <IconRight />
-            </p>
-          </a>
+          <p {...rest}>
+            {children}
+            <IconRight />
+          </p>
         </Link>
       </FooterStyle>
       <SocialMedia>
@@ -110,6 +105,7 @@ const FooterStyle = styled.footer`
   p {
     font-size: var(--font-sm);
     transition: all 1s ease;
+
     svg {
       margin-left: 1rem;
       animation-name: forward;
@@ -117,6 +113,7 @@ const FooterStyle = styled.footer`
       animation-iteration-count: infinite;
       animation-direction: alternate;
     }
+
     &:hover {
       @keyframes forward {
         from {
@@ -129,9 +126,5 @@ const FooterStyle = styled.footer`
     }
   }
 `;
-
-FooterLink.defaultProps = defaultProps;
-
-FooterLink.propTypes = propTypes;
 
 export default FooterLink;

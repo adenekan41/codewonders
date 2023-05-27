@@ -5,14 +5,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /* ------------------------------ Tab PropTypes ----------------------------- */
-const propTypes = {
-  activeTab: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  href: PropTypes.string,
-};
+interface TabProps {
+  activeTab: string;
+  label: string;
+  onClick: (label: string) => void;
+  href?: string;
+  [key: string]: any;
+}
 
-const Tab = ({ activeTab, label, onClick, href, ...rest }) => {
+const Tab: React.FC<TabProps> = ({
+  activeTab,
+  label,
+  onClick,
+  href,
+  ...rest
+}) => {
   if (href) {
     return (
       <a
@@ -48,5 +55,4 @@ const Tab = ({ activeTab, label, onClick, href, ...rest }) => {
   );
 };
 
-Tab.propTypes = propTypes;
 export default Tab;

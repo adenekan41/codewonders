@@ -1,46 +1,47 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, {
+  PropsWithChildren,
+  ReactElement,
+  ReactNode,
+  useState,
+} from 'react';
 
 /* -------------------------- Internal Dependecies -------------------------- */
 import styled from 'styled-components';
 import Tab from './Tab';
 
-/* ------------------------------ Tab PropTypes ----------------------------- */
-const propTypes = {
-  children: PropTypes.instanceOf(Array).isRequired,
-};
+const Tabs: React.FC<PropsWithChildren> = ({ children }) => {
+  const pickOneChild = React.Children.toArray(children)[0] as ReactElement;
+  const [activeTab, setActiveTab] = useState<string>(pickOneChild.props.label);
 
-const Tabs = ({ children }) => {
-  const [activeTab, setActiveTab] = useState(children[0].props.label);
-  const onClickTabItem = (tab) => {
+  const onClickTabItem = (tab: string) => {
     setActiveTab(tab);
   };
 
   return (
     <>
       <Wrapper className="d-md-flex d-block tabs" role="tablist">
-        {children.map((child) => {
-          const { label, href } = child.props;
+        {children &&
+          React.Children.map(children as any, (child: ReactElement) => {
+            const { label, href } = child.props;
 
-          return (
-            <Tab
-              activeTab={activeTab}
-              key={label}
-              label={label}
-              href={href}
-              aria-current={activeTab}
-              onClick={onClickTabItem}
-            />
-          );
-        })}
+            return (
+              <Tab
+                activeTab={activeTab}
+                key={label}
+                label={label}
+                href={href}
+                aria-current={activeTab}
+                onClick={onClickTabItem}
+              />
+            );
+          })}
       </Wrapper>
       <div className="tab-content">
-        {children.map((child) => {
-          if (child.props.label !== activeTab) return false;
-          return child.props.children;
+        {React.Children.map(children as any, (child: ReactElement) => {
+          return child.props.label === activeTab && child.props.children;
         })}
       </div>
     </>
@@ -83,9 +84,11 @@ const Wrapper = styled.nav`
   }
 `;
 
-export const TabItems = styled.div`
+export const TabItems = styled.div<{
+  label?: string;
+  href?: string;
+}>`
   display: block;
 `;
-Tabs.propTypes = propTypes;
 
 export default Tabs;

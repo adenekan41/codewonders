@@ -23,7 +23,7 @@ const Articles = () => {
             <TabItems label="All">
               <MansoryLayout>
                 {articles.map((item, index) => (
-                  <MansoryItem key={index} index={index} item={item} />
+                  <MansoryItem key={index} item={item} />
                 ))}
               </MansoryLayout>
             </TabItems>
@@ -32,7 +32,7 @@ const Articles = () => {
                 {articles.map(
                   (item, index) =>
                     item.type.includes('article') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>
@@ -42,7 +42,7 @@ const Articles = () => {
                 {articles.map(
                   (item, index) =>
                     item.type.includes('reading') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>
@@ -52,7 +52,7 @@ const Articles = () => {
                 {articles.map(
                   (item, index) =>
                     item.type.includes('video') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>

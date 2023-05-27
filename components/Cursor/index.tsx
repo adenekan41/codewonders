@@ -7,9 +7,17 @@ import styled, { css } from 'styled-components';
 /* -------------------------- Internal Dependencies ------------------------- */
 import useIsMounted from '../Utils/useIsMounted';
 
+// Define Props type for CursorStyle component
+interface CursorStyleProps {
+  cursorActive: boolean;
+}
+
+// Define a type for the Event used in mouse events
+type MouseEvent = globalThis.MouseEvent;
+
 const Cursor = () => {
-  const dot = useRef(null);
-  const dotOutline = useRef(null);
+  const dot = useRef<HTMLDivElement>(null);
+  const dotOutline = useRef<HTMLDivElement>(null);
   const isMounted = useIsMounted();
   const [mouseActive, setMouseActive] = useState(false);
 
@@ -22,7 +30,7 @@ const Cursor = () => {
   const cursorVisible = useRef(true);
   const cursorEnlarged = useRef(false);
 
-  const requestRef = useRef(null);
+  const requestRef = useRef<number | null>(null);
 
   const toggleCursorVisibility = useCallback(() => {
     if (dot?.current && dotOutline?.current)
@@ -45,8 +53,8 @@ const Cursor = () => {
   }, []);
 
   const mouseOverEvent = useCallback(
-    (e) => {
-      if (e.target.id === 'cardHover') {
+    (e: MouseEvent) => {
+      if ((e.target as any)?.id === 'cardHover') {
         cursorEnlarged.current = true;
         toggleCursorSize();
       }
@@ -55,8 +63,8 @@ const Cursor = () => {
   );
 
   const mouseOutEvent = useCallback(
-    (e) => {
-      if (e.target.id === 'cardHover') {
+    (e: MouseEvent) => {
+      if ((e.target as any)?.id === 'cardHover') {
         cursorEnlarged.current = false;
         toggleCursorSize();
       }
@@ -75,7 +83,7 @@ const Cursor = () => {
   }, [toggleCursorVisibility]);
 
   const mouseMoveEvent = useCallback(
-    (e) => {
+    (e: MouseEvent) => {
       cursorVisible.current = true;
       toggleCursorVisibility();
 
@@ -120,7 +128,7 @@ const Cursor = () => {
       document.removeEventListener('mouseover', mouseOverEvent);
       document.removeEventListener('mouseout', mouseOutEvent);
 
-      cancelAnimationFrame(requestRefs);
+      cancelAnimationFrame(requestRefs as number);
     };
   }, [
     isMounted,
@@ -140,7 +148,7 @@ const Cursor = () => {
   );
 };
 
-const CursorStyle = styled.div`
+const CursorStyle = styled.div<CursorStyleProps>`
   @media (min-width: 989px) {
     .cursor-dot,
     .cursor-dot-outline {
@@ -163,8 +171,8 @@ const CursorStyle = styled.div`
     }
 
     .cursor-dot-outline {
-      width: 65px;
-      height: 65px;
+      width: 85px;
+      height: 85px;
       border: 1px solid var(--gray);
       box-shadow: inset 0 0 0px 0.5px var(--light-gray);
     }
@@ -173,25 +181,14 @@ const CursorStyle = styled.div`
       cursorActive
         ? css`
             .cursor-dot {
-              transform: translate(-50%, -50%) scale(0.75);
-              &::before {
-                content: 'Open';
-                position: absolute;
-                top: 50%;
-                font-weight: 500;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-                left: 50%;
-                color: var(--bg);
-                background: var(--cw);
-                border-radius: 50px;
-                padding: 2px 8px;
-                transform: translate(-50%, -50%);
-              }
+              transform: translate(-50%, -50%) scale(2.2);
+              background: hsla(0, 0%, 100%, 0.3);
+              border: 1px solid #fff;
             }
+
             .cursor-dot-outline {
               box-shadow: none;
-              transform: translate(-50%, -50%) scale(1.7);
+              transform: translate(-50%, -50%) scale(0);
             }
           `
         : css`

@@ -11,99 +11,66 @@ import { arrayRandomItem } from 'codewonders-helpers';
 
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
+import { AnimatePresence, motion } from 'framer-motion';
+import { getTransitions } from '../components/Utils';
 
 const Home = () => {
   const [color] = useState(arrayRandomItem(['#37609c', '#34c759', '#5856d6']));
-  const copyText = () => {
-    const textField = document.createElement('textarea');
-    textField.innerText = 'hellocodewonders@gmail.com';
-    document.body.appendChild(textField);
-    textField.select();
-    document.execCommand('copy');
-    textField.remove();
-  };
 
   return (
     <Layout>
       <PageSection color={color}>
         <PageWrapper>
-          <article>
-            <h1 data-text="I'm Adenekan Wonderful" className="intro__text">
-              <mark className="mark">I&apos;m Adenekan Wonderful</mark>
-            </h1>
-            <p>
-              {' '}
-              Frontend developer, UX architect and Javascript engineer,{' '}
-              <Link href="/lens">
-                <a aria-label="Go to Lens Page">
-                  <button type="button" tabIndex="-1">
-                    Photochromic Lens
-                  </button>
-                </a>
-              </Link>{' '}
-              enthusiast, practicing minimalist, and{' '}
-              <a
-                href="https://open.spotify.com/playlist/2EH5NURI9OzRsMOFOGL70V"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Music Playlist"
+          <AnimatePresence mode="sync">
+            <article>
+              <motion.h1
+                data-text="I'm Adenekan Wonderful"
+                className="intro__text"
+                {...getTransitions(0.1)}
               >
-                <button type="button" tabIndex="-1">
-                  Pop Music & Jazz lover
-                </button>
-              </a>{' '}
-              in search of flow.
-            </p>
-            <p>
-              Working with my hands to make magic happen on the internet. View
-              my{' '}
-              <Link href="/projects">
-                <a aria-label="Go to Projects Page">
-                  <button type="button" tabIndex="-1">
-                    Projects
-                  </button>
-                </a>
-              </Link>
-              ,{' '}
-              <Link href="/articles">
-                <a aria-label="Go to Articles Page And Check What I Read">
-                  <button type="button" tabIndex="-1">
-                    Articles
-                  </button>
-                </a>
-              </Link>
-              ,{' '}
-              <Link href="/resume">
-                <a aria-label="Go to Resume Page">
-                  <button type="button" tabIndex="-1">
-                    Resumé
-                  </button>
-                </a>
-              </Link>
-              ,{' '}
-              <Link href="/contact">
-                <a aria-label="Go to Contact Page">
-                  <button type="button" tabIndex="-1">
-                    Contact Me
-                  </button>
-                </a>
-              </Link>
-              , or send me an email at{' '}
-              <button
-                style={{ cursor: 'crosshair' }}
-                title="Copy to clipboard"
-                onClick={copyText}
-                type="button"
-                aria-label="Send an email"
-              >
-                hellocodewonders@gmail.com
-              </button>
-              .
-            </p>
-          </article>
-          <br />
-          <FooterLink goto="/about">See More About Me</FooterLink>
-          <br />
+                <mark className="mark">I&apos;m Adenekan Wonderful</mark>
+              </motion.h1>
+              <motion.p {...getTransitions(0.3)}>
+                {' '}
+                Your friendly neighborhood frontend developer, UX architect, and
+                JavaScript engineer. I spend my days (and often nights) painting
+                the Internet canvas with{' '}
+                <Link href="/projects" aria-label="Go to Projects Page">
+                  Projects
+                </Link>{' '}
+                and lines of code, turning zeroes and ones into immersive,
+                interactive experiences,{' '}
+              </motion.p>
+              <motion.p {...getTransitions(0.5)}>
+                Bona fide photochromic{' '}
+                <Link href="/articles" aria-label="Check out my Lens">
+                  Lens
+                </Link>{' '}
+                enthusiast - sunlight or indoors, I&apos;ve got it covered. I
+                tread the path of minimalism, finding beauty in simplicity and
+                order. When I'm not crafting beautiful web experiences, you can
+                find me reading{' '}
+                <Link
+                  href="/articles"
+                  aria-label="Go to Articles Page And Check What I Read"
+                >
+                  Articles
+                </Link>{' '}
+                or swaying to the rhythm of Pop Music & Jazz, losing myself in
+                the captivating flow of melodies. anyways you can{' '}
+                <Link href="/contact" aria-label="Go to Contact Page">
+                  Contact Me
+                </Link>
+              </motion.p>
+            </article>
+
+            <br />
+            <motion.div {...getTransitions(0.7)}>
+              <FooterLink goto="/about">See More About Me</FooterLink>
+            </motion.div>
+
+            <br />
+          </AnimatePresence>
         </PageWrapper>
       </PageSection>
     </Layout>
@@ -116,11 +83,13 @@ const PageSection = styled.div`
   align-items: center;
   justify-content: center;
   .intro__text {
-    font-size: calc(var(--font-x-lg) + 9px);
-    font-weight: 900;
+    font-size: 2.275em;
+    font-weight: 500;
     margin: 2rem 0rem 1.5rem;
     position: relative;
-    letter-spacing: -1.1px;
+    text-transform: uppercase;
+    letter-spacing: 9.9px;
+
     &::before,
     &::after {
       content: attr(data-text);
@@ -130,16 +99,19 @@ const PageSection = styled.div`
       width: 100%;
       height: 100%;
     }
+
     &::before {
       left: 2px;
-      text-shadow: -1px 0 blue;
+      text-shadow: -1px 0 #00ffff;
       animation: noise-anim-2 15s infinite linear alternate-reverse;
     }
+
     &::after {
       left: -2px;
-      text-shadow: 3px 0 red;
+      text-shadow: 3px 0 #ff69b4;
       animation: noise-anim 2s infinite linear alternate-reverse;
     }
+
     @keyframes noise-anim {
       0% {
         clip-path: inset(29% 0 25% 0);
@@ -276,8 +248,18 @@ const PageSection = styled.div`
     line-height: 2.3;
     font-weight: 400;
     color: var(--article-color) !important;
+
+    a,button {
+      font-size: calc(var(--font-sm) + 0.9px);
+      line-height: 20px;
+      position: relative;
+      border: none;
+      font-weight: 800;
+      background: transparent;
+      text-transform: uppercase;
+    }
   }
-  button {
+  /* button {
     font-size: var(--font-sm);
     background: var(--button-index);
     border: none;
@@ -288,7 +270,7 @@ const PageSection = styled.div`
       background: ${(props) => props.color};
       color: #fff;
     }
-  }
+  } */
   @media (max-width: 585px) {
     margin: 3rem 0;
     display: block;

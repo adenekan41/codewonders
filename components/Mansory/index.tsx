@@ -1,17 +1,13 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { PropsWithChildren } from 'react';
+
 import styled from 'styled-components';
 
 /* ------------------------- MansoryLayout PropTypes ------------------------ */
 
-const propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
-};
-
-const MansoryLayout = ({ children }) => {
+const MansoryLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return <Layout>{children}</Layout>;
 };
 
@@ -68,7 +64,5 @@ const Layout = styled.div`
     opacity: 1 !important;
   }
 `;
-
-MansoryLayout.propTypes = propTypes;
 
 export default MansoryLayout;

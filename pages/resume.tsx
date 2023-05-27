@@ -29,9 +29,7 @@ const Resume = () => {
             <p>
               Reach out to me via my{' '}
               <b>
-                <Link href="/contact">
-                  <a>contact page</a>
-                </Link>
+                <Link href="/contact">contact page</Link>
               </b>{' '}
               .{' '}
               <b>

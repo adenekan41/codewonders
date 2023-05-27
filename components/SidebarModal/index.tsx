@@ -9,35 +9,39 @@ import styled, { css, createGlobalStyle } from 'styled-components';
 import { Close, Github, Product } from '../Icons';
 
 /* ------------------------- SideBarModal propTypes ------------------------ */
-const propTypes = {
-  show: PropTypes.bool,
-  closeShow: PropTypes.func,
-  size: PropTypes.string,
-  overlayColor: PropTypes.string,
-  css: PropTypes.object,
-  data: PropTypes.object,
-};
 
+interface ISideBarModal {
+  show: boolean;
+  closeShow: () => void;
+  size?: 'sm' | 'lg' | 'md';
+  overlayColor?: string;
+  data?: {
+    title: string;
+    description?: string;
+    technologies?: string[];
+    github?: string;
+    imageUrl?: string;
+    about?: string;
+    link?: string;
+  };
+}
 /* ------------------------ SideBarModal defaultprops ----------------------- */
-const defaultProps = {
+const defaultProps: ISideBarModal = {
   show: false,
   closeShow: () => {},
   size: 'md',
   overlayColor: 'rgba(0, 0, 0, 0.8)',
-  css: {},
 };
 
-const SideBarModal = ({
+const SideBarModal: React.FC<ISideBarModal> = ({
   show,
   closeShow,
   size,
   overlayColor,
-  css: styling,
   data,
 }) => {
-  const handleKeyPress = useCallback((e) => {
+  const handleKeyPress = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') {
-      console.log('sdsdsd');
       closeShow();
     }
   }, []);
@@ -51,10 +55,10 @@ const SideBarModal = ({
   }, []);
   return (
     <>
-      {show && (
+      {show && data && (
         <>
           <Body />
-          <Wrapper size={size} css={styling} data-testid="sidebarmodal">
+          <Wrapper size={size} data-testid="sidebarmodal">
             <Overlay
               overlayColor={overlayColor}
               className="overlay"
@@ -156,7 +160,7 @@ const SideBarModal = ({
   );
 };
 
-const generateSize = (size) => {
+const generateSize = (size: ISideBarModal['size']) => {
   if (size === 'sm')
     return css`
       width: 21.8em;
@@ -199,7 +203,7 @@ const Wrapper = styled.div`
   }
   aside {
     background: var(--bg);
-    ${(props) => generateSize(props.size)}
+    ${(props: { size: ISideBarModal['size'] }) => generateSize(props.size)}
     @media (max-width: 768px) {
       width: 100% !important;
     }
@@ -313,10 +317,10 @@ const Overlay = styled.div`
   width: 100%;
   top: 0;
   right: 0;
-  background: ${(props) => props.overlayColor || 'rgba(0, 0, 0, 0.8)'};
+  background: ${(props: { overlayColor?: string }) =>
+    props.overlayColor || 'rgba(0, 0, 0, 0.8)'};
 `;
 
-SideBarModal.propTypes = propTypes;
 SideBarModal.defaultProps = defaultProps;
 
 export default SideBarModal;

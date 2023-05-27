@@ -54,7 +54,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   id="message"
-                  rows="5"
+                  rows={5}
                   className="form-control"
                   placeholder="Message"
                   aria-required="true"

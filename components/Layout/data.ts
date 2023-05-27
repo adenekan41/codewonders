@@ -9,7 +9,7 @@ import ARTICLE_DATA from '../AppData/articles';
 import LENS_DATA from '../AppData/lens';
 import PROJECTS_DATA from '../AppData/projects';
 
-export const actions = (theme) => [
+export const actions = (theme: () => void) => [
   createScoutAction({
     label: 'Home',
     href: '/',

@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* -------------------------------------------------------------------------- */
 /*                             External Dependency                            */
 /* -------------------------------------------------------------------------- */
@@ -7,6 +8,7 @@ import React, { useContext } from 'react';
 /* -------------------------- Internal Dependencies ------------------------- */
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
+
 import Tabs, { TabItems } from '../components/Tabs';
 import MansoryLayout from '../components/Mansory';
 import MansoryItem from '../components/Mansory/mansory-item';
@@ -24,7 +26,7 @@ const LensPage = () => {
             <TabItems label="All">
               <MansoryLayout>
                 {lens.map((item, index) => (
-                  <MansoryItem key={index} index={index} item={item} />
+                  <MansoryItem key={index} item={item} />
                 ))}
               </MansoryLayout>
             </TabItems>
@@ -33,7 +35,7 @@ const LensPage = () => {
                 {lens.map(
                   (item, index) =>
                     item.type.includes('ray-ban') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>
@@ -43,7 +45,7 @@ const LensPage = () => {
                 {lens.map(
                   (item, index) =>
                     item.type.includes('persol') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>
@@ -53,7 +55,7 @@ const LensPage = () => {
                 {lens.map(
                   (item, index) =>
                     item.type.includes('Edblue') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>
@@ -63,7 +65,7 @@ const LensPage = () => {
                 {lens.map(
                   (item, index) =>
                     item.type.includes('sight-relax') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>

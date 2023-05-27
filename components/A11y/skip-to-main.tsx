@@ -1,16 +1,15 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React, { memo } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 
 /* -------------------------- SkipToMain PropTypes -------------------------- */
-const propTypes = {
-  content: PropTypes.string.isRequired,
-};
+interface ISkipToMain {
+  content?: string;
+}
 
-const SkipToMain = ({ content = '0' }) => {
+const SkipToMain: React.FC<ISkipToMain> = ({ content = '0' }) => {
   return (
     <Wrapper>
       <a
@@ -34,7 +33,8 @@ const Wrapper = styled.div`
     overflow: hidden;
     z-index: -999;
   }
-  a.skip-main:focus,
+
+  a.skip-main:focus-visible,
   a.skip-main:active {
     color: var(--bg);
     background-color: var(--cw);
@@ -55,6 +55,4 @@ const Wrapper = styled.div`
   }
 `;
 
-SkipToMain.propTypes = propTypes;
-
-export default memo(SkipToMain);
+export default SkipToMain;

@@ -25,7 +25,7 @@ const Projects = () => {
             <TabItems label="All">
               <MansoryLayout>
                 {projectsData.map((item, index) => (
-                  <MansoryItem key={index} index={index} item={item} />
+                  <MansoryItem key={index} item={item} />
                 ))}
               </MansoryLayout>
             </TabItems>
@@ -34,7 +34,7 @@ const Projects = () => {
                 {projectsData.map(
                   (item, index) =>
                     item.type.includes('project') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>
@@ -44,7 +44,7 @@ const Projects = () => {
                 {projectsData.map(
                   (item, index) =>
                     item.type.includes('tools') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>
@@ -54,7 +54,7 @@ const Projects = () => {
                 {projectsData.map(
                   (item, index) =>
                     item.type.includes('open-source') && (
-                      <MansoryItem key={index} index={index} item={item} />
+                      <MansoryItem key={index} item={item} />
                     )
                 )}
               </MansoryLayout>

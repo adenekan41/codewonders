@@ -20,9 +20,10 @@ export default class MyApp extends App {
     super();
     this.state = {
       show: false,
-      theme: loadState() ? true : false,
+      theme: loadState() ? false : true,
     };
   }
+
   loadTheme = () => {
     const { theme } = this.state;
     if (theme == false) {
@@ -31,6 +32,7 @@ export default class MyApp extends App {
       saveState(1);
     }
   };
+
   handleopen = () => {
     const { show } = this.state;
     this.setState({ show: !show });

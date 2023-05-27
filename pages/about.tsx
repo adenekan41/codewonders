@@ -48,42 +48,45 @@ const About = () => {
                   View Github
                 </a>
                 <p>
-                  When it comes to business, first impressions matter, and good
-                  website design is the key to capitalizing on them. An
-                  excellent site is not judged solely on its looks, but on its
-                  functionality and usability as well. My experience as a
-                  programmer allows me to come up with intelligent solutions to
-                  technical challenges, while at the same time designing sleek
-                  and visually appealing websites. Aside from having extensive
-                  knowledge of recognized technical standards, I am conversant
-                  with modern building practices.
+                  The power of first impressions cannot be underestimated, and
+                  the gateway to capitalizing on them lies in exceptional
+                  website design. An outstanding website transcends mere
+                  aesthetics and extends its influence to encompass seamless
+                  functionality and user-friendly navigation. Drawing upon my
+                  expertise as a seasoned programmer, I possess the unique
+                  ability to tackle intricate technical challenges while
+                  crafting websites that exude sleekness and visual allure.
+                  Moreover, my extensive knowledge of recognized technical
+                  standards is complemented by my proficiency in modern building
+                  practices, ensuring that every aspect of your website is
+                  finely tuned to perfection.
                 </p>
               </li>
               <li>
-                <Link href="/projects">
-                  <a aria-label="Open Products Page">
-                    Product{' '}
-                    <small>
-                      <Product />
-                    </small>
-                  </a>
+                <Link href="/projects" aria-label="Open Products Page">
+                  Product{' '}
+                  <small>
+                    <Product />
+                  </small>
                 </Link>
-                <Link href="/projects">
-                  <a
-                    aria-label="Open Products Page"
-                    id="cardHover"
-                    className="float-right"
-                  >
-                    View Products
-                  </a>
+                <Link
+                  href="/projects"
+                  aria-label="Open Products Page"
+                  id="cardHover"
+                  className="float-right"
+                >
+                  View Products
                 </Link>
                 <p>
-                  In spite of not being an atypical product manager, I have
-                  strong backgrounds in research, product design, and product
-                  coordination that can help the product grow from 0 to 1. As a
-                  first-rate analytical thinker, I am able to maintain the
-                  product's vision from start to finish, both technically and
-                  product-wise.
+                  While I may not fit the conventional mold of a product
+                  manager, my diverse skill set in research, product design, and
+                  product coordination empowers me to drive the growth of a
+                  product from its inception. As an exceptional analytical
+                  thinker, I possess the ability to uphold the product's vision
+                  throughout its entire journey, effectively bridging the
+                  technical and product aspects. By leveraging my expertise, I
+                  can navigate the path from 0 to 1, ensuring the product's
+                  success at every stage.
                 </p>
               </li>
 
@@ -110,13 +113,14 @@ const About = () => {
                   View Dribbble
                 </a>
                 <p>
-                  Although I am not the typical designer, I do possess excellent
-                  visual abilities, and this makes me an excellent presenter,
-                  allowing me to successfully communicate design ideas to
-                  stakeholders and design teams. With my strong
-                  conceptualization ability, I am able to visualize and create
-                  beautiful works. Lastly, you can find me mostly tweaking
-                  stylesheets and creating fluid user experiences.
+                  Despite not fitting the typical designer stereotype, my
+                  exceptional visual abilities enable me to excel as a
+                  presenter, effectively conveying design concepts to
+                  stakeholders and design teams. I possess a remarkable aptitude
+                  for conceptualization, allowing me to envision and bring forth
+                  stunning creations. Additionally, my expertise lies in
+                  fine-tuning stylesheets and crafting seamless user experiences
+                  that flow effortlessly.
                 </p>
               </li>
             </ul>
@@ -140,7 +144,7 @@ const About = () => {
                 >
                   Human Centered Design 101. <small>Acumen</small>
                 </a>
-                <a className="float-right" tabIndex="-1">
+                <a className="float-right" tabIndex={-1}>
                   <Date /> <b>2017 - 2018</b>
                 </a>
                 <p>
@@ -162,7 +166,7 @@ const About = () => {
                 >
                   Data Structure And Algorithm. <small>Udemy</small>
                 </a>
-                <a className="float-right" tabIndex="-1">
+                <a className="float-right" tabIndex={-1}>
                   <Date /> <b>2019</b>
                 </a>
                 <p>
@@ -183,7 +187,7 @@ const About = () => {
                 >
                   Adaptive Leadership. <small>edX</small>
                 </a>
-                <a className="float-right" tabIndex="-1">
+                <a className="float-right" tabIndex={-1}>
                   <Date /> <b>2019</b>
                 </a>
                 <p>
@@ -205,7 +209,7 @@ const About = () => {
                 >
                   Learning to Learn [Efficient Learning] <small>udemy</small>
                 </a>
-                <a className="float-right" tabIndex="-1">
+                <a className="float-right" tabIndex={-1}>
                   <Date /> <b>2020</b>
                 </a>
                 <p>
@@ -214,15 +218,14 @@ const About = () => {
                 </p>
               </li>
               <li>
-                <Link href="/articles">
-                  <a
-                    aria-label="Check my articles and recent reads"
-                    id="cardHover"
-                  >
-                    Learning Something Great 😉
-                  </a>
+                <Link
+                  href="/articles"
+                  aria-label="Check my articles and recent reads"
+                  id="cardHover"
+                >
+                  Learning Something Great 😉
                 </Link>
-                <a className="float-right" tabIndex="-1">
+                <a className="float-right" tabIndex={-1}>
                   <Date /> <b>Currently</b>
                 </a>
                 <p>We continue learning everyday. </p>
@@ -359,14 +362,10 @@ const About = () => {
             <ul className="timeline">
               <li>
                 <Link href="/lens">
-                  <a>
-                    Adenekan's Collection. <small>©Adenekan</small>
-                  </a>
+                  Adenekan's Collection. <small>©Adenekan</small>
                 </Link>
-                <Link href="/lens">
-                  <a className="float-right" id="cardHover">
-                    Visit Page
-                  </a>
+                <Link href="/lens" className="float-right" id="cardHover">
+                  Visit Page
                 </Link>
                 <p>
                   This is an intensive, curation of the photochromic lenses that
