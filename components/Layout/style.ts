@@ -71,7 +71,7 @@ const DarkTheme = css`
 export const BodyStyling = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 
-${(props) => (props.theme ? DarkTheme : LightTheme)}
+${(props) => (props.theme ? LightTheme : DarkTheme)}
 
 ::selection {
   background: var(--token);
@@ -322,7 +322,7 @@ export const Header = styled.header`
       padding:20px 0 0;
       .navbar-brand {
         svg {
-          width: 60px;
+          width: 30px;
         }
       }
       .navbar-collapse{

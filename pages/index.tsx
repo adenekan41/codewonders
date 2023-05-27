@@ -6,12 +6,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { arrayRandomItem } from 'codewonders-helpers';
+import { motion } from 'framer-motion';
 
 /* -------------------------- Internal Dependencies ------------------------- */
 
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
-import { AnimatePresence, motion } from 'framer-motion';
+
 import { getTransitions } from '../components/Utils';
 
 const Home = () => {
@@ -21,56 +22,54 @@ const Home = () => {
     <Layout>
       <PageSection color={color}>
         <PageWrapper>
-          <AnimatePresence mode="sync">
-            <article>
-              <motion.h1
-                data-text="I'm Adenekan Wonderful"
-                className="intro__text"
-                {...getTransitions(0.1)}
+          <article>
+            <motion.h1
+              data-text="I'm Adenekan Wonderful"
+              className="intro__text"
+              {...getTransitions(0.1)}
+            >
+              <mark className="mark">I&apos;m Adenekan Wonderful</mark>
+            </motion.h1>
+            <motion.p {...getTransitions(0.3)}>
+              {' '}
+              Your friendly neighborhood frontend developer, UX architect, and
+              JavaScript engineer. I spend my days (and often nights) painting
+              the Internet canvas with{' '}
+              <Link href="/projects" aria-label="Go to Projects Page">
+                Projects
+              </Link>{' '}
+              and lines of code, turning zeroes and ones into immersive,
+              interactive experiences,{' '}
+            </motion.p>
+            <motion.p {...getTransitions(0.5)}>
+              Bona fide photochromic{' '}
+              <Link href="/articles" aria-label="Check out my Lens">
+                Lens
+              </Link>{' '}
+              enthusiast - sunlight or indoors, I&apos;ve got it covered. I
+              tread the path of minimalism, finding beauty in simplicity and
+              order. When I'm not crafting beautiful web experiences, you can
+              find me reading{' '}
+              <Link
+                href="/articles"
+                aria-label="Go to Articles Page And Check What I Read"
               >
-                <mark className="mark">I&apos;m Adenekan Wonderful</mark>
-              </motion.h1>
-              <motion.p {...getTransitions(0.3)}>
-                {' '}
-                Your friendly neighborhood frontend developer, UX architect, and
-                JavaScript engineer. I spend my days (and often nights) painting
-                the Internet canvas with{' '}
-                <Link href="/projects" aria-label="Go to Projects Page">
-                  Projects
-                </Link>{' '}
-                and lines of code, turning zeroes and ones into immersive,
-                interactive experiences,{' '}
-              </motion.p>
-              <motion.p {...getTransitions(0.5)}>
-                Bona fide photochromic{' '}
-                <Link href="/articles" aria-label="Check out my Lens">
-                  Lens
-                </Link>{' '}
-                enthusiast - sunlight or indoors, I&apos;ve got it covered. I
-                tread the path of minimalism, finding beauty in simplicity and
-                order. When I'm not crafting beautiful web experiences, you can
-                find me reading{' '}
-                <Link
-                  href="/articles"
-                  aria-label="Go to Articles Page And Check What I Read"
-                >
-                  Articles
-                </Link>{' '}
-                or swaying to the rhythm of Pop Music & Jazz, losing myself in
-                the captivating flow of melodies. anyways you can{' '}
-                <Link href="/contact" aria-label="Go to Contact Page">
-                  Contact Me
-                </Link>
-              </motion.p>
-            </article>
+                Articles
+              </Link>{' '}
+              or swaying to the rhythm of Pop Music & Jazz, losing myself in the
+              captivating flow of melodies. anyways you can{' '}
+              <Link href="/contact" aria-label="Go to Contact Page">
+                Contact Me
+              </Link>
+            </motion.p>
+          </article>
 
-            <br />
-            <motion.div {...getTransitions(0.7)}>
-              <FooterLink goto="/about">See More About Me</FooterLink>
-            </motion.div>
+          <br />
+          <motion.div {...getTransitions(0.7)}>
+            <FooterLink goto="/about">See More About Me</FooterLink>
+          </motion.div>
 
-            <br />
-          </AnimatePresence>
+          <br />
         </PageWrapper>
       </PageSection>
     </Layout>

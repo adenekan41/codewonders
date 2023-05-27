@@ -113,6 +113,11 @@ const MansoryItemStyle = styled.div`
   align-items: flex-end;
   border-radius: 9px;
   break-inside: avoid;
+
+  @media (max-width: 758px) {
+    padding: 1.4rem 1rem;
+  }
+
   img {
     width: 100% !important;
     height: 100% !important;
@@ -121,6 +126,7 @@ const MansoryItemStyle = styled.div`
     top: 0 !important;
     object-fit: cover;
   }
+
   &:before {
     content: '';
     pointer-events: none;
@@ -138,6 +144,7 @@ const MansoryItemStyle = styled.div`
       whitesmoke 100%
     );
   }
+
   &:after {
     content: '';
     pointer-events: none;
@@ -159,6 +166,7 @@ const MansoryItemStyle = styled.div`
       rgb(0 0 0 / 78%) 80%
     );
   }
+
   &:hover,
   &:focus {
     cursor: none;
@@ -177,6 +185,7 @@ const MansoryItemStyle = styled.div`
     font-size: var(--font-x-md);
     font-weight: 800;
   }
+
   p {
     color: #d5d5d5 !important;
     font-size: calc(var(--font-sm) + 0.9px);
@@ -196,12 +205,8 @@ const MansoryItemStyle = styled.div`
     opacity: 0;
     transform: translateY(10%);
     transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
-
-    /* &:hover {
-            transform: none;
-            opacity: 1;
-        } */
   }
+
   @media (max-width: 585px) {
     &:after {
       opacity: 1 !important;
@@ -212,6 +217,7 @@ const MansoryItemStyle = styled.div`
       opacity: 1 !important;
     }
   }
+
   @media (max-width: 989px) {
     &:after {
       opacity: 1 !important;
@@ -222,6 +228,7 @@ const MansoryItemStyle = styled.div`
       opacity: 1 !important;
     }
   }
+
   @media (max-width: 220px) {
     &:after {
       opacity: 1 !important;
