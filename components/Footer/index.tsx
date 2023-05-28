@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React from 'react';
+import React, { ComponentPropsWithoutRef } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -20,13 +20,11 @@ import {
 /* ---------------------------- Style Dependency ---------------------------- */
 import { SocialMedia } from '../Layout/style';
 
-interface IFooterLink {
-  children: string | React.ReactNode;
+interface IFooterLink extends ComponentPropsWithoutRef<'p'> {
   goto?: string;
 }
 
-const FooterLink: React.FC<IFooterLink &
-  React.AnchorHTMLAttributes<HTMLParagraphElement>> = ({
+const FooterLink: React.FC<IFooterLink> = ({
   children,
   goto,
   ...rest

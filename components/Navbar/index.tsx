@@ -12,7 +12,7 @@ import AppContext from '../Utils/context';
 import { Logo, Moon, Icon } from '../Icons';
 
 const Navbar = () => {
-  const { show, handleopen, setTheme, closeShow, theme } = useContext(
+  const { show, toggleShow, toggleTheme, closeShow, theme } = useContext(
     AppContext
   );
 
@@ -33,7 +33,7 @@ const Navbar = () => {
             <button
               className="navbar-toggler pr-0"
               type="button"
-              onClick={handleopen}
+              onClick={toggleShow}
               tabIndex={show ? -1 : undefined}
               aria-label="Open Button Toggle"
             >
@@ -46,7 +46,7 @@ const Navbar = () => {
             >
               <button
                 className="d-block d-md-none close-nav"
-                onClick={handleopen}
+                onClick={toggleShow}
                 type="button"
               >
                 <Icon />
@@ -112,7 +112,7 @@ const Navbar = () => {
                     aria-label={`Turn On ${
                       theme === false ? 'Light' : 'Dark'
                     } Mood`}
-                    onClick={setTheme}
+                    onClick={toggleTheme}
                   >
                     <Moon />
                   </Link>

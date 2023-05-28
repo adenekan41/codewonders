@@ -2,7 +2,6 @@
 /*                            External Dependecies                            */
 /* -------------------------------------------------------------------------- */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 /* ------------------------------ Tab PropTypes ----------------------------- */
 interface TabProps {
@@ -10,7 +9,7 @@ interface TabProps {
   label: string;
   onClick: (label: string) => void;
   href?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const Tab: React.FC<TabProps> = ({

@@ -1,12 +1,12 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { DocumentContext, Head, Main, NextScript } from 'next/document';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -36,7 +36,6 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          {this.props.styleTags}
           <meta name="author" content="Adenekan Wonderful" />
           <meta
             name="keywords"
@@ -68,8 +67,8 @@ export default class MyDocument extends Document {
             as="style"
             href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"
           />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-          <link rel="preconnect" href="https://i.ibb.co/" crossOrigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link rel="preconnect" href="https://i.ibb.co/" crossOrigin="anonymous" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
