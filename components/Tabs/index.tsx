@@ -5,6 +5,7 @@ import React, {
   PropsWithChildren,
   ReactElement,
   ReactNode,
+  isValidElement,
   useState,
 } from 'react';
 
@@ -12,9 +13,9 @@ import React, {
 import styled from 'styled-components';
 import Tab from './Tab';
 
-const Tabs: React.FC<PropsWithChildren> = ({ children }) => {
-  const pickOneChild = React.Children.toArray(children)[0] as ReactElement;
-  const [activeTab, setActiveTab] = useState<string>(pickOneChild.props.label);
+const Tabs = ({ children }: PropsWithChildren) => {
+  const firstNode = React.Children.toArray(children)[0] as ReactElement;
+  const [activeTab, setActiveTab] = useState<string>(firstNode.props.label);
 
   const onClickTabItem = (tab: string) => {
     setActiveTab(tab);
@@ -24,7 +25,8 @@ const Tabs: React.FC<PropsWithChildren> = ({ children }) => {
     <>
       <Wrapper className="d-md-flex d-block tabs" role="tablist">
         {children &&
-          React.Children.map(children as any, (child: ReactElement) => {
+          React.Children.map(children, (child) => {
+            if (!isValidElement(child)) return child;
             const { label, href } = child.props;
 
             return (
@@ -40,7 +42,8 @@ const Tabs: React.FC<PropsWithChildren> = ({ children }) => {
           })}
       </Wrapper>
       <div className="tab-content">
-        {React.Children.map(children as any, (child: ReactElement) => {
+        {React.Children.map(children, (child) => {
+          if (!isValidElement(child)) return child;
           return child.props.label === activeTab && child.props.children;
         })}
       </div>

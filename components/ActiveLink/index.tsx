@@ -2,19 +2,16 @@
 /*                           External Dependencies                        */
 /* -------------------------------------------------------------------------- */
 
-import React from 'react';
+import React, { ComponentPropsWithRef } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
 
 /* -------------------------- ActiveLink PropTypes -------------------------- */
-interface IActiveLink {
-  children: React.ReactNode;
+interface IActiveLink extends LinkProps, Omit<ComponentPropsWithRef<'a'>, keyof LinkProps>{
   activeClassName?: string;
-  href: string;
 }
 
-const ActiveLink: React.FC<IActiveLink &
-  React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({ children, ...props }) => {
+const ActiveLink: React.FC<IActiveLink> = ({ children, ...props }) => {
   const router = useRouter();
   let className = props.className || '';
 

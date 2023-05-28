@@ -2,10 +2,11 @@
 /*                            External Dependecies                            */
 /* -------------------------------------------------------------------------- */
 import React, {
+  ComponentPropsWithoutRef,
+  FC,
   PropsWithChildren,
   useContext,
   useEffect,
-  useState,
 } from 'react';
 import { ScoutBar } from 'scoutbar';
 
@@ -20,22 +21,28 @@ import { BackLay, BodyStyling, Main } from './style';
 import { actions } from './data';
 import Head from 'next/head';
 
+
+declare global {
+  interface Window {
+    GA_INITIALIZED: boolean;
+  }
+}
+
 const Layout: React.FC<PropsWithChildren<{
   title?: string;
 }>> = ({ children, title = 'Home' }) => {
-  const { theme, loadTheme, show, setTheme } = useContext(AppContext);
-  const [skew, setSkew] = useState(10);
+  const { theme, loadTheme, show, toggleTheme } = useContext(AppContext);
   const logPage = () => {
-    if (!(window as any).GA_INITIALIZED) {
+    if (!window.GA_INITIALIZED) {
       initGA();
-      (window as any).GA_INITIALIZED = true;
+      window.GA_INITIALIZED = true;
     }
     logPageView();
   };
 
   useEffect(() => {
     logPage();
-    loadTheme();
+    loadTheme?.();
   }, [loadTheme, logPage]);
 
   return (
@@ -57,14 +64,13 @@ const Layout: React.FC<PropsWithChildren<{
         </h1>
       </BackLay>
       <Cursor />
-      <ScoutBar actions={actions(setTheme)} brandColor="var(--cw)" />
+      <ScoutBar actions={actions(toggleTheme!)} brandColor="var(--cw)" />
       {!show && <>{children}</>}
     </Main>
   );
 };
 
-export const PageWrapper: React.FC<PropsWithChildren<{}> &
-  React.HTMLAttributes<HTMLDivElement>> = ({
+export const PageWrapper: FC<ComponentPropsWithoutRef<'section'>> = ({
   children,
   className = '',
   ...rest

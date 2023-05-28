@@ -54,7 +54,7 @@ const Cursor = () => {
 
   const mouseOverEvent = useCallback(
     (e: MouseEvent) => {
-      if ((e.target as any)?.id === 'cardHover') {
+      if ((e.target as Element).id === 'cardHover') {
         cursorEnlarged.current = true;
         toggleCursorSize();
       }
@@ -64,7 +64,7 @@ const Cursor = () => {
 
   const mouseOutEvent = useCallback(
     (e: MouseEvent) => {
-      if ((e.target as any)?.id === 'cardHover') {
+      if ((e.target as Element).id === 'cardHover') {
         cursorEnlarged.current = false;
         toggleCursorSize();
       }
@@ -110,8 +110,6 @@ const Cursor = () => {
   }, [endX, endY]);
 
   useEffect(() => {
-    const requestRefs = requestRef?.current;
-
     if (isMounted()) {
       document.addEventListener('mousemove', mouseMoveEvent);
       document.addEventListener('mouseenter', mouseEnterEvent);
@@ -128,7 +126,7 @@ const Cursor = () => {
       document.removeEventListener('mouseover', mouseOverEvent);
       document.removeEventListener('mouseout', mouseOutEvent);
 
-      cancelAnimationFrame(requestRefs as number);
+      cancelAnimationFrame(requestRef.current!);
     };
   }, [
     isMounted,
