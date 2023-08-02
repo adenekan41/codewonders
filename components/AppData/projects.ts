@@ -56,6 +56,16 @@ const PROJECTS_DATA = [
     technologies: ['React', 'Context API', 'Javascript'],
   },
   {
+    title: 'Magic',
+    description: 'Delightful auth for Web3 onboarding',
+    about:      "Onboard users new to crypto with just an email, phone number, or social login. One SDK for auth, wallet creation, and key management.",
+    link:
+      'https://magic.link',
+    imageUrl: 'https://i.ibb.co/1Q3331D/Screenshot-2023-08-02-at-8-21-59-PM.png',
+     type: ['others', 'project'],
+    technologies: ['React', 'TypeScript', 'Nextjs', 'Javascript', 'GraphCMS'],
+  },
+  {
     title: 'Fast',
     description: 'The fastest way to buy the things you love.',
     about:
