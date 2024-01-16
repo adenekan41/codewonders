@@ -111,21 +111,10 @@ const PROJECTS_DATA = [
     technologies: ['Nuxt', 'Vue', 'Javascript', 'A11y'],
   },
   {
-    title: 'Nester Pod',
-    description: 'Manage All Your Logistics in One Place.',
-    about:
-      "Delivery Tracking and Management. Organize, coordinate and monitor all aspects of your parcel delivery in a convenient and efficient way. Drivers, courier companies, field staff, and carriers can now receive instant pickup and delivery requests at any location through our app and edit and capture customers' delivery information on the go.",
-    link: 'https://nesterpod.com',
-    imageUrl:
-      'https://i.ibb.co/nfnG7F6/Screen-Shot-2019-11-23-at-2-17-06-PM.png',
-    type: ['others', 'project'],
-    technologies: ['Vuejs', 'Vuex', 'Javascript', 'Sass', 'A11y'],
-  },
-  {
     title: 'Bloverse',
     description:
       'A content creation platform fostering a global community of engaged and insightful individuals.',
-    link: 'https://www.bloverse.com/',
+    link: 'https://www.crunchbase.com/organization/bloverse/signals_and_news',
     about:
       'Bloverse is a content creation platform fostering a global community of engaged and insightful individuals. A global community of engaged and insightful individuals revolutionizing the creation and consumption of content ',
     imageUrl:
@@ -147,11 +136,11 @@ const PROJECTS_DATA = [
   },
 
   {
-    title: 'Lentora',
+    title: 'Lentora by NgCareers',
     description: 'Learn a New Skill, Boost Your Career',
     about:
       'Learn Anything at Your Own Pace. Get lifetime access to hundreds of top-quality professional and vocational courses/programs. Learn at your own pace. Improve your career and business growth with relevant skills.',
-    link: 'http://lentora.com/',
+    link: 'https://www.jobberman.com/discover/jobberman-nigeria-acquires-ngcareers-com',
     imageUrl:
       'https://i.ibb.co/ykQmbVw/Screen-Shot-2019-11-23-at-2-20-17-PM.png',
     type: ['others', 'project'],
@@ -175,7 +164,7 @@ const PROJECTS_DATA = [
     about:
       'Freespace can be utilized as your own safe place where you can freely un-conceal your thoughts and emotions without any apprehensions. Freespace requires no log-in, your IP address is not tracked and we do not leave any cache files on your browser or SERVER.  This is to assure our users that we give utmost importance to their privacy and anonymity.  Keeping this in mind, we have also ensured that no comment section is available for the posts.  This is to further protect the writer of the post and to ensure no negative interactions or cyberbullying takes place.  We are hopeful that this will further encourage our users to share openly and to read stories of others, who are just like them or might be different but can still connect and learn at a certain level.',
     link: 'https://freespaace.com',
-    imageUrl: 'https://i.ibb.co/q5ZDjLd/image.png',
+    imageUrl: 'https://i.ibb.co/Q9fYs4c/ezgif-2-0b55cd56fe.gif',
     type: ['others', 'project'],
     technologies: ['React', 'Redux', 'Javascript', 'Firebase'],
   },
@@ -184,23 +173,23 @@ const PROJECTS_DATA = [
     description: 'Manage all your properties in one place.',
     about:
       'We reduce the cost of living and help you meet your most important living expectations by increasing easy access to all the necessary resources needed to improve living standards.',
-    link: 'https://liveizy.com',
+    link: 'https://techpoint.africa/2020/08/17/liveizy-feature/',
     imageUrl:
       'https://i.ibb.co/PxwbV5m/Screen-Shot-2019-11-24-at-11-36-52-PM-1.png',
     type: ['others', 'project'],
     technologies: ['HTML', '11ty', 'Javascript', 'CSS & Sass'],
   },
   {
-    title: 'Farmhub360',
+    title: 'Audiomack Web',
     description:
-      'Our goal is to help Customers to get fresh foods within the shortest possible time.',
+      'The music platform empowering artists.',
     about:
-      'Farmershub360 is a platform that allows farmers around the world to be able to showcase their farm produce to the customer or to distributors that can buy directly from the farmers. Farmerhub360.com is an online portal available 24/7 to internet customers, It is a virtual online market place facilitation easy buying and selling of farm products such as Livestock, Aquaculture, Crops, Farm Equipments and Farm services such as Veterinary Doctors e.t.c',
-    link: 'https://farmhub360.com',
+      'Audiomack is an artist-first music platform that helps musicians reach and engage fans across the world. This project was aimed to redefine the desktop experience for our 14M monthly active users.',
+    link: 'https://audiomack.com',
     imageUrl:
-      'https://i.ibb.co/XWjV6k0/Screen-Shot-2019-11-23-at-2-25-40-PM.png',
+      'https://i.ibb.co/GHssNFz/ezgif-4-03232fcf9b.gif',
     type: ['project'],
-    technologies: ['Vuejs', 'Vuex', 'Javascript', 'Nodejs'],
+    technologies: ['React', 'Nextjs', 'Typescript', 'Javascript'],
   },
 
   {
@@ -227,16 +216,16 @@ const PROJECTS_DATA = [
   },
 
   {
-    title: '70Shops',
+    title: 'Nex AI',
     description:
-      'Helps business owners create an eCommerce platform for their businesses.',
+      'The new way to tell stories',
     about:
-      "We are introducing a set of tools that will help grow the merchants' businesses in Africa especially. Our tools will be able to effectively manage the general operations of these merchants and provide them with analytical data to help streamline the growth of their businesses.",
-    link: 'https://70shops.com',
+      "NEX builds new tools for digital media creation. We’re on a mission to augment human storytelling-- try our newest AI tools now!",
+    link: 'https://nex.art',
     imageUrl:
-      'https://i.ibb.co/q939Wxd/Screen-Shot-2019-11-23-at-2-27-08-PM.png',
+      'https://i.ibb.co/GtLWcwC/Screenshot-2024-01-16-at-7-55-21-PM.png',
     type: ['others', 'project'],
-    technologies: ['HTML', '11ty', 'Javascript', 'CSS & Sass', 'A11y'],
+    technologies: ['Nextjs (React)', 'Javascript'],
   },
 
   {
@@ -250,18 +239,6 @@ const PROJECTS_DATA = [
     type: ['tools'],
     technologies: ['Vue', 'javascript', 'HTML & CSS'],
   },
-  {
-    title: 'Atara Pay',
-    description: 'Buy and Sell Anywhere with Zero Risk',
-    about:
-      'AtaraPay is an online escrow service promoted by TrustPay Technologies Limited. We are the first company to create online escrow supported by technology to allow users to accept or reject items purchased at the point of delivery. Our solution protects buyers’ funds but goes the extra step to specifically protect merchants from a logistics perspective.',
-    link: 'https://atarapay.com',
-    imageUrl:
-      'https://i.ibb.co/dk7bZ9L/Screen-Shot-2019-11-23-at-3-16-38-PM.png',
-    type: ['portfolio', 'project'],
-    technologies: ['Vuejs', 'Vuex', 'Javascript', 'Nodejs'],
-  },
-
   {
     title: 'Urley',
     description: 'A cross-platform utility library to work with URLs',
@@ -286,7 +263,7 @@ const PROJECTS_DATA = [
   },
 
   {
-    title: 'Developp',
+    title: 'Developp by Tunga',
     description: 'Test engineers on their skills and competence.',
     link: 'https://testing.tunga.io',
     about: 'Test Engineers on their skills and competence.',
