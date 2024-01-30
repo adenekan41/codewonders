@@ -32,6 +32,18 @@ const PROJECTS_DATA = [
     type: ['project'],
     technologies: ['React', 'Redux Saga', 'Javascript', 'Firebase'],
   },
+    {
+    title: 'Audiomack Web',
+    description:
+      'The music platform empowering artists.',
+    about:
+      'Audiomack is an artist-first music platform that helps musicians reach and engage fans across the world. This project was aimed to redefine the desktop experience for our 14M monthly active users.',
+    link: 'https://audiomack.com',
+    imageUrl:
+      'https://i.ibb.co/GHssNFz/ezgif-4-03232fcf9b.gif',
+    type: ['project'],
+    technologies: ['React', 'Nextjs', 'Typescript', 'Javascript'],
+  },
   {
     title: '54gene',
     description: 'Discover Yourself Through Your Genes.',
@@ -179,18 +191,7 @@ const PROJECTS_DATA = [
     type: ['others', 'project'],
     technologies: ['HTML', '11ty', 'Javascript', 'CSS & Sass'],
   },
-  {
-    title: 'Audiomack Web',
-    description:
-      'The music platform empowering artists.',
-    about:
-      'Audiomack is an artist-first music platform that helps musicians reach and engage fans across the world. This project was aimed to redefine the desktop experience for our 14M monthly active users.',
-    link: 'https://audiomack.com',
-    imageUrl:
-      'https://i.ibb.co/GHssNFz/ezgif-4-03232fcf9b.gif',
-    type: ['project'],
-    technologies: ['React', 'Nextjs', 'Typescript', 'Javascript'],
-  },
+
 
   {
     title: 'DrugStoc',
@@ -249,6 +250,17 @@ const PROJECTS_DATA = [
     imageUrl: 'https://i.ibb.co/FDh7T07/image.png',
     type: ['open-source', 'tools'],
     technologies: ['Javascript', 'Typescript', 'Rollup'],
+  },
+  {
+    title: 'Usable Query',
+    description: 'Simplifies the use of React Query by offering a streamlined and centralized approach to managing queries and mutations.',
+    link: 'https://www.npmjs.com/package/usable-query',
+    github: 'https://github.com/adenekan41/usable-query',
+    about:
+      'UsableQuery simplifies the use of React Query by offering a streamlined and centralized approach to managing queries and mutations. Designed for developers who seek efficiency and ease in their React applications, this package enables quick setup, intuitive syntax, and seamless navigation across queries and mutations. Ideal for both small projects and large-scale applications, UsableQuery enhances the React Query experience by providing a more accessible and user-friendly interface for data fetching and state management.',
+    imageUrl: 'https://i.ibb.co/rZdp765/Dribbble-shot-HD-3.png',
+    type: ['open-source', 'tools'],
+    technologies: ['Javascript', 'Typescript', 'Vite'],
   },
   {
     title: 'Eze Wholesale',
