@@ -191,19 +191,16 @@ const PROJECTS_DATA = [
     type: ['others', 'project'],
     technologies: ['HTML', '11ty', 'Javascript', 'CSS & Sass'],
   },
-
-
   {
-    title: 'DrugStoc',
-    description: 'Empowering Pharmacies Toward a Healthier Africa.',
-    link:
-      'https://techcrunch.com/2021/11/14/nigerian-e-health-pharmaceutical-distribution-startup-drugstoc-secures-4-4-million-series-a-funding-embarks-on-expansion-drive/',
+    title: 'Usable Query',
+    description: 'Simplifies the use of React Query by offering a streamlined and centralized approach to managing queries and mutations.',
+    link: 'https://www.npmjs.com/package/usable-query',
+    github: 'https://github.com/adenekan41/usable-query',
     about:
-      'Drugstoc makes use of unmatched technology, supply chain innovation, financial solutions, and product knowledge to unlock access to medications in emerging Economies.',
-    imageUrl:
-      'https://i.ibb.co/mC4z0c4/Screenshot-2021-11-30-at-3-12-33-AM.png',
-    type: ['project', 'others'],
-    technologies: ['Nextjs (React)', 'Javascript'],
+      'UsableQuery simplifies the use of React Query by offering a streamlined and centralized approach to managing queries and mutations. Designed for developers who seek efficiency and ease in their React applications, this package enables quick setup, intuitive syntax, and seamless navigation across queries and mutations. Ideal for both small projects and large-scale applications, UsableQuery enhances the React Query experience by providing a more accessible and user-friendly interface for data fetching and state management.',
+    imageUrl: 'https://i.ibb.co/rZdp765/Dribbble-shot-HD-3.png',
+    type: ['open-source', 'tools'],
+    technologies: ['Javascript', 'Typescript', 'Vite'],
   },
   {
     title: 'EmptyCarafes',
@@ -251,17 +248,20 @@ const PROJECTS_DATA = [
     type: ['open-source', 'tools'],
     technologies: ['Javascript', 'Typescript', 'Rollup'],
   },
+
   {
-    title: 'Usable Query',
-    description: 'Simplifies the use of React Query by offering a streamlined and centralized approach to managing queries and mutations.',
-    link: 'https://www.npmjs.com/package/usable-query',
-    github: 'https://github.com/adenekan41/usable-query',
+    title: 'DrugStoc',
+    description: 'Empowering Pharmacies Toward a Healthier Africa.',
+    link:
+      'https://techcrunch.com/2021/11/14/nigerian-e-health-pharmaceutical-distribution-startup-drugstoc-secures-4-4-million-series-a-funding-embarks-on-expansion-drive/',
     about:
-      'UsableQuery simplifies the use of React Query by offering a streamlined and centralized approach to managing queries and mutations. Designed for developers who seek efficiency and ease in their React applications, this package enables quick setup, intuitive syntax, and seamless navigation across queries and mutations. Ideal for both small projects and large-scale applications, UsableQuery enhances the React Query experience by providing a more accessible and user-friendly interface for data fetching and state management.',
-    imageUrl: 'https://i.ibb.co/rZdp765/Dribbble-shot-HD-3.png',
-    type: ['open-source', 'tools'],
-    technologies: ['Javascript', 'Typescript', 'Vite'],
+      'Drugstoc makes use of unmatched technology, supply chain innovation, financial solutions, and product knowledge to unlock access to medications in emerging Economies.',
+    imageUrl:
+      'https://i.ibb.co/mC4z0c4/Screenshot-2021-11-30-at-3-12-33-AM.png',
+    type: ['project', 'others'],
+    technologies: ['Nextjs (React)', 'Javascript'],
   },
+  
   {
     title: 'Eze Wholesale',
     description: 'Buy & sell iPhones in wholesale quantities.',
